@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button, constants } from '@ifixit/toolbox';
 
-const { color, spacing } = constants;
+const { spacing } = constants;
 
 const Container = styled.div`
    margin-top: ${spacing[4]};

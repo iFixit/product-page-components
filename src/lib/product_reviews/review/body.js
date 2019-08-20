@@ -1,10 +1,5 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Stars, Avatar, constants } from '@ifixit/toolbox';
-import Author from './author';
-import Header from './header';
-
-const { color } = constants;
 
 const Body = styled.h3`
    margin-bottom: 24px;
@@ -17,10 +12,6 @@ const SeeMore = styled.h3`
    margin-bottom: 18px;
    cursor: pointer;
    font-size: 13px;
-`;
-
-const LinkButton = styled.a`
-   font-size: 16px;
 `;
 
 class ReviewBody extends Component {

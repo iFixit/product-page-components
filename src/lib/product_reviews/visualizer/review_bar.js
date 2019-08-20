@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { constants } from '@ifixit/toolbox';
 
-const { color } = constants;
 const breakpointSm = '@media screen and (max-width: 650px)';
 
 const BarContainer = styled.div`

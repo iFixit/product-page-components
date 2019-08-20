@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Stars, constants } from '@ifixit/toolbox';
 
 const { color, spacing } = constants;

@@ -1,8 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Avatar, Button, constants } from '@ifixit/toolbox';
-
-const { color } = constants;
+import { Avatar, Button } from '@ifixit/toolbox';
 
 const Container = styled.div`
    display: flex;

@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Review from './review/index.js';
 import Visualizer from './visualizer';
-import { Stars, Button, constants } from '@ifixit/toolbox';
+import { Button, constants } from '@ifixit/toolbox';
 
-const { color, spacing } = constants;
+const { spacing } = constants;
 const breakpointSm = '@media screen and (max-width: 650px)';
 
 const Container = styled.div`
@@ -81,7 +81,6 @@ class ProductReviews extends Component {
       const { itemLimit } = this.state;
       const reviewsWithText = this.reviewsWithText;
       const noReviews = reviewsWithText.length === 0;
-      const average = parseFloat(productReviews.average.toFixed(1), 10);
 
       return (
          <Container id="productReviews">

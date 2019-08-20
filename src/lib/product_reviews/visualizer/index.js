@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { Stars, Avatar, constants } from '@ifixit/toolbox';
+import { Stars, constants } from '@ifixit/toolbox';
 import ReviewBar from './review_bar';
 import ReviewLink from './review_link';
-import { breakpoint } from '@core-ds/primitives';
 
 const { color, fontSize, spacing } = constants;
 
@@ -58,7 +57,7 @@ const ReviewCount = styled.h3`
 class Visualizer extends Component {
    render() {
       const { productReviews, itemcode, reviewsLink, translatePlural, translate } = this.props;
-      const { average, reviews, groupedReviews } = productReviews;
+      const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
       return (
