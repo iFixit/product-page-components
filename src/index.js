@@ -1,9 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import ReviewStars from './lib/product_reviews/review_stars/review_stars.js';
-import ProductReviews from './lib/product_reviews/product_reviews.js';
-import exampleReviews from './lib/product_reviews/example_reviews.json';
+import { ProductReviews, ReviewStars } from './lib/index.js';
+import exampleReviews from './example_reviews.json';
 
 function App() {
   // Dummy translation function. Just replaces numbered args.
