@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { ProductReviews, ReviewStars } from './lib/index.js';
+import { ProductReviews, ReviewStars, ProductNote } from './lib/index.js';
 import exampleReviews from './example_reviews.json';
 
 function App() {
@@ -18,6 +18,22 @@ function App() {
 
   return (
     <div className="App">
+      <ProductNote
+        type="note"
+        title="Example Note"
+        html="Example Contents"
+      />
+      <ProductNote
+        type="disclaimer"
+        title="Example Disclaimer"
+        html="Example Contents"
+      />
+      <ProductNote
+        type="warning"
+        title="Example Warning"
+        html="Example Contents"
+      />
+      <hr />
       <ReviewStars
         numReviews={30}
         average={3.2}

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import initializeComponent from '../Shared/react-initialize';
 import { fontSize, color, space } from '@core-ds/primitives';
 import { Icon } from '@ifixit/toolbox';
 import { breakpoint } from '@core-ds/primitives';
@@ -93,4 +92,4 @@ ProductNote.propTypes = {
    html: PropTypes.string.isRequired,
 };
 
-initializeComponent("ProductNote", ProductNote);
+export default ProductNote;
