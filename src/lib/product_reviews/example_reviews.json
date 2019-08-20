@@ -1,0 +1,1013 @@
+{
+  "reviews": [
+    {
+      "reviewid": 3558,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 30 Jul 2019 05:42:31 -0700\" datetime=\"2019-07-30T05:42:31-07:00\">July 30</time>",
+      "modified_date": 1564490551,
+      "author": {
+        "userid": 3153672,
+        "name": "Steven Servi",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-11.thumbnail",
+        "url": "/User/3153672/Steven+Servi",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3506,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 25 Jul 2019 06:19:50 -0700\" datetime=\"2019-07-25T06:19:50-07:00\">July 25</time>",
+      "modified_date": 1564060790,
+      "author": {
+        "userid": 347289,
+        "name": "Tom",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/347289/Tom",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3484,
+      "rating": 4,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 24 Jul 2019 02:37:36 -0700\" datetime=\"2019-07-24T02:37:36-07:00\">July 24</time>",
+      "modified_date": 1563961056,
+      "author": {
+        "userid": 3145700,
+        "name": "martin medearis",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-3.thumbnail",
+        "url": "/User/3145700/martin+medearis",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3411,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 22 Jul 2019 06:06:58 -0700\" datetime=\"2019-07-22T06:06:58-07:00\">July 22</time>",
+      "modified_date": 1563800818,
+      "author": {
+        "userid": 3136752,
+        "name": "John Suihkonen",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/3136752/John+Suihkonen",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3294,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 17 Jul 2019 06:14:00 -0700\" datetime=\"2019-07-17T06:14:00-07:00\">July 17</time>",
+      "modified_date": 1563369240,
+      "author": {
+        "userid": 3056296,
+        "name": "Matt",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/3056296/Matt",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3145,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 09 Jul 2019 08:37:44 -0700\" datetime=\"2019-07-09T08:37:44-07:00\">July 9</time>",
+      "modified_date": 1562686664,
+      "author": {
+        "userid": 2340582,
+        "name": "Thayer Johnson",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/2340582/Thayer+Johnson",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3030,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 01 Jul 2019 05:08:00 -0700\" datetime=\"2019-07-01T05:08:00-07:00\">July 1</time>",
+      "modified_date": 1561982880,
+      "author": {
+        "userid": 1833941,
+        "name": "Derek Juarez",
+        "avatar": "https://www.cominor.com/igi/kTUF3ESrc3Ff1oiA.thumbnail",
+        "url": "/User/1833941/Derek+Juarez",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 3022,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 01 Jul 2019 04:36:42 -0700\" datetime=\"2019-07-01T04:36:42-07:00\">July 1</time>",
+      "modified_date": 1561981002,
+      "author": {
+        "userid": 2450681,
+        "name": "Rob Oudendijk",
+        "avatar": "https://www.cominor.com/igi/ELEbfG2VxYKNRMuY.thumbnail",
+        "url": "/User/2450681/Rob+Oudendijk",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2944,
+      "rating": 5,
+      "headline": "",
+      "body": "Handy-dandy.",
+      "date": "<time   title=\"Thu, 27 Jun 2019 03:52:24 -0700\" datetime=\"2019-06-27T03:52:24-07:00\">June 27</time>",
+      "modified_date": 1561632995,
+      "author": {
+        "userid": 1610487,
+        "name": "Colin Wood",
+        "avatar": "https://www.cominor.com/igi/WjVyykdlOWEImZYd.thumbnail",
+        "url": "/User/1610487/Colin+Wood",
+        "canEdit": false
+      },
+      "body_trunc": "Handy-dandy."
+    },
+    {
+      "reviewid": 2927,
+      "rating": 5,
+      "headline": "",
+      "body": "Worked well!",
+      "date": "<time   title=\"Wed, 26 Jun 2019 04:19:28 -0700\" datetime=\"2019-06-26T04:19:28-07:00\">June 26</time>",
+      "modified_date": 1561547977,
+      "author": {
+        "userid": 3072205,
+        "name": "Richard Hanewald",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/3072205/Richard+Hanewald",
+        "canEdit": false
+      },
+      "body_trunc": "Worked well!"
+    },
+    {
+      "reviewid": 2913,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 25 Jun 2019 05:57:16 -0700\" datetime=\"2019-06-25T05:57:16-07:00\">June 25</time>",
+      "modified_date": 1561467463,
+      "author": {
+        "userid": 1287286,
+        "name": "SMichaelHughes",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/1287286/SMichaelHughes",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2894,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 24 Jun 2019 05:24:53 -0700\" datetime=\"2019-06-24T05:24:53-07:00\">June 24</time>",
+      "modified_date": 1561379093,
+      "author": {
+        "userid": 3100108,
+        "name": "Chris Martin",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-5.thumbnail",
+        "url": "/User/3100108/Chris+Martin",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2880,
+      "rating": 5,
+      "headline": "",
+      "body": "Great tool",
+      "date": "<time   title=\"Sat, 22 Jun 2019 03:52:21 -0700\" datetime=\"2019-06-22T03:52:21-07:00\">June 22</time>",
+      "modified_date": 1561200754,
+      "author": {
+        "userid": 1231875,
+        "name": "djddirty",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/1231875/djddirty",
+        "canEdit": false
+      },
+      "body_trunc": "Great tool"
+    },
+    {
+      "reviewid": 2842,
+      "rating": 5,
+      "headline": "Everyone needs one, some need two.",
+      "body": "Part of the mandatory kit.",
+      "date": "<time   title=\"Fri, 21 Jun 2019 21:49:17 -0700\" datetime=\"2019-06-21T21:49:17-07:00\">June 21</time>",
+      "modified_date": 1561179006,
+      "author": {
+        "userid": 49890,
+        "name": "hewsey",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/49890/hewsey",
+        "canEdit": false
+      },
+      "body_trunc": "Part of the mandatory kit."
+    },
+    {
+      "reviewid": 2731,
+      "rating": 5,
+      "headline": "",
+      "body": "Perfect for disassembly jobs",
+      "date": "<time   title=\"Tue, 18 Jun 2019 18:44:57 -0700\" datetime=\"2019-06-18T18:44:57-07:00\">June 18</time>",
+      "modified_date": 1560908834,
+      "author": {
+        "userid": 2972283,
+        "name": "Miguel Vazquez",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/2972283/Miguel+Vazquez",
+        "canEdit": false
+      },
+      "body_trunc": "Perfect for disassembly jobs"
+    },
+    {
+      "reviewid": 2625,
+      "rating": 5,
+      "headline": "THIS TOOL WORKS!",
+      "body": "Thank you IFIXIT.  If not for this tool, I would have NEVER been able to successfully open my metal case iPod 7th Generation Classic. I actually tried to get a local repair place who advertises that they put batteries in iPods to put it in. They said the metal case iPods are the only ones they WILL NOT do.  So I was faced with the choice of either buying another iPod or trying to do it myself.  I am a senior citizen lady so I wasn't sure about doing it.  The iPod Battery I already had came with two cheap plastic pieces that broke immediately. This Spudger (along with the iSesamo tool) was necessary to get the back off.  I can say, YOU MUST BE PATIENT!  It finally came off and the rest of the steps were easy.  I can't say I didn't bend the metal a bit - I did!  But it went back together and it works perfectly now!",
+      "date": "<time   title=\"Wed, 12 Jun 2019 08:54:36 -0700\" datetime=\"2019-06-12T08:54:36-07:00\">June 12</time>",
+      "modified_date": 1560355448,
+      "author": {
+        "userid": 3103621,
+        "name": "Rhonda Lester",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-10.thumbnail",
+        "url": "/User/3103621/Rhonda+Lester",
+        "canEdit": false
+      },
+      "body_trunc": "Thank you IFIXIT.  If not for this tool, I would have NEVER been able to successfully open my metal case iPod 7th Generation Classic. I actually tried to get a local repair place who advertises that they put batteries in iPods to put it in. They said the metal case iPods are the only ones they WILL "
+    },
+    {
+      "reviewid": 2616,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 12 Jun 2019 04:19:03 -0700\" datetime=\"2019-06-12T04:19:03-07:00\">June 12</time>",
+      "modified_date": 1560338343,
+      "author": {
+        "userid": 1832941,
+        "name": "Jesse Erlbaum",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/1832941/Jesse+Erlbaum",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2583,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Sun, 09 Jun 2019 14:11:12 -0700\" datetime=\"2019-06-09T14:11:12-07:00\">June 9</time>",
+      "modified_date": 1560114672,
+      "author": {
+        "userid": 3099314,
+        "name": "Nathen Clerici",
+        "avatar": "https://www.cominor.com/igi/oQnOPyaUfoCHMsAT.thumbnail",
+        "url": "/User/3099314/Nathen+Clerici",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2574,
+      "rating": 5,
+      "headline": "so far, they feel confidently more rigorous.",
+      "body": "I've had great going with the regular spudgers; though I've yet to give them a go, they feel to be an improvement.",
+      "date": "<time   title=\"Fri, 07 Jun 2019 18:33:34 -0700\" datetime=\"2019-06-07T18:33:34-07:00\">June 7</time>",
+      "modified_date": 1559957814,
+      "author": {
+        "userid": 1703675,
+        "name": "Ed Fiala",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/1703675/Ed+Fiala",
+        "canEdit": false
+      },
+      "body_trunc": "I've had great going with the regular spudgers; though I've yet to give them a go, they feel to be an improvement."
+    },
+    {
+      "reviewid": 2568,
+      "rating": 2,
+      "headline": "Not worth the price.",
+      "body": "We were hoping for so much more with these. We were very excited when we found out about these. The edge of these aren't as sharp as the standard spuders. We bought 3 of them and 2 of them lost their edge on first use. We currently get plastic spuders for about 25 cents each, these are roughly 12 times more expensive, yet no where near 12 times better. Doing the same repair with standard spuders we may have ruined the edge on 2 or 3 of them, but we would still have 9 or 10 more to go through before we've spent as much on them. We really wanted to love these, but they just aren't worth the extra cost.",
+      "date": "<time   title=\"Fri, 07 Jun 2019 10:22:26 -0700\" datetime=\"2019-06-07T10:22:26-07:00\">June 7</time>",
+      "modified_date": 1559928754,
+      "author": {
+        "userid": 1349754,
+        "name": "KC Bills",
+        "avatar": "https://www.cominor.com/igi/4tcfvDZNHWLTeahB.thumbnail",
+        "url": "/User/1349754/KC+Bills",
+        "canEdit": false
+      },
+      "body_trunc": "We were hoping for so much more with these. We were very excited when we found out about these. The edge of these aren't as sharp as the standard spuders. We bought 3 of them and 2 of them lost their edge on first use. We currently get plastic spuders for about 25 cents each, these are roughly 12 ti"
+    },
+    {
+      "reviewid": 2564,
+      "rating": 5,
+      "headline": "Prompt delivery.   Item exactly as described.",
+      "body": "I bought this tool based on the description of its advantages  because I've got a project coming up.  Delivery was prompt and the tool shows promise for my use.",
+      "date": "<time   title=\"Fri, 07 Jun 2019 09:42:13 -0700\" datetime=\"2019-06-07T09:42:13-07:00\">June 7</time>",
+      "modified_date": 1559925917,
+      "author": {
+        "userid": 1009422,
+        "name": "RDB",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/1009422/RDB",
+        "canEdit": false
+      },
+      "body_trunc": "I bought this tool based on the description of its advantages  because I've got a project coming up.  Delivery was prompt and the tool shows promise for my use."
+    },
+    {
+      "reviewid": 2554,
+      "rating": 5,
+      "headline": "",
+      "body": "what can you say about a spludger fast shipping?",
+      "date": "<time   title=\"Fri, 07 Jun 2019 08:23:49 -0700\" datetime=\"2019-06-07T08:23:49-07:00\">June 7</time>",
+      "modified_date": 1559921038,
+      "author": {
+        "userid": 1389565,
+        "name": "Ralph Malone",
+        "avatar": "https://www.cominor.com/igi/A1GG3jmdBHmcaaij.thumbnail",
+        "url": "/User/1389565/Ralph+Malone",
+        "canEdit": false
+      },
+      "body_trunc": "what can you say about a spludger fast shipping?"
+    },
+    {
+      "reviewid": 2553,
+      "rating": 5,
+      "headline": "",
+      "body": "what can you say about a spludger fast shipping?",
+      "date": "<time   title=\"Fri, 07 Jun 2019 08:22:53 -0700\" datetime=\"2019-06-07T08:22:53-07:00\">June 7</time>",
+      "modified_date": 1559921021,
+      "author": {
+        "userid": 1389565,
+        "name": "Ralph Malone",
+        "avatar": "https://www.cominor.com/igi/A1GG3jmdBHmcaaij.thumbnail",
+        "url": "/User/1389565/Ralph+Malone",
+        "canEdit": false
+      },
+      "body_trunc": "what can you say about a spludger fast shipping?"
+    },
+    {
+      "reviewid": 2552,
+      "rating": 5,
+      "headline": "Multi-tasker - Electronics to toothpick!",
+      "body": "Got 2.  One joins other tiny tools in my purse.  I'm known as the go-to for tools.  It's the Girl Scout training.",
+      "date": "<time   title=\"Fri, 07 Jun 2019 07:47:19 -0700\" datetime=\"2019-06-07T07:47:19-07:00\">June 7</time>",
+      "modified_date": 1559918976,
+      "author": {
+        "userid": 2474523,
+        "name": "Jane Nearing",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/2474523/Jane+Nearing",
+        "canEdit": false
+      },
+      "body_trunc": "Got 2.  One joins other tiny tools in my purse.  I'm known as the go-to for tools.  It's the Girl Scout training."
+    },
+    {
+      "reviewid": 2493,
+      "rating": 5,
+      "headline": "",
+      "body": "I used it to pry up parts, scrap old thermal paste off CPU and GPU.",
+      "date": "<time   title=\"Fri, 31 May 2019 16:38:19 -0700\" datetime=\"2019-05-31T16:38:19-07:00\">May 31</time>",
+      "modified_date": 1559345957,
+      "author": {
+        "userid": 3077913,
+        "name": "Mark Blockinger",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/3077913/Mark+Blockinger",
+        "canEdit": false
+      },
+      "body_trunc": "I used it to pry up parts, scrap old thermal paste off CPU and GPU."
+    },
+    {
+      "reviewid": 2488,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Fri, 31 May 2019 13:14:03 -0700\" datetime=\"2019-05-31T13:14:03-07:00\">May 31</time>",
+      "modified_date": 1559333643,
+      "author": {
+        "userid": 3093185,
+        "name": "charles long",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-12.thumbnail",
+        "url": "/User/3093185/charles+long",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2446,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 30 May 2019 01:14:35 -0700\" datetime=\"2019-05-30T01:14:35-07:00\">May 30</time>",
+      "modified_date": 1559204075,
+      "author": {
+        "userid": 1786485,
+        "name": "Adrian Wan",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-8.thumbnail",
+        "url": "/User/1786485/Adrian+Wan",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2422,
+      "rating": 3,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 28 May 2019 07:22:36 -0700\" datetime=\"2019-05-28T07:22:36-07:00\">May 28</time>",
+      "modified_date": 1559053409,
+      "author": {
+        "userid": 1465706,
+        "name": "Raphael Vidal",
+        "avatar": "https://www.cominor.com/igi/Cc2vuOICWqO1rh4a.thumbnail",
+        "url": "/User/1465706/Raphael+Vidal",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2420,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 28 May 2019 01:35:26 -0700\" datetime=\"2019-05-28T01:35:26-07:00\">May 28</time>",
+      "modified_date": 1559032526,
+      "author": {
+        "userid": 3086089,
+        "name": "Paul Brinkkemper",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/3086089/Paul+Brinkkemper",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2412,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 27 May 2019 20:38:36 -0700\" datetime=\"2019-05-27T20:38:36-07:00\">May 27</time>",
+      "modified_date": 1559014716,
+      "author": {
+        "userid": 330666,
+        "name": "robertvstaats",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-6.thumbnail",
+        "url": "/User/330666/robertvstaats",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2391,
+      "rating": 5,
+      "headline": "",
+      "body": "Great",
+      "date": "<time   title=\"Sat, 25 May 2019 21:01:46 -0700\" datetime=\"2019-05-25T21:01:46-07:00\">May 25</time>",
+      "modified_date": 1558843501,
+      "author": {
+        "userid": 3064144,
+        "name": "eddyriachy",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-6.thumbnail",
+        "url": "/User/3064144/eddyriachy",
+        "canEdit": false
+      },
+      "body_trunc": "Great"
+    },
+    {
+      "reviewid": 2375,
+      "rating": 5,
+      "headline": "",
+      "body": "It spudges in a unique and special way...",
+      "date": "<time   title=\"Fri, 24 May 2019 06:14:55 -0700\" datetime=\"2019-05-24T06:14:55-07:00\">May 24</time>",
+      "modified_date": 1558703730,
+      "author": {
+        "userid": 3086216,
+        "name": "Drew Hickok",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-8.thumbnail",
+        "url": "/User/3086216/Drew+Hickok",
+        "canEdit": false
+      },
+      "body_trunc": "It spudges in a unique and special way..."
+    },
+    {
+      "reviewid": 2326,
+      "rating": 4,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 21 May 2019 17:45:24 -0700\" datetime=\"2019-05-21T17:45:24-07:00\">May 21</time>",
+      "modified_date": 1558485927,
+      "author": {
+        "userid": 2015941,
+        "name": "Martin Heinsdorf",
+        "avatar": "https://www.cominor.com/igi/GfBNxcRKWS5VeMID.thumbnail",
+        "url": "/User/2015941/Martin+Heinsdorf",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2255,
+      "rating": 5,
+      "headline": "",
+      "body": "This tool worked exactly as needed for replacing my hard drive in my iMac.",
+      "date": "<time   title=\"Wed, 15 May 2019 12:53:46 -0700\" datetime=\"2019-05-15T12:53:46-07:00\">May 15</time>",
+      "modified_date": 1557950053,
+      "author": {
+        "userid": 2972440,
+        "name": "Alicia Witherill",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/2972440/Alicia+Witherill",
+        "canEdit": false
+      },
+      "body_trunc": "This tool worked exactly as needed for replacing my hard drive in my iMac."
+    },
+    {
+      "reviewid": 2238,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 13 May 2019 18:20:48 -0700\" datetime=\"2019-05-13T18:20:48-07:00\">May 13</time>",
+      "modified_date": 1557796848,
+      "author": {
+        "userid": 1145882,
+        "name": "leclercmartin",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/1145882/leclercmartin",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2200,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 09 May 2019 19:54:43 -0700\" datetime=\"2019-05-09T19:54:43-07:00\">May 9</time>",
+      "modified_date": 1557456883,
+      "author": {
+        "userid": 3070564,
+        "name": "Cadarius  Brooks",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-5.thumbnail",
+        "url": "/User/3070564/Cadarius++Brooks",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2152,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 08 May 2019 05:56:33 -0700\" datetime=\"2019-05-08T05:56:33-07:00\">May 8</time>",
+      "modified_date": 1557320193,
+      "author": {
+        "userid": 2555989,
+        "name": "Brian Thomason",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-3.thumbnail",
+        "url": "/User/2555989/Brian+Thomason",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 2124,
+      "rating": 5,
+      "headline": "",
+      "body": "Just a very useful tool.",
+      "date": "<time   title=\"Tue, 07 May 2019 01:04:43 -0700\" datetime=\"2019-05-07T01:04:43-07:00\">May 7</time>",
+      "modified_date": 1557216327,
+      "author": {
+        "userid": 3067274,
+        "name": "Joe Montgomery",
+        "avatar": "https://www.cominor.com/igi/5JbcdVJVsE5SUUHQ.thumbnail",
+        "url": "/User/3067274/Joe+Montgomery",
+        "canEdit": false
+      },
+      "body_trunc": "Just a very useful tool."
+    },
+    {
+      "reviewid": 2095,
+      "rating": 5,
+      "headline": "",
+      "body": "Spare just in case the others break. Excellent quality.",
+      "date": "<time   title=\"Sun, 05 May 2019 15:39:06 -0700\" datetime=\"2019-05-05T15:39:06-07:00\">May 5</time>",
+      "modified_date": 1557096016,
+      "author": {
+        "userid": 1316157,
+        "name": "Hector Perez",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/1316157/Hector+Perez",
+        "canEdit": false
+      },
+      "body_trunc": "Spare just in case the others break. Excellent quality."
+    },
+    {
+      "reviewid": 2058,
+      "rating": 5,
+      "headline": "",
+      "body": "Perfect tool for MacBook Pro fan connectors",
+      "date": "<time   title=\"Wed, 01 May 2019 14:15:38 -0700\" datetime=\"2019-05-01T14:15:38-07:00\">May 1</time>",
+      "modified_date": 1556745394,
+      "author": {
+        "userid": 2202776,
+        "name": "Ron Stafford",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-12.thumbnail",
+        "url": "/User/2202776/Ron+Stafford",
+        "canEdit": false
+      },
+      "body_trunc": "Perfect tool for MacBook Pro fan connectors"
+    },
+    {
+      "reviewid": 1841,
+      "rating": 5,
+      "headline": "",
+      "body": "Great tool! works perfectly!",
+      "date": "<time   title=\"Sun, 21 Apr 2019 15:37:15 -0700\" datetime=\"2019-04-21T15:37:15-07:00\">April 21</time>",
+      "modified_date": 1555886271,
+      "author": {
+        "userid": 2159450,
+        "name": "Andrés Lloret",
+        "avatar": "https://www.cominor.com/igi/T2HsL1DPbiunJIZj.thumbnail",
+        "url": "/User/2159450/Andr%C3%A9s+Lloret",
+        "canEdit": false
+      },
+      "body_trunc": "Great tool! works perfectly!"
+    },
+    {
+      "reviewid": 1776,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 17 Apr 2019 08:11:45 -0700\" datetime=\"2019-04-17T08:11:45-07:00\">April 17</time>",
+      "modified_date": 1555513908,
+      "author": {
+        "userid": 92861,
+        "name": "damaclac",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-8.thumbnail",
+        "url": "/User/92861/damaclac",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 1517,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 03 Apr 2019 08:04:06 -0700\" datetime=\"2019-04-03T08:04:06-07:00\">April 3</time>",
+      "modified_date": 1554303846,
+      "author": {
+        "userid": 3012710,
+        "name": "Daniel Quiroz",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/3012710/Daniel+Quiroz",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 1448,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 28 Mar 2019 23:38:34 -0700\" datetime=\"2019-03-28T23:38:34-07:00\">March 28</time>",
+      "modified_date": 1553841514,
+      "author": {
+        "userid": 2999419,
+        "name": "Trevor Miranda",
+        "avatar": "https://www.cominor.com/igi/33VHAPZ6J4OSjxu4.thumbnail",
+        "url": "/User/2999419/Trevor+Miranda",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 1398,
+      "rating": 5,
+      "headline": "",
+      "body": "Still have this and use it!",
+      "date": "<time   title=\"Wed, 27 Mar 2019 03:47:54 -0700\" datetime=\"2019-03-27T03:47:54-07:00\">March 27</time>",
+      "modified_date": 1553683686,
+      "author": {
+        "userid": 31091,
+        "name": "CHARLES MICHAELS",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-12.thumbnail",
+        "url": "/User/31091/CHARLES+MICHAELS",
+        "canEdit": false
+      },
+      "body_trunc": "Still have this and use it!"
+    },
+    {
+      "reviewid": 1343,
+      "rating": 5,
+      "headline": "",
+      "body": "All good, thanks a lot.",
+      "date": "<time   title=\"Mon, 25 Mar 2019 11:41:20 -0700\" datetime=\"2019-03-25T11:41:20-07:00\">March 25</time>",
+      "modified_date": 1553539342,
+      "author": {
+        "userid": 2517582,
+        "name": "Vera  Steiner",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-10.thumbnail",
+        "url": "/User/2517582/Vera++Steiner",
+        "canEdit": false
+      },
+      "body_trunc": "All good, thanks a lot."
+    },
+    {
+      "reviewid": 1272,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 21 Mar 2019 09:16:55 -0700\" datetime=\"2019-03-21T09:16:55-07:00\">March 21</time>",
+      "modified_date": 1553185015,
+      "author": {
+        "userid": 970369,
+        "name": "uBreakiFix Little Rock",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-10.thumbnail",
+        "url": "/User/970369/uBreakiFix+Little+Rock",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 1240,
+      "rating": 5,
+      "headline": "",
+      "body": "hat seinen Dienst erfüllt",
+      "date": "<time   title=\"Wed, 20 Mar 2019 01:02:30 -0700\" datetime=\"2019-03-20T01:02:30-07:00\">March 20</time>",
+      "modified_date": 1553069006,
+      "author": {
+        "userid": 2989515,
+        "name": "Felix von Hundelshausen",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-7.thumbnail",
+        "url": "/User/2989515/Felix+von+Hundelshausen",
+        "canEdit": false
+      },
+      "body_trunc": "hat seinen Dienst erfüllt"
+    },
+    {
+      "reviewid": 852,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Fri, 01 Mar 2019 08:40:29 -0700\" datetime=\"2019-03-01T08:40:29-07:00\">March 1</time>",
+      "modified_date": 1551454829,
+      "author": {
+        "userid": 1500155,
+        "name": "Michael Donscheski",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-8.thumbnail",
+        "url": "/User/1500155/Michael+Donscheski",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 782,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 26 Feb 2019 16:08:37 -0700\" datetime=\"2019-02-26T16:08:37-07:00\">February 26</time>",
+      "modified_date": 1551222517,
+      "author": {
+        "userid": 581933,
+        "name": "Jeff Snyder",
+        "avatar": "https://www.cominor.com/igi/YJYoRv1oOGHxXgZe.thumbnail",
+        "url": "/User/581933/Jeff+Snyder",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 772,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 26 Feb 2019 10:50:46 -0700\" datetime=\"2019-02-26T10:50:46-07:00\">February 26</time>",
+      "modified_date": 1551203446,
+      "author": {
+        "userid": 2954999,
+        "name": "Jay Burlingham",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-2.thumbnail",
+        "url": "/User/2954999/Jay+Burlingham",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 735,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Sat, 23 Feb 2019 14:45:25 -0700\" datetime=\"2019-02-23T14:45:25-07:00\">February 23</time>",
+      "modified_date": 1550958325,
+      "author": {
+        "userid": 1113809,
+        "name": "pfrohwein",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-3.thumbnail",
+        "url": "/User/1113809/pfrohwein",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 723,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Fri, 22 Feb 2019 06:27:36 -0700\" datetime=\"2019-02-22T06:27:36-07:00\">February 22</time>",
+      "modified_date": 1550842056,
+      "author": {
+        "userid": 28314,
+        "name": "zen3333ster",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-12.thumbnail",
+        "url": "/User/28314/zen3333ster",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 711,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 21 Feb 2019 19:16:25 -0700\" datetime=\"2019-02-21T19:16:25-07:00\">February 21</time>",
+      "modified_date": 1550801785,
+      "author": {
+        "userid": 691028,
+        "name": "simolinic",
+        "avatar": "https://www.cominor.com/igi/aaDhTbEbmEB5Mlcc.thumbnail",
+        "url": "/User/691028/simolinic",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 667,
+      "rating": 5,
+      "headline": "Essential repair tool",
+      "body": "Excellent product that helped me get the job done!",
+      "date": "<time   title=\"Wed, 20 Feb 2019 11:28:25 -0700\" datetime=\"2019-02-20T11:28:25-07:00\">February 20</time>",
+      "modified_date": 1550687345,
+      "author": {
+        "userid": 2902925,
+        "name": "Andy Duran",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-6.thumbnail",
+        "url": "/User/2902925/Andy+Duran",
+        "canEdit": false
+      },
+      "body_trunc": "Excellent product that helped me get the job done!"
+    },
+    {
+      "reviewid": 617,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 19 Feb 2019 05:35:58 -0700\" datetime=\"2019-02-19T05:35:58-07:00\">February 19</time>",
+      "modified_date": 1550579758,
+      "author": {
+        "userid": 637904,
+        "name": "tech",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-9.thumbnail",
+        "url": "/User/637904/tech",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 586,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Fri, 15 Feb 2019 17:17:18 -0700\" datetime=\"2019-02-15T17:17:18-07:00\">February 15</time>",
+      "modified_date": 1550276238,
+      "author": {
+        "userid": 2944052,
+        "name": "Jordan Rucker",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-11.thumbnail",
+        "url": "/User/2944052/Jordan+Rucker",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 556,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 14 Feb 2019 11:48:43 -0700\" datetime=\"2019-02-14T11:48:43-07:00\">February 14</time>",
+      "modified_date": 1550170123,
+      "author": {
+        "userid": 2943212,
+        "name": "Ted Gillham",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-10.thumbnail",
+        "url": "/User/2943212/Ted+Gillham",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 481,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 13 Feb 2019 05:40:35 -0700\" datetime=\"2019-02-13T05:40:35-07:00\">February 13</time>",
+      "modified_date": 1550061635,
+      "author": {
+        "userid": 2735645,
+        "name": "Ryan Williams",
+        "avatar": "https://www.cominor.com/igi/YljbT1IUGwATVqp6.thumbnail",
+        "url": "/User/2735645/Ryan+Williams",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 456,
+      "rating": 5,
+      "headline": "",
+      "body": "I love these things! They are useful for almost any repair job, from tablets, to phones, to laptops, and desktops, they are the swiss army knife of repair tools. The ones from iFixit are much better than the other ones I have used. They last longer,  and they are tougher to break.",
+      "date": "<time   title=\"Tue, 12 Feb 2019 13:10:14 -0700\" datetime=\"2019-02-12T13:10:14-07:00\">February 12</time>",
+      "modified_date": 1550002297,
+      "author": {
+        "userid": 2854070,
+        "name": "Anthony Finch",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-10.thumbnail",
+        "url": "/User/2854070/Anthony+Finch",
+        "canEdit": false
+      },
+      "body_trunc": "I love these things! They are useful for almost any repair job, from tablets, to phones, to laptops, and desktops, they are the swiss army knife of repair tools. The ones from iFixit are much better than the other ones I have used. They last longer,  and they are tougher to break."
+    },
+    {
+      "reviewid": 445,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Tue, 12 Feb 2019 06:08:17 -0700\" datetime=\"2019-02-12T06:08:17-07:00\">February 12</time>",
+      "modified_date": 1549976897,
+      "author": {
+        "userid": 933813,
+        "name": "Sandor Inshiqaq",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-4.thumbnail",
+        "url": "/User/933813/Sandor+Inshiqaq",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 239,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Wed, 30 Jan 2019 18:46:11 -0700\" datetime=\"2019-01-30T18:46:11-07:00\">January 30</time>",
+      "modified_date": 1548899171,
+      "author": {
+        "userid": 1728325,
+        "name": "Kadan Sharpe",
+        "avatar": "https://www.cominor.com/igi/FiNHTmnoxNShjOYQ.thumbnail",
+        "url": "/User/1728325/Kadan+Sharpe",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 184,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 28 Jan 2019 09:41:39 -0700\" datetime=\"2019-01-28T09:41:39-07:00\">January 28</time>",
+      "modified_date": 1548693699,
+      "author": {
+        "userid": 2680494,
+        "name": "Robert Crocker",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-5.thumbnail",
+        "url": "/User/2680494/Robert+Crocker",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 180,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Mon, 28 Jan 2019 08:55:51 -0700\" datetime=\"2019-01-28T08:55:51-07:00\">January 28</time>",
+      "modified_date": 1548690951,
+      "author": {
+        "userid": 843434,
+        "name": "aliciaswain",
+        "avatar": "https://www.cominor.com/static/images/avatars/User/ifixit/avatar-12.thumbnail",
+        "url": "/User/843434/aliciaswain",
+        "canEdit": false
+      }
+    },
+    {
+      "reviewid": 29,
+      "rating": 5,
+      "headline": "",
+      "body": null,
+      "date": "<time   title=\"Thu, 17 Jan 2019 13:13:06 -0700\" datetime=\"2019-01-17T13:13:06-07:00\">January 17</time>",
+      "modified_date": 1547755986,
+      "author": {
+        "userid": 418937,
+        "name": "David Rans",
+        "avatar": "https://www.cominor.com/igi/pZM1W64ei2W5uJmt.thumbnail",
+        "url": "/User/418937/David+Rans",
+        "canEdit": false
+      }
+    }
+  ],
+  "count": 65,
+  "average": 4.9,
+  "groupedReviews": {
+    "1": 0,
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 61
+  }
+}

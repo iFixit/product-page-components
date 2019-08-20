@@ -1,12 +1,41 @@
 import React from 'react';
-import { render } from "react-dom";
-import { TextInput } from "./lib";
+import { render } from 'react-dom';
 
-const App = () => (
-  <div style={{ width: 640, margin: "15px auto" }}>
-    <h1>Hello React</h1>
-    <TextInput label="Email Address" placeholder="name@example.com" />
-  </div>
-);
+import ReviewStars from './lib/product_reviews/review_stars/review_stars.js';
+import ProductReviews from './lib/product_reviews/product_reviews.js';
+import exampleReviews from './lib/product_reviews/example_reviews.json';
+
+function App() {
+  // Dummy translation function. Just replaces numbered args.
+  const translate =
+    (str, ...args) => [...args].reduceRight(
+      (tmpStr, replacement, index) =>
+        tmpStr.replace("%" + (index + 1), args[index]),
+      str
+    );
+  const translatePlural = (num, str1, str2, ...args) =>
+    (num === 1 ? translate(str1, ...args) : translate(str2, ...args));
+  const reviewsLink = '/User/Reviews';
+
+  return (
+    <div className="App">
+      <ReviewStars
+        numReviews={30}
+        average={3.2}
+        starSize={18}
+        translate={translate}
+      />
+      <hr />
+      <ProductReviews
+        productReviews={exampleReviews}
+        langid="en"
+        itemcode="IF145-002-4"
+        translate={translate}
+        translatePlural={translatePlural}
+        reviewsLink={reviewsLink}
+      />
+    </div>
+  );
+}
 
 render(<App />, document.getElementById("root"));
