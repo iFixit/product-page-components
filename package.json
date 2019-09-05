@@ -8,6 +8,7 @@
   ],
   "dependencies": {
     "@core-ds/primitives": "^0.12.1",
+    "@ifixit/localize": "^0.1.0",
     "@ifixit/toolbox": "^0.12.6",
     "styled-components": "^3.3.3"
   },

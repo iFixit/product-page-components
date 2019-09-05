@@ -4,6 +4,7 @@ import styled, { css } from 'styled-components';
 import Review from './review/index.js';
 import Visualizer from './visualizer';
 import { Button, constants } from '@ifixit/toolbox';
+import { _js } from '@ifixit/localize';
 
 const { spacing } = constants;
 const breakpointSm = '@media screen and (max-width: 650px)';
@@ -77,7 +78,7 @@ class ProductReviews extends Component {
    }
 
    render() {
-      const { itemcode, productReviews, reviewsLink, translate, translatePlural } = this.props;
+      const { itemcode, productReviews, reviewsLink } = this.props;
       const { itemLimit } = this.state;
       const reviewsWithText = this.reviewsWithText;
       const noReviews = reviewsWithText.length === 0;
@@ -88,13 +89,11 @@ class ProductReviews extends Component {
                productReviews={productReviews}
                itemcode={itemcode}
                reviewsLink={reviewsLink}
-               translatePlural={translatePlural}
-               translate={translate}
             />
             <ReviewsContainer noReviews={noReviews}>
                {noReviews && (
                   <NoReviewsText>
-                     {translate('No comments to show yet')}
+                     {_js('No comments to show yet')}
                   </NoReviewsText>
                )}
                {reviewsWithText.map((review, index) => {
@@ -108,7 +107,6 @@ class ProductReviews extends Component {
                               reviewsWithText.length > 1 &&
                               index < reviewsWithText.length - 1
                            }
-                           translate={translate}
                            reviewsLink={reviewsLink}
                         />
                      );
@@ -118,7 +116,7 @@ class ProductReviews extends Component {
                {itemLimit < reviewsWithText.length && (
                   <ShowMore>
                      <Button fullWidth onClick={this.showMore}>
-                        {translate(
+                        {_js(
                            'Show %1 more',
                            itemLimit < reviewsWithText.length - increment
                               ? increment

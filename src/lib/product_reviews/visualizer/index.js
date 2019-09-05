@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import { Stars, constants } from '@ifixit/toolbox';
+import { ___p } from '@ifixit/localize';
 import ReviewBar from './review_bar';
 import ReviewLink from './review_link';
 
@@ -56,7 +57,7 @@ const ReviewCount = styled.h3`
 
 class Visualizer extends Component {
    render() {
-      const { productReviews, itemcode, reviewsLink, translatePlural, translate } = this.props;
+      const { productReviews, itemcode, reviewsLink } = this.props;
       const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
@@ -77,7 +78,7 @@ class Visualizer extends Component {
 
                <ReviewCount itemProp="reviewCount" content={numReviews}>
                   {/* Translators: Number of reviews */}
-                  {translatePlural(numReviews, '%1 review', '%1 reviews',  numReviews)}
+                  {___p(numReviews, '%1 review', '%1 reviews',  numReviews)}
                </ReviewCount>
             </ContainerHeader>
 
@@ -88,12 +89,11 @@ class Visualizer extends Component {
                     index={rating}
                     count={groupedReviews[rating]}
                     numReviews={numReviews}
-                    translatePlural={translatePlural}
                   />
                ))
                .reverse()}
 
-            <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} translate={translate} />
+            <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} />
          </Container>
       );
    }
