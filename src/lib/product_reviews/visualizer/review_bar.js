@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { ___p } from '@ifixit/localize';
 
 const breakpointSm = '@media screen and (max-width: 650px)';
 
@@ -46,13 +47,13 @@ const BarText = styled.h3`
 `;
 
 
-const ReviewBar = ({ count, numReviews, index, translatePlural }) => {
+const ReviewBar = ({ count, numReviews, index }) => {
    const percentage = Math.round(count / numReviews * 100);
 
    return (
       <BarContainer>
          {/* Translators: %1: number. Next to a count of reviews (%1 > 1) having that many stars. */}
-         <BarText active={count > 0}>{translatePlural(index, '1 star', '%1 star', index)}</BarText>
+         <BarText active={count > 0}>{___p(index, '1 star', '%1 star', index)}</BarText>
          <Bar>
             <InnerBar value={count} max={numReviews} />
          </Bar>

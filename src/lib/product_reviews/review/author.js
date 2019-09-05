@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Avatar, Button } from '@ifixit/toolbox';
+import { _js } from '@ifixit/localize';
 
 const Container = styled.div`
    display: flex;
@@ -18,7 +19,7 @@ const Name = styled.h3`
    line-height: 24px;
 `;
 
-const Author = ({ author, itemcode, translate, reviewsLink }) => {
+const Author = ({ author, itemcode, reviewsLink }) => {
    const { name, avatar, url, userid, canEdit } = author;
 
    return (
@@ -29,7 +30,7 @@ const Author = ({ author, itemcode, translate, reviewsLink }) => {
          </Link>
          {canEdit && (
             <a href={`${reviewsLink}/${itemcode}?userid=${userid}`}>
-               <Button size="small">{translate('Edit')}</Button>
+               <Button size="small">{_js('Edit')}</Button>
             </a>
          )}
       </Container>

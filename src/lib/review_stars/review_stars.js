@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Stars, constants } from '@ifixit/toolbox';
+import { _js } from '@ifixit/localize';
 
 const { color, spacing } = constants;
 
@@ -24,7 +25,6 @@ const ReviewStars = ({
    numReviews,
    average,
    starSize,
-   translate,
 }) => {
    return (
       <RatingContainer
@@ -39,10 +39,10 @@ const ReviewStars = ({
          <ReviewsCount>
             {numReviews || ''}{' '}
             {numReviews === 1
-               ? translate('review')
+               ? _js('review')
                : numReviews === 0
-                  ? translate('No reviews yet')
-                  : translate('reviews')}
+                  ? _js('No reviews yet')
+                  : _js('reviews')}
          </ReviewsCount>
       </RatingContainer>
    );

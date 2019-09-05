@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { _js } from '@ifixit/localize';
 
 const Body = styled.h3`
    margin-bottom: 24px;
@@ -26,7 +27,7 @@ class ReviewBody extends Component {
    };
 
    render() {
-      const { body, body_trunc, translate } = this.props;
+      const { body, body_trunc } = this.props;
       const { expanded } = this.state;
 
       return (
@@ -38,7 +39,7 @@ class ReviewBody extends Component {
             </Body>
             {body_trunc && body !== body_trunc && (
                <SeeMore onClick={this.toggleExpanded}>
-                  {expanded ? translate('See less') : !!body_trunc && translate('See more')}
+                  {expanded ? _js('See less') : !!body_trunc && _js('See more')}
                </SeeMore>
             )}
          </React.Fragment>
