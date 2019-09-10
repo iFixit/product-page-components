@@ -1,8 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
 
-import { ProductReviews, ReviewStars, ProductNote } from './lib/index.js';
+import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from './lib/index.js';
 import exampleReviews from './example_reviews.json';
+import exampleProducts from './example_products.json';
 
 function App() {
   const reviewsLink = '/User/Reviews';
@@ -36,6 +37,10 @@ function App() {
         langid="en"
         itemcode="IF145-002-4"
         reviewsLink={reviewsLink}
+      />
+      <hr />
+      <RecommendedProducts
+        {...exampleProducts}
       />
     </div>
   );
