@@ -213,7 +213,7 @@ class RecommendedProductsComponent extends Component {
             <Container>
                <Grid>
                   <InitialBlock>
-                     <Image isSelected={isSelected(initialProduct)}
+                     <Image isSelected={true}
                         src={initialProduct.image}
                         alt={initialProduct.title} />
                      <Plus />
@@ -230,10 +230,10 @@ class RecommendedProductsComponent extends Component {
                   })}
                </Grid>
                <Details>
-                  <Product isSelected={isSelected(initialProduct)}>
+                  <Product isSelected={true}>
                      <Selected>This Item</Selected>
                      {initialProduct.name}
-                     <Price isSelected={isSelected(initialProduct)}>
+                     <Price isSelected={true}>
                         ${initialProduct.price}
                      </Price>
                   </Product>
