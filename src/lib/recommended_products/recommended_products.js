@@ -192,20 +192,21 @@ const Submit = styled.button`
 `;
 
 class RecommendedProductsComponent extends Component {
+
    constructor(props) {
       super(props);
-      // state variables
-      const related_products = this.props.related_products;
+      const related_products = props.related_products;
       // get random products
-      let products = shuffle(related_products);;
-      products = take(products, 2);
-      this.state = {
-         related: (products.length != null) ? products : related_products
-      }
+      let products = shuffle(related_products);
+      this.related = take(products, 2);
+      const selected = new Set([
+         props.initial_product.sku,
+         ...props.related_products.map((product) => product.sku)]);
+      this.state = { selected }
    }
 
    render() {
-      const isSelected = (product) => product.selected;
+      const isSelected = (product) => this.state.selected.has(product.sku);
       const initialProduct = this.props.initial_product;
       return (
          <RecommendedProducts className="recommended-products">
@@ -218,13 +219,13 @@ class RecommendedProductsComponent extends Component {
                         alt={initialProduct.title} />
                      <Plus />
                   </InitialBlock>
-                  {this.state.related.map((product, key)=> {
+                  {this.related.map((product, key)=> {
                      return (
                         <Block key={key}>
                            <Image isSelected={isSelected(product)}
                               src={product.image}
                               alt={product.title} />
-                           {key < this.state.related.length - 1 ? (<Plus />) : null}
+                           {key < this.related.length - 1 ? (<Plus />) : null}
                         </Block>
                      )
                   })}
@@ -237,7 +238,7 @@ class RecommendedProductsComponent extends Component {
                         ${initialProduct.price}
                      </Price>
                   </Product>
-                  {this.state.related.map((product, key) =>
+                  {this.related.map((product, key) =>
                      <Product
                         isSelected={isSelected(product)}
                         key={key}>
@@ -258,36 +259,19 @@ class RecommendedProductsComponent extends Component {
    }
 
    getTotal() {
-      return this.props.initial_product.price + this.state.related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
+      return this.props.initial_product.price + this.related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
    }
 
    handleCheckboxClick(sku, e) {
-      // handle checkbox change event
-      if(e.target.checked) {
-         this.setState({
-            related: this.state.related.map((item) => {
-               return {
-                  "name": item.name,
-                  "image": item.image,
-                  "sku": item.sku,
-                  "price": item.price,
-                  "selected": (item.sku === sku) ? true : item.selected,
-               }
-            })
-         })
-      } else {
-         this.setState({
-            related: this.state.related.map((item) => {
-               return {
-                  "name": item.name,
-                  "image": item.image,
-                  "sku": item.sku,
-                  "price": item.price,
-                  "selected": (item.sku === sku) ? false : item.selected,
-               }
-            })
-         })
-      }
+      this.setState((state) => {
+         const selected = new Set(state.selected);
+         if(e.target.checked) {
+            selected.add(sku);
+         } else {
+            selected.delete(sku);
+         }
+         return { selected };
+      });
    }
 
    addToCart(e, addToCartCallback) {
