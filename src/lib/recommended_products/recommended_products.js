@@ -228,7 +228,7 @@ class RecommendedProductsComponent extends Component {
                <Details>
                   <Product isSelected={isSelected(initialProduct)}><Selected>This Item</Selected>{initialProduct.name}<Price isSelected={isSelected(initialProduct)}>${initialProduct.price}</Price></Product>
                   {this.state.related.map((product, key)=> {
-                     return <Product isSelected={isSelected(product)} key={key}><Checkbox type="checkbox" onChange={(e) => this.getSelection(product.sku, e)} defaultChecked />{product.name}<Price isSelected={isSelected(product)}>${product.price}</Price></Product>;
+                     return <Product isSelected={isSelected(product)} key={key}><Checkbox type="checkbox" onChange={(e) => this.handleCheckboxClick(product.sku, e)} defaultChecked />{product.name}<Price isSelected={isSelected(product)}>${product.price}</Price></Product>;
                   })}
                   <Wrapper>
                      <Price className="total">${this.getTotal()}</Price><Submit onClick={(e) => this.addToCart(e, addToCartCallback)}>Add To Cart</Submit>
@@ -243,7 +243,7 @@ class RecommendedProductsComponent extends Component {
       return this.props.initial_product.price + this.state.related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
    }
 
-   getSelection(key, e) {
+   handleCheckboxClick(sku, e) {
       // handle checkbox change event
       if(e.target.checked) {
          this.setState({
@@ -253,7 +253,7 @@ class RecommendedProductsComponent extends Component {
                   "image": item.image,
                   "sku": item.sku,
                   "price": item.price,
-                  "selected": (item.sku === key) ? true : item.selected,
+                  "selected": (item.sku === sku) ? true : item.selected,
                }
             })
          })
@@ -265,7 +265,7 @@ class RecommendedProductsComponent extends Component {
                   "image": item.image,
                   "sku": item.sku,
                   "price": item.price,
-                  "selected": (item.sku === key) ? false : item.selected,
+                  "selected": (item.sku === sku) ? false : item.selected,
                }
             })
          })
