@@ -209,6 +209,7 @@ class RecommendedProductsComponent extends Component {
    }
 
    render() {
+      const isSelected = (product) => product.selected;
       const initialProduct = this.props.initial_product;
       return (
          <RecommendedProducts className="recommended-products">
@@ -216,22 +217,22 @@ class RecommendedProductsComponent extends Component {
             <Container>
                <Grid>
                   <InitialBlock>
-                     <Image isSelected={initialProduct.selected} src={initialProduct.image} alt={initialProduct.title} />
+                     <Image isSelected={isSelected(initialProduct)} src={initialProduct.image} alt={initialProduct.title} />
                      <Plus />
                   </InitialBlock>
                   {this.state.related.map((product, key)=> {
                      return (
                         <Block key={key}>
-                           <Image isSelected={product.selected} src={product.image} alt={product.title} />
+                           <Image isSelected={isSelected(product)} src={product.image} alt={product.title} />
                            {key < this.state.related.length - 1 ? (<Plus />) : null}
                         </Block>
                      )
                   })}
                </Grid>
                <Details>
-                  <Product isSelected={initialProduct.selected}><Selected>This Item</Selected>{initialProduct.name}<Price isSelected={initialProduct.selected}>${initialProduct.price}</Price></Product>
+                  <Product isSelected={isSelected(initialProduct)}><Selected>This Item</Selected>{initialProduct.name}<Price isSelected={isSelected(initialProduct)}>${initialProduct.price}</Price></Product>
                   {this.state.related.map((product, key)=> {
-                     return <Product isSelected={product.selected} key={key}><Checkbox type="checkbox" onChange={(e) => this.getSelection(product.sku, e)} defaultChecked />{product.name}<Price isSelected={product.selected}>${product.price}</Price></Product>;
+                     return <Product isSelected={isSelected(product)} key={key}><Checkbox type="checkbox" onChange={(e) => this.getSelection(product.sku, e)} defaultChecked />{product.name}<Price isSelected={isSelected(product)}>${product.price}</Price></Product>;
                   })}
                   <Wrapper>
                      <Price className="total">${this.getTotal()}</Price><Submit onClick={(e) => this.addToCart(e, addToCartCallback)}>Add To Cart</Submit>
