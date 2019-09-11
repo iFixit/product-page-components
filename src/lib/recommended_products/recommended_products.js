@@ -202,10 +202,6 @@ class RecommendedProductsComponent extends Component {
       this.state = {
          related: (products.length != null) ? products : related_products
       }
-      // data binding
-      this.getSelection = this.getSelection.bind(this);
-      this.getTotal = this.getTotal.bind(this);
-      this.addToCart = this.addToCart.bind(this);
    }
 
    render() {
