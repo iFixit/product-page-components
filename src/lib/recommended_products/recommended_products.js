@@ -209,13 +209,14 @@ class RecommendedProductsComponent extends Component {
    }
 
    render() {
+      const initialProduct = this.props.initial_product;
       return (
          <RecommendedProducts className="recommended-products">
             <Header>{this.props.header}</Header>
             <Container>
                <Grid>
                   <InitialBlock>
-                     <Image isSelected={this.props.initial_product.selected} src={this.props.initial_product.image} alt={this.props.initial_product.title} />
+                     <Image isSelected={initialProduct.selected} src={initialProduct.image} alt={initialProduct.title} />
                      <Plus />
                   </InitialBlock>
                   {this.state.related.map((product, key)=> {
@@ -228,7 +229,7 @@ class RecommendedProductsComponent extends Component {
                   })}
                </Grid>
                <Details>
-                  <Product isSelected={this.props.initial_product.selected}><Selected>This Item</Selected>{this.props.initial_product.name}<Price isSelected={this.props.initial_product.selected}>${this.props.initial_product.price}</Price></Product>
+                  <Product isSelected={initialProduct.selected}><Selected>This Item</Selected>{initialProduct.name}<Price isSelected={initialProduct.selected}>${initialProduct.price}</Price></Product>
                   {this.state.related.map((product, key)=> {
                      return <Product isSelected={product.selected} key={key}><Checkbox type="checkbox" onChange={(e) => this.getSelection(product.sku, e)} defaultChecked />{product.name}<Price isSelected={product.selected}>${product.price}</Price></Product>;
                   })}
