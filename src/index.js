@@ -5,11 +5,14 @@ import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '.
 import exampleReviews from './example_reviews.json';
 import exampleProducts from './example_products.json';
 
+import './styles.css';
+
 function App() {
   const reviewsLink = '/User/Reviews';
 
   return (
     <div className="App">
+      <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"/>
       <ProductNote
         type="note"
         title="Example Note"
