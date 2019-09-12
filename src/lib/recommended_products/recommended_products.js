@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState, useMemo } from 'react';
 import styled from 'styled-components';
 import { color } from '@core-ds/primitives'
 import shuffle from 'lodash/shuffle';
@@ -191,94 +191,89 @@ const Submit = styled.button`
    border: none;
 `;
 
-class RecommendedProductsComponent extends Component {
+const RecommendedProductsComponent = (props) => {
+   const related_products = props.related_products;
+   // get random products
+   const related = useMemo(() => {
+      const products = shuffle(related_products);
+      return take(products, 2);
+   }, [related_products]);
 
-   constructor(props) {
-      super(props);
-      const related_products = props.related_products;
-      // get random products
-      let products = shuffle(related_products);
-      this.related = take(products, 2);
-      const selected = new Set([
+   const [selected, setSelected] = useState(() => {
+      return new Set([
          props.initial_product.sku,
-         ...props.related_products.map((product) => product.sku)]);
-      this.state = { selected }
-   }
+         ...props.related_products.map((product) => product.sku)
+      ]);
+   });
 
-   render() {
-      const isSelected = (product) => this.state.selected.has(product.sku);
-      const initialProduct = this.props.initial_product;
-      return (
-         <RecommendedProducts className="recommended-products">
-            <Header>{this.props.header}</Header>
-            <Container>
-               <Grid>
-                  <InitialBlock>
-                     <Image isSelected={true}
-                        src={initialProduct.image}
-                        alt={initialProduct.title} />
-                     <Plus />
-                  </InitialBlock>
-                  {this.related.map((product, key)=> {
-                     return (
-                        <Block key={key}>
-                           <Image isSelected={isSelected(product)}
-                              src={product.image}
-                              alt={product.title} />
-                           {key < this.related.length - 1 ? (<Plus />) : null}
-                        </Block>
-                     )
-                  })}
-               </Grid>
-               <Details>
-                  <Product isSelected={true}>
-                     <Selected>This Item</Selected>
-                     {initialProduct.name}
-                     <Price isSelected={true}>
-                        ${initialProduct.price}
-                     </Price>
-                  </Product>
-                  {this.related.map((product, key) =>
-                     <Product
-                        isSelected={isSelected(product)}
-                        key={key}>
-                        <Checkbox type="checkbox"
-                           onChange={(e) => this.handleCheckboxClick(product.sku, e)}
-                           defaultChecked />
-                        {product.name}
-                        <Price isSelected={isSelected(product)}>${product.price}</Price>
-                     </Product>
-                  )}
-                  <Wrapper>
-                     <Price className="total">${this.getTotal()}</Price><Submit onClick={(e) => this.addToCart(e, addToCartCallback)}>Add To Cart</Submit>
-                  </Wrapper>
-               </Details>
-            </Container>
-         </RecommendedProducts>
-      );
-   }
+   const getTotal = () => {
+      return props.initial_product.price + related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
+   };
 
-   getTotal() {
-      return this.props.initial_product.price + this.related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
-   }
-
-   handleCheckboxClick(sku, e) {
-      this.setState((state) => {
-         const selected = new Set(state.selected);
-         if(e.target.checked) {
+   const handleCheckboxClick = (sku, e) => {
+      const target = e.target;
+      setSelected((oldSelected) => {
+         const selected = new Set(oldSelected);
+         if(target.checked) {
             selected.add(sku);
          } else {
             selected.delete(sku);
          }
-         return { selected };
+         return selected;
       });
-   }
+   };
 
-   addToCart(e, addToCartCallback) {
-      // handle submit
-      const itemsToAdd = this.state.related.filter(item => item.selected);
-      addToCartCallback(itemsToAdd);
-   }
+   const isSelected = (product) => selected.has(product.sku);
+   const initialProduct = props.initial_product;
+   return (
+      <RecommendedProducts className="recommended-products">
+         <Header>{props.header}</Header>
+         <Container>
+            <Grid>
+               <InitialBlock>
+                  <Image isSelected={true}
+                     src={initialProduct.image}
+                     alt={initialProduct.title} />
+                  <Plus />
+               </InitialBlock>
+               {related.map((product, key)=> {
+                  return (
+                     <Block key={key}>
+                        <Image isSelected={isSelected(product)}
+                           src={product.image}
+                           alt={product.title} />
+                        {key < related.length - 1 ? (<Plus />) : null}
+                     </Block>
+                  )
+               })}
+            </Grid>
+            <Details>
+               <Product isSelected={true}>
+                  <Selected>This Item</Selected>
+                  {initialProduct.name}
+                  <Price isSelected={true}>
+                     ${initialProduct.price}
+                  </Price>
+               </Product>
+               {related.map((product, key) =>
+                  <Product
+                     isSelected={isSelected(product)}
+                     key={key}>
+                     <Checkbox type="checkbox"
+                        onChange={(e) => handleCheckboxClick(product.sku, e)}
+                        defaultChecked />
+                     {product.name}
+                     <Price isSelected={isSelected(product)}>${product.price}</Price>
+                  </Product>
+               )}
+               <Wrapper>
+                  <Price className="total">${getTotal()}</Price><Submit onClick={(e) => addToCartCallback(selected)}>Add To Cart</Submit>
+               </Wrapper>
+            </Details>
+         </Container>
+      </RecommendedProducts>);
+   
+
 }
 
 function addToCartCallback(items) {
