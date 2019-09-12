@@ -207,7 +207,9 @@ const RecommendedProductsComponent = (props) => {
    });
 
    const getTotal = () => {
-      return props.initial_product.price + related.map(a => (a.selected) ? a.price : 0).reduce((a, b) => a + b, 0)
+      return props.initial_product.price +
+         related.map(a => selected.has(a.sku) ? a.price : 0)
+         .reduce((a, b) => a + b, 0)
    };
 
    const handleCheckboxClick = (sku, e) => {
