@@ -1,8 +1,9 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { color } from '@core-ds/primitives'
 import shuffle from 'lodash/shuffle';
 import take from 'lodash/take';
+import SelectableProductList from './selectable_product_list.js';
 
 /* style variables */
 const bp1 = '@media screen and (min-width: 650px)';
@@ -132,33 +133,6 @@ const Details = styled.section`
    }
 `;
 
-const Checkbox = styled.input`
-   margin-right: 5px;
-
-   ${bp1} {
-      transform: translateY(-1px);
-   }
-`;
-
-const Product = styled.label`
-   color: ${props => props.isSelected ? color.gray8 : color.gray5};
-   font-size: 16px;
-   text-align: left;
-   font-weight: bold;
-   line-height: 2;
-   display: inline-block;
-`;
-
-const Selected = styled.span`
-   background: ${color.gray1};
-   color: ${color.gray6};
-   border-radius: 4px;
-   padding: 3px 4px;
-   margin-right: 5px;
-   font-size: 14px;
-   line-height: 1.7;
-`;
-
 const Price = styled.span`
    color: ${props => props.isSelected ? color.redDark1 : color.gray5};
    padding: 0 5px;
@@ -212,18 +186,17 @@ const RecommendedProductsComponent = (props) => {
          .reduce((a, b) => a + b, 0)
    };
 
-   const handleCheckboxClick = (sku, e) => {
-      const target = e.target;
+   const onSelectedChange = useCallback((sku, checked) => {
       setSelected((oldSelected) => {
          const selected = new Set(oldSelected);
-         if(target.checked) {
+         if(checked) {
             selected.add(sku);
          } else {
             selected.delete(sku);
          }
          return selected;
       });
-   };
+   }, [setSelected]);
 
    const isSelected = (product) => selected.has(product.sku);
    const initialProduct = props.initial_product;
@@ -250,32 +223,18 @@ const RecommendedProductsComponent = (props) => {
                })}
             </Grid>
             <Details>
-               <Product isSelected={true}>
-                  <Selected>This Item</Selected>
-                  {initialProduct.name}
-                  <Price isSelected={true}>
-                     ${initialProduct.price}
-                  </Price>
-               </Product>
-               {related.map((product, key) =>
-                  <Product
-                     isSelected={isSelected(product)}
-                     key={key}>
-                     <Checkbox type="checkbox"
-                        onChange={(e) => handleCheckboxClick(product.sku, e)}
-                        defaultChecked />
-                     {product.name}
-                     <Price isSelected={isSelected(product)}>${product.price}</Price>
-                  </Product>
-               )}
+               <SelectableProductList
+                  initialProduct={initialProduct}
+                  relatedProducts={related}
+                  isSelected={isSelected}
+                  onSelectedChange={onSelectedChange}/>
                <Wrapper>
-                  <Price className="total">${getTotal()}</Price><Submit onClick={(e) => addToCartCallback(selected)}>Add To Cart</Submit>
+                  <Price className="total">${getTotal()}</Price>
+                  <Submit onClick={(e) => addToCartCallback(selected)}>Add To Cart</Submit>
                </Wrapper>
             </Details>
          </Container>
       </RecommendedProducts>);
-   
-
 }
 
 function addToCartCallback(items) {
