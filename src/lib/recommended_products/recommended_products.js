@@ -155,17 +155,11 @@ const RecommendedProductsComponent = (props) => {
                   onSelectedChange={onSelectedChange}/>
                <Wrapper>
                   <Price className="total">${getTotal()}</Price>
-                  <Submit onClick={(e) => addToCartCallback(selected)}>Add To Cart</Submit>
+                  <Submit onClick={(e) => props.addToCart(selected)}>Add To Cart</Submit>
                </Wrapper>
             </Details>
          </Container>
       </RecommendedProducts>);
-}
-
-function addToCartCallback(items) {
-   console.log("callback provided by parent app");
-   console.log("The items to be added: ");
-   console.log(items);
 }
 
 export default RecommendedProductsComponent;

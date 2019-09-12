@@ -41,6 +41,7 @@ function App() {
       <hr />
       <RecommendedProducts
         {...exampleProducts}
+        addToCart={skus => console.log("Add to Cart:", skus)}
       />
     </div>
   );
