@@ -57,9 +57,7 @@ const Wrapper = styled.div`
       color: ${color.redDark1};
       font-weight: bold;
       font-size: ${fontSize[5]};
-      width: 35%;
-      display: flex;
-      align-items: center;
+      margin-right: 24px;
    }
 `;
 
