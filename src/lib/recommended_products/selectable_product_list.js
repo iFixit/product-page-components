@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '@core-ds/primitives'
+import { color } from '@core-ds/primitives';
+import Label from './label.js';
 
 /* style variables */
 const bp1 = '@media screen and (min-width: 650px)';
@@ -22,14 +23,8 @@ const Checkbox = styled.input`
    }
 `;
 
-const ThisItem = styled.span`
-   background: ${color.gray1};
-   color: ${color.gray6};
-   border-radius: 4px;
-   padding: 3px 4px;
+const ThisItem = styled(Label)`
    margin-right: 5px;
-   font-size: 14px;
-   line-height: 1.7;
 `;
 
 const Price = styled.span`

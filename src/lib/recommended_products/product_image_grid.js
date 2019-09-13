@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { color } from '@core-ds/primitives';
+import Label from './label.js';
 
 /* style variables */
 const bp1 = '@media screen and (min-width: 650px)';
@@ -26,22 +27,15 @@ const Block = styled.div`
    justify-content: center;
 `;
 
-const ThisItem = styled.span`
+const ThisItem = styled(Label)`
    display: none;
    ${bp1} {
       display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: ${color.gray1};
-      color: ${color.gray6};
-      border-radius: 4px;
-      font-size: 14px;
-      font-weight: bold;
-      padding: 3px 4px;
-      margin: 15%;
-      z-index: 1;
    }
+   margin: 15%;
+   position: absolute;
+   top: 0;
+   right: 0;
 `;
 
 const Image = styled.img`
