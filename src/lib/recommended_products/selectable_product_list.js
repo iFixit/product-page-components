@@ -10,7 +10,7 @@ const ProductLabel = styled.label`
    font-weight: bold;
    line-height: ${lineHeight.tight};
    margin-bottom: ${space[2]}
-   display: inline-block;
+   display: block;
 `;
 
 const Checkbox = styled.input`
