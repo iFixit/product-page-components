@@ -10,6 +10,7 @@ const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 const Grid = styled.div`
    display: flex;
    flex-direction: row;
+   justify-content: center;
    margin: 0 10px;
 
    ${ABOVE_MOBILE} {
@@ -20,7 +21,7 @@ const Grid = styled.div`
 
 const Block = styled.div`
    position: relative;
-   padding: 10px;
+   padding: 10px 15px;
    display: flex;
    align-items: center;
    justify-content: center;
