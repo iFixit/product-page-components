@@ -46,7 +46,7 @@ const Image = styled.img`
 
 const Plus = styled.span`
    position: absolute;
-   right: -4%;
+   left: -4%;
    height: -50%;
 
    &:before {
@@ -56,7 +56,7 @@ const Plus = styled.span`
    }
 
    ${bp1} {
-      right: -3%;
+      left: -3%;
    }
 `;
 
@@ -83,10 +83,10 @@ function ProductImageGrid({
          </Block>
          {relatedProducts.map((product, key) =>
             <Block key={key}>
+               <Plus />
                <ProductImage
                   isSelected={isSelected(product)}
                   product={product}/>
-               {key < relatedProducts.length - 1 ? (<Plus />) : null}
             </Block>
          )}
       </Grid>
