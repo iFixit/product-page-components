@@ -33,6 +33,9 @@ const Container = styled.section`
 const Details = styled.section`
    padding: 20px;
    line-height: 1.5;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
 
    ${ABOVE_MOBILE} {
       width: 45%;
