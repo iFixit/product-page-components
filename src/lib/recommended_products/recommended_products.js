@@ -6,8 +6,7 @@ import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
 import ProductImageGrid from './product_image_grid.js';
 
-/* style variables */
-const bp1 = '@media screen and (min-width: 650px)';
+const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 
 /* styled page elements */
 const RecommendedProducts = styled.section`
@@ -15,7 +14,7 @@ const RecommendedProducts = styled.section`
    margin: 0 auto;
    max-width: 1024px;
 
-   ${bp1} {
+   ${ABOVE_MOBILE} {
       padding: 20px;
    }
 `;
@@ -23,7 +22,7 @@ const RecommendedProducts = styled.section`
 const Container = styled.section`
    padding: 20px;
 
-   ${bp1} {
+   ${ABOVE_MOBILE} {
       padding: 10px;
       display: flex;
    }
@@ -47,7 +46,7 @@ const Header = styled.header`
       background-color: ${color.gray3};
       visibility: hidden;
 
-      ${bp1} {
+      ${ABOVE_MOBILE} {
          visibility: visible;
       }
    }
@@ -65,7 +64,7 @@ const Details = styled.section`
    padding: 20px;
    line-height: 1.5;
 
-   ${bp1} {
+   ${ABOVE_MOBILE} {
       width: 45%;
       padding: 0 10px;
       margin: 10px 0;

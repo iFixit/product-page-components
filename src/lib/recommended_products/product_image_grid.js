@@ -4,8 +4,7 @@ import { color } from '@core-ds/primitives';
 import Label from './label.js';
 import { Plus as PlusIcon } from '@core-ds/icons/16';
 
-/* style variables */
-const bp1 = '@media screen and (min-width: 650px)';
+const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 
 const Grid = styled.div`
    display: flex;
@@ -13,7 +12,7 @@ const Grid = styled.div`
    flex-wrap: wrap;
    margin: 0 10px;
 
-   ${bp1} {
+   ${ABOVE_MOBILE} {
       width: 55%;
       margin: 10px 0;
    }
@@ -30,7 +29,7 @@ const Block = styled.div`
 
 const ThisItem = styled(Label)`
    display: none;
-   ${bp1} {
+   ${ABOVE_MOBILE} {
       display: block;
    }
    margin: 15%;

@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import { color } from '@core-ds/primitives';
 import Label from './label.js';
 
-/* style variables */
-const bp1 = '@media screen and (min-width: 650px)';
-
 const Product = styled.label`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
    font-size: 16px;
@@ -17,10 +14,6 @@ const Product = styled.label`
 
 const Checkbox = styled.input`
    margin-right: 5px;
-
-   ${bp1} {
-      transform: translateY(-1px);
-   }
 `;
 
 const ThisItem = styled(Label)`
