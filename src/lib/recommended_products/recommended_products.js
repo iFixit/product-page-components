@@ -104,23 +104,23 @@ const Submit = styled.button`
    border: none;
 `;
 
-const RecommendedProductsComponent = (props) => {
-   const related_products = props.related_products;
+const RecommendedProductsComponent =
+({addToCart, header, initialProduct, relatedProducts}) => {
    // get random products
    const related = useMemo(() => {
-      const products = shuffle(related_products);
+      const products = shuffle(relatedProducts);
       return take(products, 2);
-   }, [related_products]);
+   }, [relatedProducts]);
 
    const [selected, setSelected] = useState(() => {
       return new Set([
-         props.initial_product.sku,
-         ...props.related_products.map((product) => product.sku)
+         initialProduct.sku,
+         ...relatedProducts.map((product) => product.sku)
       ]);
    });
 
    const getTotal = () => {
-      return props.initial_product.price +
+      return initialProduct.price +
          related.map(a => selected.has(a.sku) ? a.price : 0)
          .reduce((a, b) => a + b, 0)
    };
@@ -138,10 +138,9 @@ const RecommendedProductsComponent = (props) => {
    }, [setSelected]);
 
    const isSelected = (product) => selected.has(product.sku);
-   const initialProduct = props.initial_product;
    return (
       <RecommendedProducts className="recommended-products">
-         <Header>{props.header}</Header>
+         <Header>{header}</Header>
          <Container>
             <ProductImageGrid
                initialProduct={initialProduct}
@@ -155,7 +154,7 @@ const RecommendedProductsComponent = (props) => {
                   onSelectedChange={onSelectedChange}/>
                <Wrapper>
                   <Price className="total">${getTotal()}</Price>
-                  <Submit onClick={(e) => props.addToCart(selected)}>Add To Cart</Submit>
+                  <Submit onClick={(e) => addToCart(selected)}>Add To Cart</Submit>
                </Wrapper>
             </Details>
          </Container>
