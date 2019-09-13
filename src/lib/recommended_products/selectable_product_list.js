@@ -5,6 +5,7 @@ import Label from './label.js';
 
 const ProductLabel = styled.label`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
+   cursor: pointer;
    font-size: ${fontSize[2]};
    text-align: left;
    font-weight: bold;

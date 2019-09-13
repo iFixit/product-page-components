@@ -71,6 +71,7 @@ const Submit = styled.button`
    font-weight: bold;
    border-radius: 5px;
    border: none;
+   cursor: pointer;
 `;
 
 const RecommendedProductsComponent =
