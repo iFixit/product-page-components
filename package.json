@@ -8,9 +8,9 @@
   ],
   "dependencies": {
     "@core-ds/icons": "^0.7.0",
-    "@core-ds/primitives": "^0.12.1",
-    "@ifixit/localize": "^0.1.0",
-    "@ifixit/toolbox": "^0.13.0",
+    "@core-ds/primitives": "^1.0.0",
+    "@ifixit/localize": "^1.0.0",
+    "@ifixit/toolbox": "^1.0.1",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "styled-components": "^4.3.1"
