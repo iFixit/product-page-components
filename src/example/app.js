@@ -42,12 +42,30 @@ function App() {
         reviewsLink={reviewsLink}
       />
       <hr/>
+      <RecommenededProductsExample/>
+    </div>
+  );
+}
+
+function RecommenededProductsExample() {
+   const fewerProducts = {
+      ...exampleProducts,
+      relatedProducts: exampleProducts.relatedProducts.slice(0,1)
+   };
+
+   return (
+      <>
       <RecommendedProducts
         {...exampleProducts}
         addToCart={skus => console.log("Add to Cart:", skus)}
       />
-    </div>
-  );
+      <hr/>
+      <RecommendedProducts
+        {...fewerProducts}
+        addToCart={skus => console.log("Add to Cart:", skus)}
+      />
+      </>
+   );
 }
 
 render(<App />, document.getElementById("root"));
