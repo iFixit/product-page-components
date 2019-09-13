@@ -26,22 +26,21 @@ const Block = styled.div`
    justify-content: center;
 `;
 
-const InitialBlock = styled(Block)`
-   &:before {
-      ${bp1} {
-         content: 'This Item';
-         position: absolute;
-         top: 0;
-         right: 0;
-         background: ${color.gray1};
-         color: ${color.gray6};
-         border-radius: 4px;
-         font-size: 14px;
-         font-weight: bold;
-         padding: 3px 4px;
-         margin: 15%;
-         z-index: 1;
-      }
+const ThisItem = styled.span`
+   display: none;
+   ${bp1} {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: ${color.gray1};
+      color: ${color.gray6};
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      padding: 3px 4px;
+      margin: 15%;
+      z-index: 1;
    }
 `;
 
@@ -74,12 +73,13 @@ function ProductImageGrid({
 
    return (
       <Grid>
-         <InitialBlock>
+         <Block>
+            <ThisItem>This Item</ThisItem>
             <Image isSelected={true}
                src={initialProduct.image}
                alt={initialProduct.title} />
             <Plus />
-         </InitialBlock>
+         </Block>
          {relatedProducts.map((product, key)=> {
             return (
                <Block key={key}>
