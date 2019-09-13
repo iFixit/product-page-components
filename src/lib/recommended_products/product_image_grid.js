@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { color } from '@core-ds/primitives';
 import Label from './label.js';
+import { Plus as PlusIcon } from '@core-ds/icons/16';
 
 /* style variables */
 const bp1 = '@media screen and (min-width: 650px)';
@@ -44,20 +45,10 @@ const Image = styled.img`
    filter: ${props => props.isSelected ? 'opacity(1)' : 'opacity(0.5)'};
 `;
 
-const Plus = styled.span`
+const Plus = styled(PlusIcon)`
    position: absolute;
-   left: -4%;
-   height: -50%;
-
-   &:before {
-      content: '+';
-      color: ${color.gray5};
-      font-size: 18px;
-   }
-
-   ${bp1} {
-      left: -3%;
-   }
+   left: -8px;
+   color: ${color.gray5};
 `;
 
 function ProductImage({product, isSelected}) {
