@@ -6,6 +6,7 @@ import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
 import ProductImageGrid from './product_image_grid.js';
 import Header from './header.js';
+import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 
@@ -122,7 +123,9 @@ const RecommendedProductsComponent =
                   onSelectedChange={onSelectedChange}/>
                <Wrapper>
                   <Price className="total">${getTotal()}</Price>
-                  <Submit onClick={(e) => addToCart(selected)}>Add To Cart</Submit>
+                  <Submit onClick={(e) => addToCart(selected)}>
+                     {_js("Add To Cart")}
+                  </Submit>
                </Wrapper>
             </Details>
          </Container>

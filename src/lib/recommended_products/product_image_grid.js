@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { color } from '@core-ds/primitives';
 import Label from './label.js';
 import { Plus as PlusIcon } from '@core-ds/icons/16';
+import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 
@@ -64,7 +65,7 @@ function ProductImageGrid({
    return (
       <Grid>
          <Block>
-            <ThisItem>This Item</ThisItem>
+            <ThisItem>{_js("This Item")}</ThisItem>
             <ProductImage
                isSelected={true}
                product={initialProduct}/>
