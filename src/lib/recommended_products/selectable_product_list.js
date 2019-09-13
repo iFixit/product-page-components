@@ -1,19 +1,23 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '@core-ds/primitives';
+import { space, color, lineHeight } from '@core-ds/primitives';
 import Label from './label.js';
 
-const Product = styled.label`
+const ProductLabel = styled.label`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
    font-size: 16px;
    text-align: left;
    font-weight: bold;
-   line-height: 2;
+   line-height: ${lineHeight.tight};
+   margin-bottom: ${space[2]}
    display: inline-block;
 `;
 
 const Checkbox = styled.input`
    margin-right: 5px;
+   vertical-align: baseline;
+   height: 16px;
+   width: 16px;
 `;
 
 const ThisItem = styled(Label)`
@@ -26,6 +30,17 @@ const Price = styled.span`
    font-size: 14px;
 `;
 
+function SelectableProduct({product, isSelected, onSelectedChange}) {
+   return (
+   <ProductLabel isSelected={isSelected(product)}>
+      <Checkbox type="checkbox"
+         onChange={(e) => onSelectedChange(product.sku, e.target.checked)}
+         defaultChecked />
+      {product.name}
+      <Price isSelected={isSelected(product)}>${product.price}</Price>
+   </ProductLabel>);
+}
+
 function SelectableProductList({
    initialProduct,
    relatedProducts,
@@ -33,23 +48,19 @@ function SelectableProductList({
    onSelectedChange}) {
 
    return (<React.Fragment>
-      <Product isSelected={true}>
+      <ProductLabel isSelected={true}>
          <ThisItem>This Item</ThisItem>
          {initialProduct.name}
          <Price isSelected={true}>
             ${initialProduct.price}
          </Price>
-      </Product>
+      </ProductLabel>
       {relatedProducts.map((product, key) =>
-         <Product
-            isSelected={isSelected(product)}
-            key={key}>
-            <Checkbox type="checkbox"
-               onChange={(e) => onSelectedChange(product.sku, e.target.checked)}
-               defaultChecked />
-            {product.name}
-            <Price isSelected={isSelected(product)}>${product.price}</Price>
-         </Product>
+         <SelectableProduct
+            product={product}
+            isSelected={isSelected}
+            onSelectedChange={onSelectedChange}
+            key={key}/>
       )}
    </React.Fragment>);
 }
