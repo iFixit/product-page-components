@@ -7,11 +7,12 @@
     "dist"
   ],
   "dependencies": {
+    "@core-ds/icons": "^0.7.0",
     "@core-ds/primitives": "^0.12.1",
-    "react": "^16.9.0",
-    "lodash": "^4.17.15",
     "@ifixit/localize": "^0.1.0",
     "@ifixit/toolbox": "^0.13.0",
+    "lodash": "^4.17.15",
+    "react": "^16.9.0",
     "styled-components": "^4.3.1"
   },
   "scripts": {
