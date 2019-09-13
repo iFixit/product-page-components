@@ -74,16 +74,14 @@ function ProductImageGrid({
                alt={initialProduct.title} />
             <Plus />
          </Block>
-         {relatedProducts.map((product, key)=> {
-            return (
-               <Block key={key}>
-                  <Image isSelected={isSelected(product)}
-                     src={product.image}
-                     alt={product.title} />
-                  {key < relatedProducts.length - 1 ? (<Plus />) : null}
-               </Block>
-            )
-         })}
+         {relatedProducts.map((product, key) =>
+            <Block key={key}>
+               <Image isSelected={isSelected(product)}
+                  src={product.image}
+                  alt={product.title} />
+               {key < relatedProducts.length - 1 ? (<Plus />) : null}
+            </Block>
+         )}
       </Grid>
    );
 }
