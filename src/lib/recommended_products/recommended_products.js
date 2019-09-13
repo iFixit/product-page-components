@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
-import { color } from '@core-ds/primitives'
+import { color, fontSize } from '@core-ds/primitives'
 import shuffle from 'lodash/shuffle';
 import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
@@ -44,7 +44,7 @@ const Details = styled.section`
 const Price = styled.span`
    color: ${props => props.isSelected ? color.redDark1 : color.gray5};
    padding: 0 5px;
-   font-size: 14px;
+   font-size: ${fontSize[1]};
 `;
 
 const Wrapper = styled.div`
@@ -56,7 +56,7 @@ const Wrapper = styled.div`
    ${Price} {
       color: ${color.redDark1};
       font-weight: bold;
-      font-size: 24px;
+      font-size: ${fontSize[5]};
       width: 35%;
       display: flex;
       align-items: center;
@@ -66,7 +66,7 @@ const Wrapper = styled.div`
 const Submit = styled.button`
    background: ${color.blue};
    color: white;
-   font-size: 16px;
+   font-size: ${fontSize[1]};
    padding: 10px 15px;
    font-weight: bold;
    border-radius: 5px;

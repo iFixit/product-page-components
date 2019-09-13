@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { space, color, lineHeight } from '@core-ds/primitives';
+import { space, color, lineHeight, fontSize } from '@core-ds/primitives';
 import Label from './label.js';
 
 const ProductLabel = styled.label`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
-   font-size: 16px;
+   font-size: ${fontSize[2]};
    text-align: left;
    font-weight: bold;
    line-height: ${lineHeight.tight};
@@ -27,7 +27,7 @@ const ThisItem = styled(Label)`
 const Price = styled.span`
    color: ${props => props.isSelected ? color.redDark1 : color.gray5};
    padding: 0 5px;
-   font-size: 14px;
+   font-size: ${fontSize[1]};
 `;
 
 function SelectableProduct({product, isSelected, onSelectedChange}) {
