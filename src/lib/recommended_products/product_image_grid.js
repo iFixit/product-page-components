@@ -60,6 +60,14 @@ const Plus = styled.span`
    }
 `;
 
+function ProductImage({product, isSelected}) {
+   return (
+      <Image isSelected={isSelected}
+         src={product.image}
+         alt={product.title} />
+   );
+}
+
 function ProductImageGrid({
    initialProduct,
    relatedProducts,
@@ -69,16 +77,15 @@ function ProductImageGrid({
       <Grid>
          <Block>
             <ThisItem>This Item</ThisItem>
-            <Image isSelected={true}
-               src={initialProduct.image}
-               alt={initialProduct.title} />
-            <Plus />
+            <ProductImage
+               isSelected={true}
+               product={initialProduct}/>
          </Block>
          {relatedProducts.map((product, key) =>
             <Block key={key}>
-               <Image isSelected={isSelected(product)}
-                  src={product.image}
-                  alt={product.title} />
+               <ProductImage
+                  isSelected={isSelected(product)}
+                  product={product}/>
                {key < relatedProducts.length - 1 ? (<Plus />) : null}
             </Block>
          )}
