@@ -10,7 +10,7 @@ const ProductLabel = styled.label`
    text-align: left;
    font-weight: bold;
    line-height: ${lineHeight.tight};
-   margin-bottom: ${space[2]}
+   margin-bottom: ${space[2]};
    display: block;
 `;
 
