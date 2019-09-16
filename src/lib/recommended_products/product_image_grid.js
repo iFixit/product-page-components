@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color } from '@core-ds/primitives';
+import { color, borderRadius, shadow } from '@core-ds/primitives';
 import Label from './label.js';
 import { Plus as PlusIcon } from '@core-ds/icons/16';
 import { _js } from '@ifixit/localize';
@@ -42,6 +42,8 @@ const Image = styled.img`
    width: 100%;
    transition: all ease 0.5s;
    filter: ${props => props.isSelected ? 'opacity(1)' : 'opacity(0.5)'};
+   border-radius: ${borderRadius.md};
+   box-shadow: ${shadow[1]};
 `;
 
 const Plus = styled(PlusIcon)`
