@@ -26,7 +26,7 @@ const Container = styled.section`
    justify-content: space-evenly;
 
    ${ABOVE_MOBILE} {
-      padding: 0;
+      padding: 20px 0;
       display: flex;
    }
 `;
