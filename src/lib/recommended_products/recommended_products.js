@@ -44,6 +44,15 @@ const Details = styled.section`
    }
 `;
 
+const StyledProductImageGrid = styled(ProductImageGrid)`
+   margin: 0 10px;
+
+   ${ABOVE_MOBILE} {
+      width: 55%;
+      margin: 10px 0;
+   }
+`;
+
 const Price = styled.span`
    color: ${props => props.isSelected ? color.redDark1 : color.gray5};
    padding: 0 5px;
@@ -113,7 +122,7 @@ const RecommendedProductsComponent =
       <RecommendedProducts className="recommended-products">
          <Header>{header}</Header>
          <Container>
-            <ProductImageGrid
+            <StyledProductImageGrid
                initialProduct={initialProduct}
                relatedProducts={related}
                isSelected={isSelected} />

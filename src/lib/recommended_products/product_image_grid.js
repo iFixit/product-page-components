@@ -12,12 +12,6 @@ const Grid = styled.div`
    flex-direction: row;
    justify-content: center;
    align-items: center;
-   margin: 0 10px;
-
-   ${ABOVE_MOBILE} {
-      width: 55%;
-      margin: 10px 0;
-   }
 `;
 
 const Block = styled.div`
