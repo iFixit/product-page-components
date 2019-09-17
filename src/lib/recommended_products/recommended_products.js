@@ -76,6 +76,7 @@ const Wrapper = styled.div`
 
 const Submit = styled.button`
    background: ${color.blue};
+   font-family: inherit;
    color: white;
    font-size: ${fontSize[1]};
    padding: 10px 15px;
@@ -136,7 +137,7 @@ const RecommendedProductsComponent =
                <Wrapper>
                   <Price className="total">${getTotal()}</Price>
                   <Submit onClick={(e) => addToCart(selected)}>
-                     {_js("Add To Cart")}
+                     {_js("Add to cart")}
                   </Submit>
                </Wrapper>
             </Details>
