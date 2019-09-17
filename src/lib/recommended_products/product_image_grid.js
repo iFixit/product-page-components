@@ -11,6 +11,7 @@ const Grid = styled.div`
    display: flex;
    flex-direction: row;
    justify-content: center;
+   align-items: center;
    margin: 0 10px;
 
    ${ABOVE_MOBILE} {
@@ -21,7 +22,7 @@ const Grid = styled.div`
 
 const Block = styled.div`
    position: relative;
-   padding: 10px 15px;
+   padding: 10px 0;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -47,9 +48,9 @@ const Image = styled.img`
 `;
 
 const Plus = styled(PlusIcon)`
-   position: absolute;
-   left: -8px;
+   flex-shrink: 0;
    color: ${color.gray5};
+   margin: 20px 1.5vw;
 `;
 
 function ProductImage({product, isSelected}) {
@@ -74,12 +75,14 @@ function ProductImageGrid({
                product={initialProduct}/>
          </Block>
          {relatedProducts.map((product, key) =>
-            <Block key={key}>
+            <React.Fragment>
                <Plus />
-               <ProductImage
-                  isSelected={isSelected(product)}
-                  product={product}/>
-            </Block>
+               <Block key={key}>
+                  <ProductImage
+                     isSelected={isSelected(product)}
+                     product={product}/>
+               </Block>
+            </React.Fragment>
          )}
       </Grid>
    );
