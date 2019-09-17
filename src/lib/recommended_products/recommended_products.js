@@ -12,13 +12,7 @@ const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
 
 /* styled page elements */
 const RecommendedProducts = styled.section`
-   padding: 20px 0;
-   margin: 0 auto;
    max-width: 1024px;
-
-   ${ABOVE_MOBILE} {
-      padding: 20px;
-   }
 `;
 
 const Container = styled.section`

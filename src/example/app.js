@@ -1,11 +1,17 @@
 import React from 'react';
 import { render } from 'react-dom';
+import styled from 'styled-components';
 
 import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleProducts from './example_products.json';
 
 import './styles.css';
+
+const SpacedRecommendedProducts = styled.div`
+   margin: 20px auto;
+   padding: 0 20px;
+`;
 
 function App() {
   const reviewsLink = '/User/Reviews';
@@ -55,15 +61,19 @@ function RecommenededProductsExample() {
 
    return (
       <>
-      <RecommendedProducts
-        {...exampleProducts}
-        addToCart={skus => console.log("Add to Cart:", skus)}
-      />
-      <hr/>
-      <RecommendedProducts
-        {...fewerProducts}
-        addToCart={skus => console.log("Add to Cart:", skus)}
-      />
+         <SpacedRecommendedProducts>
+            <RecommendedProducts
+              {...exampleProducts}
+              addToCart={skus => console.log("Add to Cart:", skus)}
+            />
+         </SpacedRecommendedProducts>
+         <hr/>
+         <SpacedRecommendedProducts>
+            <RecommendedProducts
+              {...fewerProducts}
+              addToCart={skus => console.log("Add to Cart:", skus)}
+            />
+         </SpacedRecommendedProducts>
       </>
    );
 }
