@@ -23,24 +23,25 @@ const RecommendedProducts = styled.section`
 
 const Container = styled.section`
    padding: 20px;
+   justify-content: space-evenly;
 
    ${ABOVE_MOBILE} {
-      padding: 10px;
+      padding: 0;
       display: flex;
    }
 `;
 
 const Details = styled.section`
-   padding: 20px;
+   margin: 20px 5px;
    line-height: 1.5;
    display: flex;
    flex-direction: column;
    justify-content: center;
 
    ${ABOVE_MOBILE} {
-      width: 45%;
-      padding: 0 10px;
-      margin: 10px 0;
+      flex-shrink: 0;
+      max-width: 50%;
+      margin: 10px 0px 10px 20px;
    }
 `;
 
@@ -48,7 +49,7 @@ const StyledProductImageGrid = styled(ProductImageGrid)`
    margin: 0 10px;
 
    ${ABOVE_MOBILE} {
-      width: 55%;
+      flex-shrink: 0;
       margin: 10px 0;
    }
 `;
