@@ -27,9 +27,9 @@ const ThisItem = styled(Label)`
    ${ABOVE_MOBILE} {
       display: block;
    }
-   margin: 15%;
+   margin: 10%;
    position: absolute;
-   top: 0;
+   top: 8%;
    right: 0;
 `;
 
