@@ -14,11 +14,20 @@ const ProductLabel = styled.label`
    display: block;
 `;
 
+const checkboxSize = 16;
+const checkboxMargin = 7;
+
+const ProductLabelWithCheckbox = styled(ProductLabel)`
+   padding-left: ${checkboxSize + checkboxMargin}px;
+   position: relative;
+`;
+
 const Checkbox = styled.input`
-   margin-right: 5px;
+   position: absolute;
+   left: 0;
    vertical-align: baseline;
-   height: 16px;
-   width: 16px;
+   height: ${checkboxSize}px;
+   width: ${checkboxSize}px;
 `;
 
 const ThisItem = styled(Label)`
@@ -33,13 +42,13 @@ const Price = styled.span`
 
 function SelectableProduct({product, isSelected, onSelectedChange}) {
    return (
-   <ProductLabel isSelected={isSelected(product)}>
+   <ProductLabelWithCheckbox isSelected={isSelected(product)}>
       <Checkbox type="checkbox"
          onChange={(e) => onSelectedChange(product.sku, e.target.checked)}
          defaultChecked />
       {product.name}
       <Price isSelected={isSelected(product)}>${product.price}</Price>
-   </ProductLabel>);
+   </ProductLabelWithCheckbox>);
 }
 
 function SelectableProductList({
