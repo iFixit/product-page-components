@@ -26,9 +26,9 @@ const ThisItem = styled(Label)`
 `;
 
 const Price = styled.span`
-   color: ${props => props.isSelected ? color.redDark1 : color.gray5};
+   color: ${props => props.isSelected ? color.red : color.gray5};
    padding: 0 5px;
-   font-size: ${fontSize[1]};
+   font-weight: normal;
 `;
 
 function SelectableProduct({product, isSelected, onSelectedChange}) {
