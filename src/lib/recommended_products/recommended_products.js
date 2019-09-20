@@ -5,7 +5,6 @@ import shuffle from 'lodash/shuffle';
 import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
 import ProductImageGrid from './product_image_grid.js';
-import Header from './header.js';
 import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
@@ -13,9 +12,6 @@ const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 /* styled page elements */
 const RecommendedProducts = styled.section`
    max-width: 1024px;
-`;
-
-const Container = styled.section`
    padding: 20px;
    justify-content: space-evenly;
 
@@ -81,7 +77,7 @@ const Submit = styled.button`
 `;
 
 const RecommendedProductsComponent =
-({addToCart, header, initialProduct, relatedProducts}) => {
+({addToCart, initialProduct, relatedProducts}) => {
    // get random products
    const related = useMemo(() => {
       const products = shuffle(relatedProducts);
@@ -116,26 +112,23 @@ const RecommendedProductsComponent =
    const isSelected = (product) => selected.has(product.sku);
    return (
       <RecommendedProducts className="recommended-products">
-         <Header>{header}</Header>
-         <Container>
-            <StyledProductImageGrid
+         <StyledProductImageGrid
+            initialProduct={initialProduct}
+            relatedProducts={related}
+            isSelected={isSelected} />
+         <Details>
+            <SelectableProductList
                initialProduct={initialProduct}
                relatedProducts={related}
-               isSelected={isSelected} />
-            <Details>
-               <SelectableProductList
-                  initialProduct={initialProduct}
-                  relatedProducts={related}
-                  isSelected={isSelected}
-                  onSelectedChange={onSelectedChange}/>
-               <Wrapper>
-                  <Price className="total">${getTotal()}</Price>
-                  <Submit onClick={(e) => addToCart(selected)}>
-                     {_js("Add to cart")}
-                  </Submit>
-               </Wrapper>
-            </Details>
-         </Container>
+               isSelected={isSelected}
+               onSelectedChange={onSelectedChange}/>
+            <Wrapper>
+               <Price className="total">${getTotal()}</Price>
+               <Submit onClick={(e) => addToCart(selected)}>
+                  {_js("Add to cart")}
+               </Submit>
+            </Wrapper>
+         </Details>
       </RecommendedProducts>);
 }
 
