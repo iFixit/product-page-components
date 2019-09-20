@@ -91,7 +91,7 @@ const RecommendedProductsComponent =
    const [selected, setSelected] = useState(() => {
       return new Set([
          initialProduct.sku,
-         ...relatedProducts.map((product) => product.sku)
+         ...related.map((product) => product.sku)
       ]);
    });
 
