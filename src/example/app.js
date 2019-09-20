@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleProducts from './example_products.json';
+import exampleProductsLongTitles from './example_products_long_titles.json';
 
 import './styles.css';
 
@@ -53,6 +54,8 @@ function App() {
   );
 }
 
+const addToCart = skus => console.log("Add to Cart:", skus);
+
 function RecommenededProductsExample() {
    const fewerProducts = {
       ...exampleProducts,
@@ -64,14 +67,21 @@ function RecommenededProductsExample() {
          <SpacedRecommendedProducts>
             <RecommendedProducts
               {...exampleProducts}
-              addToCart={skus => console.log("Add to Cart:", skus)}
+              addToCart={addToCart}
+            />
+         </SpacedRecommendedProducts>
+         <hr/>
+         <SpacedRecommendedProducts>
+            <RecommendedProducts
+              {...exampleProductsLongTitles}
+              addToCart={addToCart}
             />
          </SpacedRecommendedProducts>
          <hr/>
          <SpacedRecommendedProducts>
             <RecommendedProducts
               {...fewerProducts}
-              addToCart={skus => console.log("Add to Cart:", skus)}
+              addToCart={addToCart}
             />
          </SpacedRecommendedProducts>
       </>
