@@ -70,9 +70,9 @@ function ProductImageGrid({
                product={initialProduct}/>
          </Block>
          {relatedProducts.map((product, key) =>
-            <React.Fragment>
+            <React.Fragment key={key}>
                <Plus />
-               <Block key={key}>
+               <Block>
                   <ProductImage
                      isSelected={isSelected(product)}
                      product={product}/>
