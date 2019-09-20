@@ -1,6 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
-import { color, fontSize } from '@core-ds/primitives'
+import { breakpoint, color, fontSize } from '@core-ds/primitives'
 import shuffle from 'lodash/shuffle';
 import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
@@ -8,7 +8,7 @@ import ProductImageGrid from './product_image_grid.js';
 import Header from './header.js';
 import { _js } from '@ifixit/localize';
 
-const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
+const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 
 /* styled page elements */
 const RecommendedProducts = styled.section`

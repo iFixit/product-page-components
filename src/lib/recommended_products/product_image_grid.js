@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { color, borderRadius, shadow } from '@core-ds/primitives';
+import { breakpoint, color, borderRadius, shadow } from '@core-ds/primitives';
 import Label from './label.js';
 import { Plus as PlusIcon } from '@core-ds/icons/16';
 import { _js } from '@ifixit/localize';
 
-const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
+const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
+const blockPadding = '10px';
 
 const Grid = styled.div`
    display: flex;
@@ -16,7 +17,7 @@ const Grid = styled.div`
 
 const Block = styled.div`
    position: relative;
-   padding: 10px 0;
+   padding: ${blockPadding} 0;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -29,7 +30,7 @@ const ThisItem = styled(Label)`
    }
    margin: 10%;
    position: absolute;
-   top: 8%;
+   top: ${blockPadding};
    right: 0;
 `;
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { color } from '@core-ds/primitives'
+import { breakpoint, color } from '@core-ds/primitives'
 
-const ABOVE_MOBILE = '@media screen and (min-width: 650px)';
+const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 
 const Header = styled.header`
    font-weight: bold;
