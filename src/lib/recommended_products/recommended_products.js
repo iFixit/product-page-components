@@ -1,8 +1,6 @@
 import React, { useState, useMemo, useCallback } from 'react';
 import styled from 'styled-components';
 import { breakpoint, color, fontSize } from '@core-ds/primitives'
-import shuffle from 'lodash/shuffle';
-import take from 'lodash/take';
 import SelectableProductList from './selectable_product_list.js';
 import ProductImageGrid from './product_image_grid.js';
 import { _js } from '@ifixit/localize';
@@ -78,11 +76,7 @@ const Submit = styled.button`
 
 const RecommendedProductsComponent =
 ({addToCart, initialProduct, relatedProducts}) => {
-   // get random products
-   const related = useMemo(() => {
-      const products = shuffle(relatedProducts);
-      return take(products, 2);
-   }, [relatedProducts]);
+   const related = useMemo(() => relatedProducts.slice(0,2), [relatedProducts]);
 
    const [selected, setSelected] = useState(() => {
       return new Set([
