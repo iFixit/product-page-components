@@ -78,32 +78,34 @@ const RecommendedProductsComponent =
 ({addToCart, initialProduct, relatedProducts}) => {
    const related = useMemo(() => relatedProducts.slice(0,2), [relatedProducts]);
 
-   const [selected, setSelected] = useState(() => {
-      return new Set([
-         initialProduct.sku,
-         ...related.map((product) => product.sku)
-      ]);
-   });
+   const [unselected, setUnselected] = useState(() => new Set())
 
    const getTotal = () => {
       return initialProduct.price +
-         related.map(a => selected.has(a.sku) ? a.price : 0)
+         related.map(a => !unselected.has(a.sku) ? a.price : 0)
          .reduce((a, b) => a + b, 0)
    };
 
    const onSelectedChange = useCallback((sku, checked) => {
-      setSelected((oldSelected) => {
-         const selected = new Set(oldSelected);
-         if(checked) {
-            selected.add(sku);
+      setUnselected((oldUnselected) => {
+         const unselected = new Set(oldUnselected);
+         if (checked) {
+            unselected.delete(sku);
          } else {
-            selected.delete(sku);
+            unselected.add(sku);
          }
-         return selected;
+         return unselected;
       });
-   }, [setSelected]);
+   }, [setUnselected]);
 
-   const isSelected = (product) => selected.has(product.sku);
+   const fireAddToCart = useCallback(() => {
+      const relatedSkus = related.map((product) => product.sku);
+      const selectedSkus = relatedSkus.filter((sku) => !unselected.has(sku));
+      selectedSkus.push(initialProduct.sku);
+      addToCart(selectedSkus);
+   }, [initialProduct, related, unselected, addToCart]);
+
+   const isSelected = (product) => !unselected.has(product.sku);
    return (
       <RecommendedProducts className="recommended-products">
          <StyledProductImageGrid
@@ -118,7 +120,7 @@ const RecommendedProductsComponent =
                onSelectedChange={onSelectedChange}/>
             <Wrapper>
                <Price className="total">${getTotal()}</Price>
-               <Submit onClick={(e) => addToCart(selected)}>
+               <Submit onClick={fireAddToCart}>
                   {_js("Add to cart")}
                </Submit>
             </Wrapper>
