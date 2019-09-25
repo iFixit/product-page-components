@@ -58,7 +58,7 @@ class ProductNote extends Component {
       const values = {
          note           : [color.blueLight4, color.blueLight3, color.blueDark1, color.blueLight1, "check"],
          disclaimer : [color.yellowLight4, color.yellowLight3, color.yellowDark1, color.yellowLight1, "alert-circle"],
-         warning     : [color.redLight4, color.redLight3, color.redDark1, color.redLight1, "x"]
+         warning     : [color.yellowLight4, color.yellowLight3, color.yellowDark1, color.yellowLight1, "alert-triangle"]
       };
 
       const fill = values[type][0];
