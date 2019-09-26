@@ -7,6 +7,7 @@ import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 const blockPadding = '10px';
+const imageWidth = '160px';
 
 const Grid = styled.div`
    display: flex;
@@ -21,6 +22,7 @@ const Block = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
+   flex-basis: ${imageWidth};
 `;
 
 const ThisItem = styled(Label)`
