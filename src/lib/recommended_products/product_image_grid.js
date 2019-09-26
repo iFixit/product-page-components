@@ -36,8 +36,8 @@ const ThisItem = styled(Label)`
 
 const Image = styled.img`
    width: 100%;
-   transition: all ease 0.5s;
-   filter: ${props => props.isSelected ? 'opacity(1)' : 'opacity(0.5)'};
+   transition: opacity ease 0.5s;
+   opacity: ${props => props.isSelected ? '1' : '0.5'};
    border-radius: ${borderRadius.md};
    box-shadow: ${shadow[1]};
 `;
