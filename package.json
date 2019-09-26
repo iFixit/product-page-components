@@ -10,7 +10,7 @@
     "@core-ds/icons": "^0.7.0",
     "@core-ds/primitives": "^1.0.0",
     "@ifixit/localize": "^1.0.0",
-    "@ifixit/toolbox": "^1.0.1",
+    "@ifixit/toolbox": "^1.1.0",
     "lodash": "^4.17.15",
     "react": "^16.9.0",
     "styled-components": "^4.3.1"
