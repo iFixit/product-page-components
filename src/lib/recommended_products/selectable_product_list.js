@@ -2,8 +2,10 @@ import React from 'react';
 import styled from 'styled-components';
 import { space, color, lineHeight, fontSize } from '@core-ds/primitives';
 import Label from './label.js';
+import { Checkbox } from '@ifixit/toolbox';
+import { _js } from '@ifixit/localize';
 
-const ProductLabel = styled.label`
+const ProductLabel = styled.span`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
    cursor: pointer;
    font-size: ${fontSize[2]};
@@ -14,24 +16,18 @@ const ProductLabel = styled.label`
    display: block;
 `;
 
-const checkboxSize = 16;
-const checkboxMargin = 7;
+const checkboxMargin = space[2];
 
 const ProductLabelWithCheckbox = styled(ProductLabel)`
-   padding-left: ${checkboxSize + checkboxMargin}px;
    position: relative;
 `;
 
-const Checkbox = styled.input`
-   position: absolute;
-   left: 0;
-   vertical-align: baseline;
-   height: ${checkboxSize}px;
-   width: ${checkboxSize}px;
+const ProductName = styled.span`
+   position: relative;
 `;
 
 const ThisItem = styled(Label)`
-   margin-right: 5px;
+   margin-right: ${checkboxMargin};
 `;
 
 const Price = styled.span`
@@ -43,11 +39,13 @@ const Price = styled.span`
 function SelectableProduct({product, isSelected, onSelectedChange}) {
    return (
    <ProductLabelWithCheckbox isSelected={isSelected(product)}>
-      <Checkbox type="checkbox"
-         onChange={(e) => onSelectedChange(product.sku, e.target.checked)}
-         defaultChecked />
-      {product.name}
-      <Price isSelected={isSelected(product)}>${product.price}</Price>
+      <Checkbox
+         checked={isSelected(product)}
+         labelMargin={checkboxMargin}
+         onChange={({checked}) => onSelectedChange(product.sku, checked)}>
+         <ProductName>{product.name}</ProductName>
+         <Price isSelected={isSelected(product)}>${product.price}</Price>
+      </Checkbox>
    </ProductLabelWithCheckbox>);
 }
 
