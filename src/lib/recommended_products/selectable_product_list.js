@@ -57,7 +57,7 @@ function SelectableProductList({
 
    return (<React.Fragment>
       <ProductLabel isSelected={true}>
-         <ThisItem>This Item</ThisItem>
+         <ThisItem>{_js("This Item")}</ThisItem>
          {initialProduct.name}
          <Price isSelected={true}>
             ${initialProduct.price}
