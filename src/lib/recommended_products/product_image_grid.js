@@ -47,7 +47,7 @@ const Image = styled.img`
 const Plus = styled(PlusIcon)`
    flex-shrink: 0;
    color: ${color.gray5};
-   margin: 20px 1.5vw;
+   margin: 20px 2.5%;
 `;
 
 function ProductImage({product, isSelected}) {
