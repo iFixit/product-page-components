@@ -10,12 +10,11 @@ const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 /* styled page elements */
 const RecommendedProducts = styled.section`
    max-width: 1024px;
-   padding: 20px;
-   justify-content: space-evenly;
 
    ${ABOVE_MOBILE} {
       padding: 20px 0;
       display: flex;
+      justify-content: space-evenly;
    }
 `;
 

@@ -9,9 +9,15 @@ import exampleProductsLongTitles from './example_products_long_titles.json';
 
 import './styles.css';
 
+const MOBILE = `@media screen and (max-width: 500px)`;
+
 const SpacedRecommendedProducts = styled.div`
    margin: 20px auto;
    padding: 0 20px;
+
+   ${MOBILE} {
+      padding: 0;
+   }
 `;
 
 function App() {
