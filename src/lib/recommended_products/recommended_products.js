@@ -98,10 +98,10 @@ const RecommendedProductsComponent =
    }, [setUnselected]);
 
    const fireAddToCart = useCallback(() => {
-      const relatedSkus = related.map((product) => product.sku);
-      const selectedSkus = relatedSkus.filter((sku) => !unselected.has(sku));
-      selectedSkus.push(initialProduct.sku);
-      addToCart(selectedSkus);
+      const selectedProducts =
+       related.filter((product) => !unselected.has(product.sku));
+      selectedProducts.push(initialProduct);
+      addToCart(selectedProducts);
    }, [initialProduct, related, unselected, addToCart]);
 
    const isSelected = (product) => !unselected.has(product.sku);
