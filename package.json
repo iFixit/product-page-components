@@ -10,9 +10,7 @@
     "@core-ds/icons": "^0.7.0",
     "@core-ds/primitives": "^1.0.0",
     "@ifixit/localize": "^1.0.0",
-    "@ifixit/toolbox": "^1.1.0",
-    "react": "^16.9.0",
-    "styled-components": "^4.3.1"
+    "@ifixit/toolbox": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +19,10 @@
     "eject": "react-scripts eject",
     "build": "rimraf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__"
   },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "styled-components": "^4.0.0"
+  },
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
@@ -28,6 +30,8 @@
     "babel-preset-react-app": "^9.0.1",
     "enzyme": "^3.10.0",
     "eslint": "^6.1.0",
+    "react": "^16.9.0",
+    "styled-components": "^4.3.1",
     "react-dom": "^16.9.0",
     "react-scripts": "^3.1.1",
     "rimraf": "^3.0.0",
