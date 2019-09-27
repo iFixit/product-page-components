@@ -6,7 +6,8 @@ import { Plus as PlusIcon } from '@core-ds/icons/16';
 import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
-const blockPadding = '10px';
+const blockPadding = 10;
+const thisItemMargin = 5;
 const imageWidth = '160px';
 
 const Grid = styled.div`
@@ -18,7 +19,7 @@ const Grid = styled.div`
 
 const Block = styled.div`
    position: relative;
-   padding: ${blockPadding} 0;
+   padding: ${blockPadding}px 0;
    display: flex;
    align-items: center;
    justify-content: center;
@@ -30,10 +31,9 @@ const ThisItem = styled(Label)`
    ${ABOVE_MOBILE} {
       display: block;
    }
-   margin: 10%;
    position: absolute;
-   top: ${blockPadding};
-   right: 0;
+   top: ${blockPadding + thisItemMargin}px;
+   right: ${thisItemMargin}px;
 `;
 
 const Image = styled.img`
