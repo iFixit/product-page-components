@@ -15,8 +15,10 @@ const Container = styled.div`
    align-items: flex-start;
 
    ${breakpointSm} {
-      flex-direction: column;
-      justify-content: center;
+      // Switch to non-flex because IE11 and column mode don't
+      // play well.
+      display: block;
+      margin: auto;
    }
 `;
 
