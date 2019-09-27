@@ -7,7 +7,6 @@ import { _js } from '@ifixit/localize';
 
 const ProductLabel = styled.span`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
-   cursor: pointer;
    font-size: ${fontSize[2]};
    text-align: left;
    font-weight: bold;
@@ -20,6 +19,7 @@ const checkboxMargin = space[2];
 
 const ProductLabelWithCheckbox = styled(ProductLabel)`
    position: relative;
+   cursor: pointer;
 `;
 
 const ProductName = styled.span`
