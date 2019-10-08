@@ -5,7 +5,7 @@ import Label from './label.js';
 import { Checkbox } from '@ifixit/toolbox';
 import { _js } from '@ifixit/localize';
 
-const ProductLabel = styled.span`
+const ProductLabelWithCheckbox = styled.span`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
    font-size: ${fontSize[2]};
    text-align: left;
@@ -13,18 +13,11 @@ const ProductLabel = styled.span`
    line-height: ${lineHeight.tight};
    margin-bottom: ${space[2]};
    display: block;
-`;
-
-const checkboxMargin = space[2];
-
-const ProductLabelWithCheckbox = styled(ProductLabel)`
    position: relative;
    cursor: pointer;
 `;
 
-const ProductName = styled.span`
-   position: relative;
-`;
+const checkboxMargin = space[2];
 
 const ThisItem = styled(Label)`
    margin-right: ${checkboxMargin};
@@ -49,7 +42,7 @@ function SelectableProduct({product, isSelected, isInitialProduct, onSelectedCha
          labelMargin={checkboxMargin}
          onChange={({checked}) => onSelectedChange(product.sku, checked)}>
          {isInitialProduct && (<ThisItem>{_js("This Item")}</ThisItem>)}
-         <ProductName>{product.name}</ProductName>
+         <span>{product.name}</span>
          <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
       </Checkbox>
    </ProductLabelWithCheckbox>);
