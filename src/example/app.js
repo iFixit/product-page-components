@@ -6,6 +6,7 @@ import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '.
 import exampleReviews from './example_reviews.json';
 import exampleProducts from './example_products.json';
 import exampleProductsLongTitles from './example_products_long_titles.json';
+import exampleProductsFloatingPointIssues from './example_products_floating_point_issues.json';
 
 import './styles.css';
 
@@ -87,6 +88,13 @@ function RecommenededProductsExample() {
          <SpacedRecommendedProducts>
             <RecommendedProducts
               {...fewerProducts}
+              addToCart={addToCart}
+            />
+         </SpacedRecommendedProducts>
+         <hr/>
+         <SpacedRecommendedProducts>
+            <RecommendedProducts
+              {...exampleProductsFloatingPointIssues}
               addToCart={addToCart}
             />
          </SpacedRecommendedProducts>
