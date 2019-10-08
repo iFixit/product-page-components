@@ -41,13 +41,14 @@ const formatPrice = (price) => price.toLocaleString(undefined, {
    maximumFractionDigits: 2
 });
 
-function SelectableProduct({product, isSelected, onSelectedChange}) {
+function SelectableProduct({product, isSelected, isInitialProduct, onSelectedChange}) {
    return (
    <ProductLabelWithCheckbox isSelected={isSelected(product)}>
       <Checkbox
          checked={isSelected(product)}
          labelMargin={checkboxMargin}
          onChange={({checked}) => onSelectedChange(product.sku, checked)}>
+         {isInitialProduct && (<ThisItem>{_js("This Item")}</ThisItem>)}
          <ProductName>{product.name}</ProductName>
          <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
       </Checkbox>
@@ -61,17 +62,11 @@ function SelectableProductList({
    onSelectedChange}) {
 
    return (<React.Fragment>
-      <ProductLabel isSelected={true}>
-         <ThisItem>{_js("This Item")}</ThisItem>
-         {initialProduct.name}
-         <Price isSelected={true}>
-            ${formatPrice(initialProduct.price)}
-         </Price>
-      </ProductLabel>
       {relatedProducts.map((product, key) =>
          <SelectableProduct
             product={product}
             isSelected={isSelected}
+            isInitialProduct={product.sku === initialProduct.sku}
             onSelectedChange={onSelectedChange}
             key={key}/>
       )}
