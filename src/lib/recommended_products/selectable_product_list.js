@@ -36,6 +36,11 @@ const Price = styled.span`
    font-weight: normal;
 `;
 
+const formatPrice = (price) => price.toLocaleString(undefined, {
+   minimumFractionDigits: 2,
+   maximumFractionDigits: 2
+});
+
 function SelectableProduct({product, isSelected, onSelectedChange}) {
    return (
    <ProductLabelWithCheckbox isSelected={isSelected(product)}>
@@ -44,7 +49,7 @@ function SelectableProduct({product, isSelected, onSelectedChange}) {
          labelMargin={checkboxMargin}
          onChange={({checked}) => onSelectedChange(product.sku, checked)}>
          <ProductName>{product.name}</ProductName>
-         <Price isSelected={isSelected(product)}>${product.price}</Price>
+         <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
       </Checkbox>
    </ProductLabelWithCheckbox>);
 }
@@ -60,7 +65,7 @@ function SelectableProductList({
          <ThisItem>{_js("This Item")}</ThisItem>
          {initialProduct.name}
          <Price isSelected={true}>
-            ${initialProduct.price}
+            ${formatPrice(initialProduct.price)}
          </Price>
       </ProductLabel>
       {relatedProducts.map((product, key) =>

@@ -80,9 +80,14 @@ const RecommendedProductsComponent =
    const [unselected, setUnselected] = useState(() => new Set())
 
    const getTotal = () => {
-      return initialProduct.price +
+      return (
+         initialProduct.price +
          related.map(a => !unselected.has(a.sku) ? a.price : 0)
          .reduce((a, b) => a + b, 0)
+      ).toLocaleString(undefined, {
+         minimumFractionDigits: 2,
+         maximumFractionDigits: 2
+      })
    };
 
    const onSelectedChange = useCallback((sku, checked) => {
