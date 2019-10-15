@@ -71,19 +71,29 @@ const Submit = styled.button`
    border-radius: 5px;
    border: none;
    cursor: pointer;
+
+   &:disabled {
+      background: ${color.gray3};
+   }
 `;
 
 const RecommendedProductsComponent =
 ({addToCart, initialProduct, relatedProducts}) => {
-   const related = useMemo(() => relatedProducts.slice(0,2), [relatedProducts]);
+   const related = useMemo(
+      () => [initialProduct, ...relatedProducts.slice(0,2)],
+      [initialProduct, relatedProducts]);
+
+   const isSelected = (product) => !unselected.has(product.sku);
+   const getSelected = () => related.filter(isSelected);
 
    const [unselected, setUnselected] = useState(() => new Set())
 
-   const getTotal = () => {
-      return initialProduct.price +
-         related.map(a => !unselected.has(a.sku) ? a.price : 0)
-         .reduce((a, b) => a + b, 0)
-   };
+   const getTotal = () => getSelected()
+      .reduce((a, b) => a + b.price, 0)
+      .toLocaleString(undefined, {
+         minimumFractionDigits: 2,
+         maximumFractionDigits: 2
+      });
 
    const onSelectedChange = useCallback((sku, checked) => {
       setUnselected((oldUnselected) => {
@@ -98,13 +108,9 @@ const RecommendedProductsComponent =
    }, [setUnselected]);
 
    const fireAddToCart = useCallback(() => {
-      const selectedProducts =
-       related.filter((product) => !unselected.has(product.sku));
-      selectedProducts.push(initialProduct);
-      addToCart(selectedProducts);
+      addToCart(getSelected());
    }, [initialProduct, related, unselected, addToCart]);
 
-   const isSelected = (product) => !unselected.has(product.sku);
    return (
       <RecommendedProducts className="recommended-products">
          <StyledProductImageGrid
@@ -119,7 +125,7 @@ const RecommendedProductsComponent =
                onSelectedChange={onSelectedChange}/>
             <Wrapper>
                <Price className="total">${getTotal()}</Price>
-               <Submit onClick={fireAddToCart}>
+               <Submit onClick={fireAddToCart} disabled={getSelected().length === 0}>
                   {_js("Add to cart")}
                </Submit>
             </Wrapper>

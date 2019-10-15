@@ -5,7 +5,7 @@ import Label from './label.js';
 import { Checkbox } from '@ifixit/toolbox';
 import { _js } from '@ifixit/localize';
 
-const ProductLabel = styled.span`
+const ProductLabelWithCheckbox = styled.span`
    color: ${props => props.isSelected ? color.gray8 : color.gray5};
    font-size: ${fontSize[2]};
    text-align: left;
@@ -13,18 +13,11 @@ const ProductLabel = styled.span`
    line-height: ${lineHeight.tight};
    margin-bottom: ${space[2]};
    display: block;
-`;
-
-const checkboxMargin = space[2];
-
-const ProductLabelWithCheckbox = styled(ProductLabel)`
    position: relative;
    cursor: pointer;
 `;
 
-const ProductName = styled.span`
-   position: relative;
-`;
+const checkboxMargin = space[2];
 
 const ThisItem = styled(Label)`
    margin-right: ${checkboxMargin};
@@ -36,15 +29,21 @@ const Price = styled.span`
    font-weight: normal;
 `;
 
-function SelectableProduct({product, isSelected, onSelectedChange}) {
+const formatPrice = (price) => price.toLocaleString(undefined, {
+   minimumFractionDigits: 2,
+   maximumFractionDigits: 2
+});
+
+function SelectableProduct({product, isSelected, isInitialProduct, onSelectedChange}) {
    return (
    <ProductLabelWithCheckbox isSelected={isSelected(product)}>
       <Checkbox
          checked={isSelected(product)}
          labelMargin={checkboxMargin}
          onChange={({checked}) => onSelectedChange(product.sku, checked)}>
-         <ProductName>{product.name}</ProductName>
-         <Price isSelected={isSelected(product)}>${product.price}</Price>
+         {isInitialProduct && (<ThisItem>{_js("This Item")}</ThisItem>)}
+         <span>{product.name}</span>
+         <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
       </Checkbox>
    </ProductLabelWithCheckbox>);
 }
@@ -56,17 +55,11 @@ function SelectableProductList({
    onSelectedChange}) {
 
    return (<React.Fragment>
-      <ProductLabel isSelected={true}>
-         <ThisItem>{_js("This Item")}</ThisItem>
-         {initialProduct.name}
-         <Price isSelected={true}>
-            ${initialProduct.price}
-         </Price>
-      </ProductLabel>
       {relatedProducts.map((product, key) =>
          <SelectableProduct
             product={product}
             isSelected={isSelected}
+            isInitialProduct={product.sku === initialProduct.sku}
             onSelectedChange={onSelectedChange}
             key={key}/>
       )}

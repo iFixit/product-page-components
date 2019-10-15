@@ -65,16 +65,12 @@ function ProductImageGrid({
 
    return (
       <Grid>
-         <Block>
-            <ThisItem>{_js("This Item")}</ThisItem>
-            <ProductImage
-               isSelected={true}
-               product={initialProduct}/>
-         </Block>
          {relatedProducts.map((product, key) =>
             <React.Fragment key={key}>
-               <Plus />
+               {product.sku !== initialProduct.sku && (<Plus />)}
                <Block>
+                  {product.sku === initialProduct.sku
+                     && (<ThisItem>{_js("This Item")}</ThisItem>)}
                   <ProductImage
                      isSelected={isSelected(product)}
                      product={product}/>
