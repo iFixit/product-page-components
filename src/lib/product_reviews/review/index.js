@@ -19,7 +19,7 @@ const Container = styled.div`
 `;
 
 const Review = ({ itemcode, review, showBorder, locale, reviewsLink }) => {
-   const { rating, headline, body, body_trunc, author, created_date, modified_date } = review;
+   const { rating, headline, body, body_trunc, author, created_date } = review;
    const date = new Date(created_date * 1000).toLocaleDateString(locale, {
       year: 'numeric',
       month: 'long',
