@@ -64,12 +64,12 @@ class ProductReviews extends Component {
       });
    };
 
-   // Sort reviews by date modified.
+   // Sort reviews by date created.
    get sortedReviews() {
       const { reviews } = this.props.productReviews;
 
       return reviews.sort((a, b) => {
-         return b.modified_date - a.modified_date;
+         return b.created_date - a.created_date;
       });
    }
 
