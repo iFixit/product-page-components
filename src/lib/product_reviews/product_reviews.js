@@ -64,17 +64,8 @@ class ProductReviews extends Component {
       });
    };
 
-   // Sort reviews by date created.
-   get sortedReviews() {
-      const { reviews } = this.props.productReviews;
-
-      return reviews.sort((a, b) => {
-         return b.created_date - a.created_date;
-      });
-   }
-
    get reviewsWithText() {
-      const reviews = this.sortedReviews;
+      const { reviews } = this.props.productReviews;
 
       return reviews.filter(review => review.body || review.headline);
    }
