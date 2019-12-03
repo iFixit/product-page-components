@@ -48,7 +48,7 @@ const BarText = styled.h3`
 
 
 const ReviewBar = ({ count, numReviews, index }) => {
-   const percentage = Math.round(count / numReviews * 100);
+   const percentage = numReviews === 0 ? 0 : Math.round(count / numReviews * 100);
 
    return (
       <BarContainer>
