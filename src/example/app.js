@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
+import exampleReviewsNone from './example_reviews_none.json';
 import exampleProducts from './example_products.json';
 import exampleProductsLongTitles from './example_products_long_titles.json';
 import exampleProductsFloatingPointIssues from './example_products_floating_point_issues.json';
@@ -47,6 +48,13 @@ function App() {
         numReviews={30}
         average={3.2}
         starSize={18}
+      />
+      <hr/>
+      <ProductReviews
+        productReviews={exampleReviewsNone}
+        langid="en"
+        itemcode="IF145-002-4"
+        reviewsLink={reviewsLink}
       />
       <hr/>
       <ProductReviews
