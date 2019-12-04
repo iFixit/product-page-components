@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Avatar, Button } from '@ifixit/toolbox';
 import { _js } from '@ifixit/localize';
@@ -35,6 +36,12 @@ const Author = ({ author, itemcode, reviewsLink }) => {
          )}
       </Container>
    );
+};
+
+Author.propTypes = {
+   author: PropTypes.object.isRequired,
+   itemcode: PropTypes.string,
+   reviewsLink: PropTypes.string,
 };
 
 export default Author;
