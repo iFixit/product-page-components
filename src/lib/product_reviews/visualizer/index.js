@@ -58,7 +58,7 @@ const ReviewCount = styled.h3`
 
 class Visualizer extends Component {
    render() {
-      const { productReviews, itemcode, reviewsLink } = this.props;
+      const { productReviews, reviewsUrl } = this.props;
       const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
@@ -102,9 +102,7 @@ class Visualizer extends Component {
                ))
                .reverse()}
 
-            {reviewsLink && (
-               <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} />
-            )}
+            {reviewsUrl && <ReviewLink reviewsUrl={reviewsUrl} />}
          </Container>
       );
    }
@@ -112,8 +110,7 @@ class Visualizer extends Component {
 
 Visualizer.propTypes = {
    productReviews: PropTypes.object.isRequired,
-   itemcode: PropTypes.string,
-   reviewsLink: PropTypes.string,
+   reviewsUrl: PropTypes.string,
 };
 
 export default Visualizer;

@@ -20,7 +20,7 @@ const Name = styled.h3`
    line-height: 24px;
 `;
 
-const Author = ({ author, itemcode, reviewsLink }) => {
+const Author = ({ author, reviewsUrl }) => {
    const { name, avatar, url, userid, canEdit } = author;
 
    return (
@@ -29,8 +29,8 @@ const Author = ({ author, itemcode, reviewsLink }) => {
             <Avatar src={avatar} size={28} />
             <Name itemProp="author">{name}</Name>
          </Link>
-         {canEdit && reviewsLink && (
-            <a href={`${reviewsLink}/${itemcode}?userid=${userid}`}>
+         {canEdit && reviewsUrl && (
+            <a href={`${reviewsUrl}?userid=${userid}`}>
                <Button size="small">{_js('Edit')}</Button>
             </a>
          )}
@@ -40,8 +40,7 @@ const Author = ({ author, itemcode, reviewsLink }) => {
 
 Author.propTypes = {
    author: PropTypes.object.isRequired,
-   itemcode: PropTypes.string,
-   reviewsLink: PropTypes.string,
+   reviewsUrl: PropTypes.string,
 };
 
 export default Author;

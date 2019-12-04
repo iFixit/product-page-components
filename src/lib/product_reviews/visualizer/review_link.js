@@ -9,12 +9,10 @@ const Container = styled.div`
    margin-top: ${spacing[4]};
 `;
 
-const ReviewLink = ({ itemcode, reviewsLink }) => {
-   const url = `${reviewsLink}/${itemcode}`;
-
+const ReviewLink = ({ reviewsUrl }) => {
    return (
       <Container>
-         <Button href={url} fullWidth design="primary">{_js('Write a product review')}</Button>
+         <Button href={reviewsUrl} fullWidth design="primary">{_js('Write a product review')}</Button>
       </Container>
    );
 };

@@ -72,6 +72,7 @@ class ProductReviews extends Component {
 
    render() {
       const { itemcode, productReviews, reviewsLink } = this.props;
+      const reviewsUrl = (reviewsLink && itemcode) && `${reviewsLink}/${itemcode}`;
       const { itemLimit } = this.state;
       const reviewsWithText = this.reviewsWithText;
       const noReviews = reviewsWithText.length === 0;
@@ -80,8 +81,7 @@ class ProductReviews extends Component {
          <Container id="productReviews">
             <Visualizer
                productReviews={productReviews}
-               itemcode={itemcode}
-               reviewsLink={reviewsLink}
+               reviewsUrl={reviewsUrl}
             />
             <ReviewsContainer noReviews={noReviews}>
                {noReviews && (
@@ -94,13 +94,12 @@ class ProductReviews extends Component {
                      return (
                         <Review
                            key={`${review.author.name}-${index}`}
-                           itemcode={itemcode}
                            review={review}
                            showBorder={
                               reviewsWithText.length > 1 &&
                               index < reviewsWithText.length - 1
                            }
-                           reviewsLink={reviewsLink}
+                           reviewsUrl={reviewsUrl}
                         />
                      );
                   }
