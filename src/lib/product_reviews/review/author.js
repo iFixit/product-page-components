@@ -29,7 +29,7 @@ const Author = ({ author, itemcode, reviewsLink }) => {
             <Avatar src={avatar} size={28} />
             <Name itemProp="author">{name}</Name>
          </Link>
-         {canEdit && (
+         {canEdit && reviewsLink && (
             <a href={`${reviewsLink}/${itemcode}?userid=${userid}`}>
                <Button size="small">{_js('Edit')}</Button>
             </a>

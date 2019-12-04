@@ -102,7 +102,9 @@ class Visualizer extends Component {
                ))
                .reverse()}
 
-            <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} />
+            {reviewsLink && (
+               <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} />
+            )}
          </Container>
       );
    }
