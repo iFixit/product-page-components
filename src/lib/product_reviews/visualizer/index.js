@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Stars, constants } from '@ifixit/toolbox';
 import { ___p } from '@ifixit/localize';
@@ -106,5 +107,11 @@ class Visualizer extends Component {
       );
    }
 }
+
+Visualizer.propTypes = {
+   productReviews: PropTypes.object.isRequired,
+   itemcode: PropTypes.string,
+   reviewsLink: PropTypes.string,
+};
 
 export default Visualizer;
