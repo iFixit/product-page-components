@@ -125,8 +125,9 @@ class ProductReviews extends Component {
 }
 
 ProductReviews.propTypes = {
-   itemcode: PropTypes.string.isRequired,
-   reviews: PropTypes.arrayOf(PropTypes.object)
-}
+   productReviews: PropTypes.object.isRequired,
+   itemcode: PropTypes.string,
+   reviewsLink: PropTypes.string,
+};
 
 export default ProductReviews;
