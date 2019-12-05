@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Stars, constants } from '@ifixit/toolbox';
 import { ___p } from '@ifixit/localize';
@@ -57,12 +58,15 @@ const ReviewCount = styled.h3`
 
 class Visualizer extends Component {
    render() {
-      const { productReviews, itemcode, reviewsLink } = this.props;
+      const { productReviews, reviewsUrl } = this.props;
       const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
       return (
-         <Container itemProp="aggregateRating" itemScope itemType="http://schema.org/AggregateRating">
+         <Container
+            itemProp="aggregateRating"
+            itemScope
+            itemType="http://schema.org/AggregateRating">
             <meta itemProp="worstRating" content="1" />
             <meta itemProp="bestRating" content="5" />
 
@@ -73,30 +77,40 @@ class Visualizer extends Component {
                </div>
 
                <StarsContainer>
-                  <Stars rating={average} size={23} activeColor={color.blue[4]} />
+                  <Stars
+                     rating={average}
+                     size={23}
+                     activeColor={color.blue[4]}
+                  />
                </StarsContainer>
 
                <ReviewCount itemProp="reviewCount" content={numReviews}>
                   {/* Translators: Number of reviews */}
-                  {___p(numReviews, '%1 review', '%1 reviews',  numReviews)}
+                  {___p(numReviews, '%1 review', '%1 reviews', numReviews)}
                </ReviewCount>
             </ContainerHeader>
 
-            {Object.keys(groupedReviews).sort()
-               .map((rating) => (
+            {Object.keys(groupedReviews)
+               .sort()
+               .map(rating => (
                   <ReviewBar
-                    key={`stars-bar-container-${rating}`}
-                    index={rating}
-                    count={groupedReviews[rating]}
-                    numReviews={numReviews}
+                     key={`stars-bar-container-${rating}`}
+                     index={rating}
+                     count={groupedReviews[rating]}
+                     numReviews={numReviews}
                   />
                ))
                .reverse()}
 
-            <ReviewLink itemcode={itemcode} reviewsLink={reviewsLink} />
+            {reviewsUrl && <ReviewLink reviewsUrl={reviewsUrl} />}
          </Container>
       );
    }
 }
+
+Visualizer.propTypes = {
+   productReviews: PropTypes.object.isRequired,
+   reviewsUrl: PropTypes.string,
+};
 
 export default Visualizer;

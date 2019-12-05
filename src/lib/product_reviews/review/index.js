@@ -18,7 +18,7 @@ const Container = styled.div`
    }
 `;
 
-const Review = ({ itemcode, review, showBorder, locale, reviewsLink }) => {
+const Review = ({ review, showBorder, locale, reviewsUrl }) => {
    const { rating, headline, body, body_trunc, author, created_date } = review;
    const date = new Date(created_date * 1000).toLocaleDateString(locale, {
       year: 'numeric',
@@ -32,7 +32,7 @@ const Review = ({ itemcode, review, showBorder, locale, reviewsLink }) => {
          itemScope
          itemType="http://schema.org/Review"
          showBorder={showBorder}>
-         <Author author={author} itemcode={itemcode} reviewsLink={reviewsLink} />
+         <Author author={author} reviewsUrl={reviewsUrl} />
          <Header rating={rating} headline={headline} date={date} />
          <ReviewBody body={body} body_trunc={body_trunc} />
       </Container>

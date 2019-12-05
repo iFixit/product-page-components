@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Avatar, Button } from '@ifixit/toolbox';
 import { _js } from '@ifixit/localize';
@@ -19,7 +20,7 @@ const Name = styled.h3`
    line-height: 24px;
 `;
 
-const Author = ({ author, itemcode, reviewsLink }) => {
+const Author = ({ author, reviewsUrl }) => {
    const { name, avatar, url, userid, canEdit } = author;
 
    return (
@@ -28,13 +29,18 @@ const Author = ({ author, itemcode, reviewsLink }) => {
             <Avatar src={avatar} size={28} />
             <Name itemProp="author">{name}</Name>
          </Link>
-         {canEdit && (
-            <a href={`${reviewsLink}/${itemcode}?userid=${userid}`}>
+         {canEdit && reviewsUrl && (
+            <a href={`${reviewsUrl}?userid=${userid}`}>
                <Button size="small">{_js('Edit')}</Button>
             </a>
          )}
       </Container>
    );
+};
+
+Author.propTypes = {
+   author: PropTypes.object.isRequired,
+   reviewsUrl: PropTypes.string,
 };
 
 export default Author;
