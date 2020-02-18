@@ -27,7 +27,9 @@ const Author = ({ author, reviewsUrl }) => {
       <Container>
          <Link href={url}>
             <Avatar src={avatar} size={28} />
-            <Name itemProp="author">{name}</Name>
+            <div itemprop="author" itemscope="" itemtype="https://schema.org/Person">
+               <Name itemprop="name">{name}</Name>
+            </div>
          </Link>
          {canEdit && reviewsUrl && (
             <a href={`${reviewsUrl}?userid=${userid}`}>
