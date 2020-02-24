@@ -29,6 +29,12 @@ const Price = styled.span`
    font-weight: normal;
 `;
 
+const StyledLink = styled.a`
+   cursor: pointer;
+   color: inherit;
+   text-decoration: none !important;
+`;
+
 const formatPrice = price =>
    price.toLocaleString(undefined, {
       minimumFractionDigits: 2,
@@ -44,7 +50,11 @@ function SelectableProduct({ product, isSelected, isInitialProduct, onSelectedCh
             onChange={({ checked }) => onSelectedChange(product.sku, checked)}
          >
             {isInitialProduct && <ThisItem>{_js('This Item')}</ThisItem>}
-            <span>{product.name}</span>
+            {product.link ? (
+               <StyledLink href={product.link}>{product.name}</StyledLink>
+            ) : (
+               <span>{product.name}</span>
+            )}
             <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
          </Checkbox>
       </ProductLabelWithCheckbox>
