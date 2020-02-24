@@ -1,5 +1,7 @@
 # product-page-components
 
+https://www.npmjs.com/package/@ifixit/product-page-components
+
 A collection of react components for the iFixit product page.
 
 ## Requirements
