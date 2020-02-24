@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "styled-components";
-import { breakpoint, color, borderRadius, shadow } from "@core-ds/primitives";
-import Label from "./label.js";
-import { Plus as PlusIcon } from "@core-ds/icons/16";
-import { _js } from "@ifixit/localize";
+import React from 'react';
+import styled from 'styled-components';
+import { breakpoint, color, borderRadius, shadow } from '@core-ds/primitives';
+import Label from './label.js';
+import { Plus as PlusIcon } from '@core-ds/icons/16';
+import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 const blockPadding = 10;
 const thisItemMargin = 5;
-const imageWidth = "160px";
+const imageWidth = '160px';
 
 const Grid = styled.div`
    display: flex;
@@ -39,7 +39,7 @@ const ThisItem = styled(Label)`
 const Image = styled.img`
    width: 100%;
    transition: opacity ease 0.5s;
-   opacity: ${props => (props.isSelected ? "1" : "0.5")};
+   opacity: ${props => (props.isSelected ? '1' : '0.5')};
    border-radius: ${borderRadius.md};
    box-shadow: ${shadow[1]};
 `;
@@ -51,9 +51,7 @@ const Plus = styled(PlusIcon)`
 `;
 
 function ProductImage({ product, isSelected }) {
-   const image = (
-      <Image isSelected={isSelected} src={product.image} alt={product.title} />
-   );
+   const image = <Image isSelected={isSelected} src={product.image} alt={product.title} />;
 
    return product.link ? <a href={product.link}>{image}</a> : image;
 }
@@ -65,13 +63,8 @@ function ProductImageGrid({ initialProduct, relatedProducts, isSelected }) {
             <React.Fragment key={key}>
                {product.sku !== initialProduct.sku && <Plus />}
                <Block>
-                  {product.sku === initialProduct.sku && (
-                     <ThisItem>{_js("This Item")}</ThisItem>
-                  )}
-                  <ProductImage
-                     isSelected={isSelected(product)}
-                     product={product}
-                  />
+                  {product.sku === initialProduct.sku && <ThisItem>{_js('This Item')}</ThisItem>}
+                  <ProductImage isSelected={isSelected(product)} product={product} />
                </Block>
             </React.Fragment>
          ))}

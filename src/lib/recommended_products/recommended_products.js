@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useCallback } from "react";
-import styled from "styled-components";
-import { breakpoint, color, fontSize } from "@core-ds/primitives";
-import SelectableProductList from "./selectable_product_list.js";
-import ProductImageGrid from "./product_image_grid.js";
-import { _js } from "@ifixit/localize";
+import React, { useState, useMemo, useCallback } from 'react';
+import styled from 'styled-components';
+import { breakpoint, color, fontSize } from '@core-ds/primitives';
+import SelectableProductList from './selectable_product_list.js';
+import ProductImageGrid from './product_image_grid.js';
+import { _js } from '@ifixit/localize';
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 
@@ -77,25 +77,16 @@ const Submit = styled.button`
    }
 `;
 
-const RecommendedProductsComponent = ({
-   addToCart,
-   initialProduct,
-   relatedProducts
-}) => {
-   const related = useMemo(
-      () => [initialProduct, ...relatedProducts.slice(0, 2)],
-      [initialProduct, relatedProducts]
-   );
+const RecommendedProductsComponent = ({ addToCart, initialProduct, relatedProducts }) => {
+   const related = useMemo(() => [initialProduct, ...relatedProducts.slice(0, 2)], [
+      initialProduct,
+      relatedProducts,
+   ]);
 
    const [unselected, setUnselected] = useState(() => new Set());
 
-   const isSelected = useCallback(product => !unselected.has(product.sku), [
-      unselected
-   ]);
-   const getSelected = useCallback(() => related.filter(isSelected), [
-      related,
-      isSelected
-   ]);
+   const isSelected = useCallback(product => !unselected.has(product.sku), [unselected]);
+   const getSelected = useCallback(() => related.filter(isSelected), [related, isSelected]);
 
    const getTotal = useCallback(
       () =>
@@ -103,7 +94,7 @@ const RecommendedProductsComponent = ({
             .reduce((a, b) => a + b.price, 0)
             .toLocaleString(undefined, {
                minimumFractionDigits: 2,
-               maximumFractionDigits: 2
+               maximumFractionDigits: 2,
             }),
       [getSelected]
    );
@@ -143,11 +134,8 @@ const RecommendedProductsComponent = ({
             />
             <Wrapper>
                <Price className="total">${getTotal()}</Price>
-               <Submit
-                  onClick={fireAddToCart}
-                  disabled={getSelected().length === 0}
-               >
-                  {_js("Add to cart")}
+               <Submit onClick={fireAddToCart} disabled={getSelected().length === 0}>
+                  {_js('Add to cart')}
                </Submit>
             </Wrapper>
          </Details>

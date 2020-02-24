@@ -1,9 +1,9 @@
-import React from "react";
-import styled from "styled-components";
-import { space, color, lineHeight, fontSize } from "@core-ds/primitives";
-import Label from "./label.js";
-import { Checkbox } from "@ifixit/toolbox";
-import { _js } from "@ifixit/localize";
+import React from 'react';
+import styled from 'styled-components';
+import { space, color, lineHeight, fontSize } from '@core-ds/primitives';
+import Label from './label.js';
+import { Checkbox } from '@ifixit/toolbox';
+import { _js } from '@ifixit/localize';
 
 const ProductLabelWithCheckbox = styled.span`
    color: ${props => (props.isSelected ? color.gray8 : color.gray5)};
@@ -32,15 +32,10 @@ const Price = styled.span`
 const formatPrice = price =>
    price.toLocaleString(undefined, {
       minimumFractionDigits: 2,
-      maximumFractionDigits: 2
+      maximumFractionDigits: 2,
    });
 
-function SelectableProduct({
-   product,
-   isSelected,
-   isInitialProduct,
-   onSelectedChange
-}) {
+function SelectableProduct({ product, isSelected, isInitialProduct, onSelectedChange }) {
    return (
       <ProductLabelWithCheckbox isSelected={isSelected(product)}>
          <Checkbox
@@ -48,22 +43,15 @@ function SelectableProduct({
             labelMargin={checkboxMargin}
             onChange={({ checked }) => onSelectedChange(product.sku, checked)}
          >
-            {isInitialProduct && <ThisItem>{_js("This Item")}</ThisItem>}
+            {isInitialProduct && <ThisItem>{_js('This Item')}</ThisItem>}
             <span>{product.name}</span>
-            <Price isSelected={isSelected(product)}>
-               ${formatPrice(product.price)}
-            </Price>
+            <Price isSelected={isSelected(product)}>${formatPrice(product.price)}</Price>
          </Checkbox>
       </ProductLabelWithCheckbox>
    );
 }
 
-function SelectableProductList({
-   initialProduct,
-   relatedProducts,
-   isSelected,
-   onSelectedChange
-}) {
+function SelectableProductList({ initialProduct, relatedProducts, isSelected, onSelectedChange }) {
    return (
       <React.Fragment>
          {relatedProducts.map((product, key) => (
