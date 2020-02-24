@@ -83,17 +83,26 @@ const RecommendedProductsComponent =
       () => [initialProduct, ...relatedProducts.slice(0,2)],
       [initialProduct, relatedProducts]);
 
-   const isSelected = (product) => !unselected.has(product.sku);
-   const getSelected = () => related.filter(isSelected);
+   const [unselected, setUnselected] = useState(() => new Set());
 
-   const [unselected, setUnselected] = useState(() => new Set())
+   const isSelected = useCallback(product => !unselected.has(product.sku), [
+      unselected
+   ]);
+   const getSelected = useCallback(() => related.filter(isSelected), [
+      related,
+      isSelected
+   ]);
 
-   const getTotal = () => getSelected()
-      .reduce((a, b) => a + b.price, 0)
-      .toLocaleString(undefined, {
-         minimumFractionDigits: 2,
-         maximumFractionDigits: 2
-      });
+   const getTotal = useCallback(
+      () =>
+         getSelected()
+            .reduce((a, b) => a + b.price, 0)
+            .toLocaleString(undefined, {
+               minimumFractionDigits: 2,
+               maximumFractionDigits: 2
+            }),
+      [getSelected]
+   );
 
    const onSelectedChange = useCallback((sku, checked) => {
       setUnselected((oldUnselected) => {
@@ -109,7 +118,7 @@ const RecommendedProductsComponent =
 
    const fireAddToCart = useCallback(() => {
       addToCart(getSelected());
-   }, [initialProduct, related, unselected, addToCart]);
+   }, [addToCart, getSelected]);
 
    return (
       <RecommendedProducts className="recommended-products">
