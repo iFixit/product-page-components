@@ -1,9 +1,9 @@
-import React, { useState, useMemo, useCallback } from 'react';
-import styled from 'styled-components';
-import { breakpoint, color, fontSize } from '@core-ds/primitives'
-import SelectableProductList from './selectable_product_list.js';
-import ProductImageGrid from './product_image_grid.js';
-import { _js } from '@ifixit/localize';
+import React, { useState, useMemo, useCallback } from "react";
+import styled from "styled-components";
+import { breakpoint, color, fontSize } from "@core-ds/primitives";
+import SelectableProductList from "./selectable_product_list.js";
+import ProductImageGrid from "./product_image_grid.js";
+import { _js } from "@ifixit/localize";
 
 const ABOVE_MOBILE = `@media screen and (min-width: ${breakpoint.md})`;
 
@@ -42,7 +42,7 @@ const StyledProductImageGrid = styled(ProductImageGrid)`
 `;
 
 const Price = styled.span`
-   color: ${props => props.isSelected ? color.redDark1 : color.gray5};
+   color: ${props => (props.isSelected ? color.redDark1 : color.gray5)};
    padding: 0 5px;
    font-size: ${fontSize[1]};
 `;
@@ -77,11 +77,15 @@ const Submit = styled.button`
    }
 `;
 
-const RecommendedProductsComponent =
-({addToCart, initialProduct, relatedProducts}) => {
+const RecommendedProductsComponent = ({
+   addToCart,
+   initialProduct,
+   relatedProducts
+}) => {
    const related = useMemo(
-      () => [initialProduct, ...relatedProducts.slice(0,2)],
-      [initialProduct, relatedProducts]);
+      () => [initialProduct, ...relatedProducts.slice(0, 2)],
+      [initialProduct, relatedProducts]
+   );
 
    const [unselected, setUnselected] = useState(() => new Set());
 
@@ -104,17 +108,20 @@ const RecommendedProductsComponent =
       [getSelected]
    );
 
-   const onSelectedChange = useCallback((sku, checked) => {
-      setUnselected((oldUnselected) => {
-         const unselected = new Set(oldUnselected);
-         if (checked) {
-            unselected.delete(sku);
-         } else {
-            unselected.add(sku);
-         }
-         return unselected;
-      });
-   }, [setUnselected]);
+   const onSelectedChange = useCallback(
+      (sku, checked) => {
+         setUnselected(oldUnselected => {
+            const unselected = new Set(oldUnselected);
+            if (checked) {
+               unselected.delete(sku);
+            } else {
+               unselected.add(sku);
+            }
+            return unselected;
+         });
+      },
+      [setUnselected]
+   );
 
    const fireAddToCart = useCallback(() => {
       addToCart(getSelected());
@@ -125,21 +132,27 @@ const RecommendedProductsComponent =
          <StyledProductImageGrid
             initialProduct={initialProduct}
             relatedProducts={related}
-            isSelected={isSelected} />
+            isSelected={isSelected}
+         />
          <Details>
             <SelectableProductList
                initialProduct={initialProduct}
                relatedProducts={related}
                isSelected={isSelected}
-               onSelectedChange={onSelectedChange}/>
+               onSelectedChange={onSelectedChange}
+            />
             <Wrapper>
                <Price className="total">${getTotal()}</Price>
-               <Submit onClick={fireAddToCart} disabled={getSelected().length === 0}>
+               <Submit
+                  onClick={fireAddToCart}
+                  disabled={getSelected().length === 0}
+               >
                   {_js("Add to cart")}
                </Submit>
             </Wrapper>
          </Details>
-      </RecommendedProducts>);
-}
+      </RecommendedProducts>
+   );
+};
 
 export default RecommendedProductsComponent;
