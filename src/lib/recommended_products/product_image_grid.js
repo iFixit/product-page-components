@@ -51,9 +51,11 @@ const Plus = styled(PlusIcon)`
 `;
 
 function ProductImage({ product, isSelected }) {
-   return (
+   const image = (
       <Image isSelected={isSelected} src={product.image} alt={product.title} />
    );
+
+   return product.link ? <a href={product.link}>{image}</a> : image;
 }
 
 function ProductImageGrid({ initialProduct, relatedProducts, isSelected }) {
