@@ -10,13 +10,15 @@
             "name": "Magnetic Project Mat",
             "image": "https://placehold.it/160x160",
             "price": 19.99,
-            "sku": 4
+            "sku": 4,
+            "link": "/Store/Tools/Magnetic-Project-Mat/IF145-167"
         },
         {
             "name": "Mahi Driver Kit - 48bit Driver Kit",
             "image": "https://placehold.it/160x160",
             "price": 29.99,
-            "sku": 3
+            "sku": 3,
+            "link": "/Store/Tools/Mahi-Driver-Kit--48-Bit-Driver-Kit/IF145-391"
         },
         {
             "name": "Mahi Driver Kit - 34bit Driver Kit",

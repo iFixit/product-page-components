@@ -39,7 +39,7 @@ const ThisItem = styled(Label)`
 const Image = styled.img`
    width: 100%;
    transition: opacity ease 0.5s;
-   opacity: ${props => props.isSelected ? '1' : '0.5'};
+   opacity: ${props => (props.isSelected ? '1' : '0.5')};
    border-radius: ${borderRadius.md};
    box-shadow: ${shadow[1]};
 `;
@@ -50,33 +50,24 @@ const Plus = styled(PlusIcon)`
    margin: 20px 2.5%;
 `;
 
-function ProductImage({product, isSelected}) {
-   return (
-      <Image isSelected={isSelected}
-         src={product.image}
-         alt={product.title} />
-   );
+function ProductImage({ product, isSelected }) {
+   const image = <Image isSelected={isSelected} src={product.image} alt={product.title} />;
+
+   return product.link ? <a href={product.link}>{image}</a> : image;
 }
 
-function ProductImageGrid({
-   initialProduct,
-   relatedProducts,
-   isSelected}) {
-
+function ProductImageGrid({ initialProduct, relatedProducts, isSelected }) {
    return (
       <Grid>
-         {relatedProducts.map((product, key) =>
+         {relatedProducts.map((product, key) => (
             <React.Fragment key={key}>
-               {product.sku !== initialProduct.sku && (<Plus />)}
+               {product.sku !== initialProduct.sku && <Plus />}
                <Block>
-                  {product.sku === initialProduct.sku
-                     && (<ThisItem>{_js("This Item")}</ThisItem>)}
-                  <ProductImage
-                     isSelected={isSelected(product)}
-                     product={product}/>
+                  {product.sku === initialProduct.sku && <ThisItem>{_js('This Item')}</ThisItem>}
+                  <ProductImage isSelected={isSelected(product)} product={product} />
                </Block>
             </React.Fragment>
-         )}
+         ))}
       </Grid>
    );
 }
