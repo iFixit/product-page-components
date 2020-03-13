@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<section
+  className="recommended-products sc-iwsKbI fOlZUo"
+>
+  <div
+    className="sc-EHOje gcSuga"
+  >
+    <div
+      className="sc-bZQynM dsuwZp"
+    >
+      <span
+        className="sc-bdVaJa sc-gzVnrw ifthfS"
+      >
+        This Item
+      </span>
+      <img
+        className="sc-htoDjs xGZIl"
+        src="https://placehold.it/160x160"
+      />
+    </div>
+    <svg
+      className="sc-dnqmqq eiKoVh"
+      fill="currentColor"
+      height={16}
+      width={16}
+    >
+      <path
+        clipRule="evenodd"
+        d="M13 7H9V3c0-.55-.45-1-1-1s-1 .45-1 1v4H3c-.55 0-1 .45-1 1s.45 1 1 1h4v4c0 .55.45 1 1 1s1-.45 1-1V9h4c.55 0 1-.45 1-1s-.45-1-1-1z"
+        fillRule="evenodd"
+      />
+    </svg>
+    <div
+      className="sc-bZQynM dsuwZp"
+    >
+      <a
+        href="/Store/Tools/Magnetic-Project-Mat/IF145-167"
+      >
+        <img
+          className="sc-htoDjs xGZIl"
+          src="https://placehold.it/160x160"
+        />
+      </a>
+    </div>
+    <svg
+      className="sc-dnqmqq eiKoVh"
+      fill="currentColor"
+      height={16}
+      width={16}
+    >
+      <path
+        clipRule="evenodd"
+        d="M13 7H9V3c0-.55-.45-1-1-1s-1 .45-1 1v4H3c-.55 0-1 .45-1 1s.45 1 1 1h4v4c0 .55.45 1 1 1s1-.45 1-1V9h4c.55 0 1-.45 1-1s-.45-1-1-1z"
+        fillRule="evenodd"
+      />
+    </svg>
+    <div
+      className="sc-bZQynM dsuwZp"
+    >
+      <a
+        href="/Store/Tools/Mahi-Driver-Kit--48-Bit-Driver-Kit/IF145-391"
+      >
+        <img
+          className="sc-htoDjs xGZIl"
+          src="https://placehold.it/160x160"
+        />
+      </a>
+    </div>
+  </div>
+  <section
+    className="sc-gZMcBi byBETm"
+  >
+    <span
+      className="sc-bwzfXH fEyZFQ"
+    >
+      <label
+        className="css-1jorkc5"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <input
+          checked={true}
+          className="css-9g2nie"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInvalid={[Function]}
+          type="checkbox"
+          value="on"
+        />
+        <span
+          className="css-69tn4w"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
+            }
+          }
+        />
+        <span
+          className="css-2c2um8"
+        >
+          <span
+            className="sc-bdVaJa sc-htpNat cQGjFK"
+          >
+            This Item
+          </span>
+          <span>
+            Pro Tech Toolkit
+          </span>
+          <span
+            className="sc-bxivhb iKJAQO"
+          >
+            $
+            59.99
+          </span>
+        </span>
+      </label>
+    </span>
+    <span
+      className="sc-bwzfXH fEyZFQ"
+    >
+      <label
+        className="css-1jorkc5"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <input
+          checked={true}
+          className="css-9g2nie"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInvalid={[Function]}
+          type="checkbox"
+          value="on"
+        />
+        <span
+          className="css-69tn4w"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
+            }
+          }
+        />
+        <span
+          className="css-2c2um8"
+        >
+          <a
+            className="sc-ifAKCX cinRfz"
+            href="/Store/Tools/Magnetic-Project-Mat/IF145-167"
+          >
+            Magnetic Project Mat
+          </a>
+          <span
+            className="sc-bxivhb iKJAQO"
+          >
+            $
+            19.99
+          </span>
+        </span>
+      </label>
+    </span>
+    <span
+      className="sc-bwzfXH fEyZFQ"
+    >
+      <label
+        className="css-1jorkc5"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <input
+          checked={true}
+          className="css-9g2nie"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInvalid={[Function]}
+          type="checkbox"
+          value="on"
+        />
+        <span
+          className="css-69tn4w"
+          dangerouslySetInnerHTML={
+            Object {
+              "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
+            }
+          }
+        />
+        <span
+          className="css-2c2um8"
+        >
+          <a
+            className="sc-ifAKCX cinRfz"
+            href="/Store/Tools/Mahi-Driver-Kit--48-Bit-Driver-Kit/IF145-391"
+          >
+            Mahi Driver Kit - 48bit Driver Kit
+          </a>
+          <span
+            className="sc-bxivhb iKJAQO"
+          >
+            $
+            29.99
+          </span>
+        </span>
+      </label>
+    </span>
+    <div
+      className="sc-jTzLTM bnqZXR"
+    >
+      <span
+        className="total sc-VigVT luXCp"
+      >
+        $
+        109.97
+      </span>
+      <button
+        className="sc-fjdhpX drcVxA"
+        disabled={false}
+        onClick={[Function]}
+      >
+        Add to cart
+      </button>
+    </div>
+  </section>
+</section>
+`;
