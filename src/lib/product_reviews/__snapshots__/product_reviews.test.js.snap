@@ -1,0 +1,471 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-kgoBCf cxdRLc"
+  id="productReviews"
+>
+  <div
+    className="sc-jTzLTM sWhFw"
+    itemProp="aggregateRating"
+    itemScope={true}
+    itemType="http://schema.org/AggregateRating"
+  >
+    <meta
+      content="1"
+      itemProp="worstRating"
+    />
+    <meta
+      content="5"
+      itemProp="bestRating"
+    />
+    <div
+      className="sc-fjdhpX hXChni"
+    >
+      <div>
+        <span
+          className="sc-jzJRlG ghBeOu"
+          itemProp="ratingValue"
+        >
+          0
+        </span>
+        <span
+          className="sc-cSHVUG fornXZ"
+        >
+          / 5
+        </span>
+      </div>
+      <div
+        className="sc-kAzzGY cNQPiq"
+      >
+        <div
+          className="star-ratings"
+          style={
+            Object {
+              "boxSizing": "border-box",
+              "display": "inline-block",
+              "position": "relative",
+            }
+          }
+          title="0 Stars"
+        >
+          <svg
+            className="star-grad"
+            style={
+              Object {
+                "height": "0",
+                "position": "absolute",
+                "visibility": "hidden",
+                "width": "0",
+                "zIndex": "0",
+              }
+            }
+          >
+            <defs>
+              <linearGradient
+                id="starGrad172834656613728"
+                x1="0%"
+                x2="100%"
+                y1="0%"
+                y2="0%"
+              >
+                <stop
+                  className="stop-color-first"
+                  offset="0%"
+                  style={
+                    Object {
+                      "stopColor": "#0071CE",
+                      "stopOpacity": "1",
+                    }
+                  }
+                />
+                <stop
+                  className="stop-color-first"
+                  offset="0%"
+                  style={
+                    Object {
+                      "stopColor": "#0071CE",
+                      "stopOpacity": "1",
+                    }
+                  }
+                />
+                <stop
+                  className="stop-color-final"
+                  offset="0%"
+                  style={
+                    Object {
+                      "stopColor": "#E1E1E2",
+                      "stopOpacity": "1",
+                    }
+                  }
+                />
+                <stop
+                  className="stop-color-final"
+                  offset="100%"
+                  style={
+                    Object {
+                      "stopColor": "#E1E1E2",
+                      "stopOpacity": "1",
+                    }
+                  }
+                />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div
+            className="star-container"
+            onClick={null}
+            onMouseEnter={null}
+            onMouseLeave={null}
+            style={
+              Object {
+                "cursor": undefined,
+                "display": "inline-block",
+                "paddingLeft": undefined,
+                "paddingRight": "0px",
+                "position": "relative",
+                "verticalAlign": "middle",
+              }
+            }
+          >
+            <svg
+              className="widget-svg"
+              style={
+                Object {
+                  "height": "23px",
+                  "transform": undefined,
+                  "transition": "transform .2s ease-in-out",
+                  "width": "23px",
+                }
+              }
+              viewBox="0 0 51 48"
+            >
+              <path
+                className="star"
+                d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                style={
+                  Object {
+                    "fill": "#E1E1E2",
+                    "transition": "fill .2s ease-in-out",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          <div
+            className="star-container"
+            onClick={null}
+            onMouseEnter={null}
+            onMouseLeave={null}
+            style={
+              Object {
+                "cursor": undefined,
+                "display": "inline-block",
+                "paddingLeft": "0px",
+                "paddingRight": "0px",
+                "position": "relative",
+                "verticalAlign": "middle",
+              }
+            }
+          >
+            <svg
+              className="widget-svg"
+              style={
+                Object {
+                  "height": "23px",
+                  "transform": undefined,
+                  "transition": "transform .2s ease-in-out",
+                  "width": "23px",
+                }
+              }
+              viewBox="0 0 51 48"
+            >
+              <path
+                className="star"
+                d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                style={
+                  Object {
+                    "fill": "#E1E1E2",
+                    "transition": "fill .2s ease-in-out",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          <div
+            className="star-container"
+            onClick={null}
+            onMouseEnter={null}
+            onMouseLeave={null}
+            style={
+              Object {
+                "cursor": undefined,
+                "display": "inline-block",
+                "paddingLeft": "0px",
+                "paddingRight": "0px",
+                "position": "relative",
+                "verticalAlign": "middle",
+              }
+            }
+          >
+            <svg
+              className="widget-svg"
+              style={
+                Object {
+                  "height": "23px",
+                  "transform": undefined,
+                  "transition": "transform .2s ease-in-out",
+                  "width": "23px",
+                }
+              }
+              viewBox="0 0 51 48"
+            >
+              <path
+                className="star"
+                d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                style={
+                  Object {
+                    "fill": "#E1E1E2",
+                    "transition": "fill .2s ease-in-out",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          <div
+            className="star-container"
+            onClick={null}
+            onMouseEnter={null}
+            onMouseLeave={null}
+            style={
+              Object {
+                "cursor": undefined,
+                "display": "inline-block",
+                "paddingLeft": "0px",
+                "paddingRight": "0px",
+                "position": "relative",
+                "verticalAlign": "middle",
+              }
+            }
+          >
+            <svg
+              className="widget-svg"
+              style={
+                Object {
+                  "height": "23px",
+                  "transform": undefined,
+                  "transition": "transform .2s ease-in-out",
+                  "width": "23px",
+                }
+              }
+              viewBox="0 0 51 48"
+            >
+              <path
+                className="star"
+                d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                style={
+                  Object {
+                    "fill": "#E1E1E2",
+                    "transition": "fill .2s ease-in-out",
+                  }
+                }
+              />
+            </svg>
+          </div>
+          <div
+            className="star-container"
+            onClick={null}
+            onMouseEnter={null}
+            onMouseLeave={null}
+            style={
+              Object {
+                "cursor": undefined,
+                "display": "inline-block",
+                "paddingLeft": "0px",
+                "paddingRight": undefined,
+                "position": "relative",
+                "verticalAlign": "middle",
+              }
+            }
+          >
+            <svg
+              className="widget-svg"
+              style={
+                Object {
+                  "height": "23px",
+                  "transform": undefined,
+                  "transition": "transform .2s ease-in-out",
+                  "width": "23px",
+                }
+              }
+              viewBox="0 0 51 48"
+            >
+              <path
+                className="star"
+                d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
+                style={
+                  Object {
+                    "fill": "#E1E1E2",
+                    "transition": "fill .2s ease-in-out",
+                  }
+                }
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <h3
+        className="sc-chPdSV eYewvo"
+        content={0}
+        itemProp="reviewCount"
+      >
+        0 reviews
+      </h3>
+    </div>
+    <div
+      className="sc-dnqmqq bpYwvL"
+    >
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        5 star
+      </h3>
+      <div
+        className="sc-iwsKbI jFXoVP"
+      >
+        <div
+          className="sc-gZMcBi ejiNOe"
+          max={0}
+          value={0}
+        />
+      </div>
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        0%
+      </h3>
+    </div>
+    <div
+      className="sc-dnqmqq bpYwvL"
+    >
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        4 star
+      </h3>
+      <div
+        className="sc-iwsKbI jFXoVP"
+      >
+        <div
+          className="sc-gZMcBi ejiNOe"
+          max={0}
+          value={0}
+        />
+      </div>
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        0%
+      </h3>
+    </div>
+    <div
+      className="sc-dnqmqq bpYwvL"
+    >
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        3 star
+      </h3>
+      <div
+        className="sc-iwsKbI jFXoVP"
+      >
+        <div
+          className="sc-gZMcBi ejiNOe"
+          max={0}
+          value={0}
+        />
+      </div>
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        0%
+      </h3>
+    </div>
+    <div
+      className="sc-dnqmqq bpYwvL"
+    >
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        2 star
+      </h3>
+      <div
+        className="sc-iwsKbI jFXoVP"
+      >
+        <div
+          className="sc-gZMcBi ejiNOe"
+          max={0}
+          value={0}
+        />
+      </div>
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        0%
+      </h3>
+    </div>
+    <div
+      className="sc-dnqmqq bpYwvL"
+    >
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        1 star
+      </h3>
+      <div
+        className="sc-iwsKbI jFXoVP"
+      >
+        <div
+          className="sc-gZMcBi ejiNOe"
+          max={0}
+          value={0}
+        />
+      </div>
+      <h3
+        className="sc-gqjmRU hJePbF"
+      >
+        0%
+      </h3>
+    </div>
+    <div
+      className="sc-VigVT KnJZJ"
+    >
+      <a
+        className="css-tjtcz4"
+        href="/User/Reviews/IF145-002-4"
+        onClick={[Function]}
+        tabIndex={0}
+      >
+        <span
+          className="css-57kgtb"
+        >
+          <span
+            className="css-tz46pd"
+          >
+            Write a product review
+          </span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="sc-kGXeez fVnUUd"
+  >
+    <h3
+      className="sc-kpOJdX kAzjOl"
+    >
+      No comments to show yet
+    </h3>
+  </div>
+</div>
+`;
