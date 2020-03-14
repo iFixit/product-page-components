@@ -3,6 +3,8 @@ import ProductReviews from './product_reviews';
 import renderer from 'react-test-renderer';
 import exampleReviewsNone from '../../example/example_reviews_none.json';
 
+Math.random = jest.fn(() => 1);
+
 const reviewsLink = '/User/Reviews';
 
 it('renders correctly', () => {

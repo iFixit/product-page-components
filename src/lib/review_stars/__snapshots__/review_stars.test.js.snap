@@ -30,7 +30,7 @@ exports[`renders correctly 1`] = `
     >
       <defs>
         <linearGradient
-          id="starGrad339325382947629"
+          id="starGrad000000000000000"
           x1="0%"
           x2="100%"
           y1="0%"
@@ -232,7 +232,7 @@ exports[`renders correctly 1`] = `
           d="m25,1 6,17h18l-14,11 5,17-15-10-15,10 5-17-14-11h18z"
           style={
             Object {
-              "fill": "url('#starGrad339325382947629')",
+              "fill": "url('#starGrad000000000000000')",
               "transition": "fill .2s ease-in-out",
             }
           }
