@@ -1,1 +1,1 @@
-npm run test
+docker run product-page-components npm run test
