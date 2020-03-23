@@ -1,0 +1,1 @@
+docker run --env=CI=true product-page-components npm run test
