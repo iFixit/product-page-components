@@ -53,7 +53,7 @@
   },
   "jest": {
     "transformIgnorePatterns": [
-      "node_modules/(?!@ngrx|(?!deck.gl)|ng-dynamic)"
+      "node_modules/(?!@ifixit/localize)"
     ]
   }
 }
