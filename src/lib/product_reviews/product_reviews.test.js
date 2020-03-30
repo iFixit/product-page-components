@@ -2,6 +2,7 @@ import React from 'react';
 import ProductReviews from './product_reviews';
 import renderer from 'react-test-renderer';
 import exampleReviewsNone from '../../example/example_reviews_none.json';
+import 'jest-styled-components';
 
 Math.random = jest.fn(() => 1);
 

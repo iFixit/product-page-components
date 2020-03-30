@@ -2,8 +2,32 @@
 
 exports[`renders correctly 1`] = `
 Array [
-  <div
-    className="sc-ifAKCX cqmOwi"
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #3B95FF;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  border: 4px white solid;
+}
+
+<div
+    className="c0"
     color="#3B95FF"
   >
     <span
@@ -15,21 +39,61 @@ Array [
       }
     />
   </div>,
-  <div
-    className="sc-bdVaJa bhXfQi"
+  .c0 {
+  min-width: 300px;
+  background-color: #EDF6FF;
+  border: 2px #BDDCFF solid;
+  border-radius: 4px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.c2 {
+  color: #085FD9;
+  font-weight: 900;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.c3 {
+  padding-top: 8px;
+  font-size: 14px;
+  color: #11161A;
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<div
+    className="c0"
     fill="#EDF6FF"
   >
     <div
-      className="sc-bwzfXH cjdShg"
+      className="c1"
     >
       <span
-        className="sc-htpNat bkojLg"
+        className="c2"
         color="#085FD9"
       >
         EXAMPLE CONTENTS
       </span>
       <span
-        className="sc-bxivhb jsTNBV"
+        className="c3"
         dangerouslySetInnerHTML={
           Object {
             "__html": "Example Contents",

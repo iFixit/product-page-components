@@ -1,27 +1,221 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
+.c7 {
+  color: #242C33;
+  font-size: 16px;
+  text-align: left;
+  font-weight: bold;
+  line-height: 1.25;
+  margin-bottom: 8px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+}
+
+.c8 {
+  background: #F7F9FA;
+  color: #525D66;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 4px;
+  z-index: 1;
+  margin-right: 8px;
+}
+
+.c9 {
+  color: #F34E46;
+  padding: 0 5px;
+  font-weight: normal;
+}
+
+.c10 {
+  cursor: pointer;
+  color: inherit;
+  -webkit-text-decoration: none !important;
+  text-decoration: none !important;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  position: relative;
+  padding: 10px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-flex-basis: 160px;
+  -ms-flex-preferred-size: 160px;
+  flex-basis: 160px;
+}
+
+.c3 {
+  background: #F7F9FA;
+  color: #525D66;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 3px 4px;
+  z-index: 1;
+  display: none;
+  position: absolute;
+  top: 15px;
+  right: 5px;
+}
+
+.c4 {
+  width: 100%;
+  -webkit-transition: opacity ease 0.5s;
+  transition: opacity ease 0.5s;
+  opacity: 1;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(17,22,26,0.1),0 2px 4px rgba(17,22,26,0.1);
+}
+
+.c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  color: #828D96;
+  margin: 20px 2.5%;
+}
+
+.c0 {
+  max-width: 1024px;
+}
+
+.c6 {
+  margin: 20px 5px;
+  line-height: 1.5;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c13 {
+  color: #828D96;
+  padding: 0 5px;
+  font-size: 14px;
+}
+
+.c11 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.c11 .c12 {
+  color: #D93531;
+  font-weight: bold;
+  font-size: 24px;
+  margin-right: 24px;
+}
+
+.c14 {
+  background: #1975F1;
+  font-family: inherit;
+  color: white;
+  font-size: 14px;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.c14:disabled {
+  background: #D2DADF;
+}
+
+@media screen and (min-width:768px) {
+  .c3 {
+    display: block;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c0 {
+    padding: 20px 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+    -webkit-justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (min-width:768px) {
+  .c6 {
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    max-width: 50%;
+    margin: 10px 0px 10px 20px;
+  }
+}
+
 <section
-  className="recommended-products sc-iwsKbI fOlZUo"
+  className="recommended-products c0"
 >
   <div
-    className="sc-EHOje gcSuga"
+    className="c1"
   >
     <div
-      className="sc-bZQynM dsuwZp"
+      className="c2"
     >
       <span
-        className="sc-bdVaJa sc-gzVnrw ifthfS"
+        className="c3"
       >
         This Item
       </span>
       <img
-        className="sc-htoDjs xGZIl"
+        className="c4"
         src="https://placehold.it/160x160"
       />
     </div>
     <svg
-      className="sc-dnqmqq eiKoVh"
+      className="c5"
       fill="currentColor"
       height={16}
       width={16}
@@ -33,19 +227,19 @@ exports[`renders correctly 1`] = `
       />
     </svg>
     <div
-      className="sc-bZQynM dsuwZp"
+      className="c2"
     >
       <a
         href="/Store/Tools/Magnetic-Project-Mat/IF145-167"
       >
         <img
-          className="sc-htoDjs xGZIl"
+          className="c4"
           src="https://placehold.it/160x160"
         />
       </a>
     </div>
     <svg
-      className="sc-dnqmqq eiKoVh"
+      className="c5"
       fill="currentColor"
       height={16}
       width={16}
@@ -57,23 +251,23 @@ exports[`renders correctly 1`] = `
       />
     </svg>
     <div
-      className="sc-bZQynM dsuwZp"
+      className="c2"
     >
       <a
         href="/Store/Tools/Mahi-Driver-Kit--48-Bit-Driver-Kit/IF145-391"
       >
         <img
-          className="sc-htoDjs xGZIl"
+          className="c4"
           src="https://placehold.it/160x160"
         />
       </a>
     </div>
   </div>
   <section
-    className="sc-gZMcBi byBETm"
+    className="c6"
   >
     <span
-      className="sc-bwzfXH fEyZFQ"
+      className="c7"
     >
       <label
         className="css-1jorkc5"
@@ -103,7 +297,7 @@ exports[`renders correctly 1`] = `
           className="css-2c2um8"
         >
           <span
-            className="sc-bdVaJa sc-htpNat cQGjFK"
+            className="c8"
           >
             This Item
           </span>
@@ -111,7 +305,7 @@ exports[`renders correctly 1`] = `
             Pro Tech Toolkit
           </span>
           <span
-            className="sc-bxivhb iKJAQO"
+            className="c9"
           >
             $
             59.99
@@ -120,7 +314,7 @@ exports[`renders correctly 1`] = `
       </label>
     </span>
     <span
-      className="sc-bwzfXH fEyZFQ"
+      className="c7"
     >
       <label
         className="css-1jorkc5"
@@ -150,13 +344,13 @@ exports[`renders correctly 1`] = `
           className="css-2c2um8"
         >
           <a
-            className="sc-ifAKCX cinRfz"
+            className="c10"
             href="/Store/Tools/Magnetic-Project-Mat/IF145-167"
           >
             Magnetic Project Mat
           </a>
           <span
-            className="sc-bxivhb iKJAQO"
+            className="c9"
           >
             $
             19.99
@@ -165,7 +359,7 @@ exports[`renders correctly 1`] = `
       </label>
     </span>
     <span
-      className="sc-bwzfXH fEyZFQ"
+      className="c7"
     >
       <label
         className="css-1jorkc5"
@@ -195,13 +389,13 @@ exports[`renders correctly 1`] = `
           className="css-2c2um8"
         >
           <a
-            className="sc-ifAKCX cinRfz"
+            className="c10"
             href="/Store/Tools/Mahi-Driver-Kit--48-Bit-Driver-Kit/IF145-391"
           >
             Mahi Driver Kit - 48bit Driver Kit
           </a>
           <span
-            className="sc-bxivhb iKJAQO"
+            className="c9"
           >
             $
             29.99
@@ -210,16 +404,16 @@ exports[`renders correctly 1`] = `
       </label>
     </span>
     <div
-      className="sc-jTzLTM bnqZXR"
+      className="c11"
     >
       <span
-        className="total sc-VigVT luXCp"
+        className="total c12 c13"
       >
         $
         109.97
       </span>
       <button
-        className="sc-fjdhpX drcVxA"
+        className="c14"
         disabled={false}
         onClick={[Function]}
       >

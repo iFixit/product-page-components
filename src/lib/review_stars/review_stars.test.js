@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewStars from './review_stars';
 import renderer from 'react-test-renderer';
+import 'jest-styled-components';
 
 Math.random = jest.fn(() => 1);
 
