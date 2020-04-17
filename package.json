@@ -10,7 +10,9 @@
     "@core-ds/icons": "^1.0.0",
     "@core-ds/primitives": "^1.0.0",
     "@ifixit/localize": "^1.0.0",
-    "@ifixit/toolbox": "^1.1.0"
+    "@ifixit/toolbox": "^1.1.0",
+    "jest-styled-components": "^6.3.3",
+    "react-test-renderer": "^16.13.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -48,6 +50,11 @@
       "last 1 firefox version",
       "last 1 safari version",
       "ie 11"
+    ]
+  },
+  "jest": {
+    "transformIgnorePatterns": [
+      "node_modules/(?!@ifixit/localize)"
     ]
   }
 }

@@ -1,0 +1,106 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+Array [
+  .c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 20px;
+  left: -20px;
+  width: 40px;
+  height: 40px;
+  background-color: #3B95FF;
+  border-radius: 50%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: white;
+  border: 4px white solid;
+}
+
+<div
+    className="c0"
+    color="#3B95FF"
+  >
+    <span
+      className="css-1v3opmq"
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check\\"><polyline points=\\"20 6 9 17 4 12\\"></polyline></svg>",
+        }
+      }
+    />
+  </div>,
+  .c0 {
+  min-width: 300px;
+  background-color: #EDF6FF;
+  border: 2px #BDDCFF solid;
+  border-radius: 4px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.c2 {
+  color: #085FD9;
+  font-weight: 900;
+  -webkit-letter-spacing: 2px;
+  -moz-letter-spacing: 2px;
+  -ms-letter-spacing: 2px;
+  letter-spacing: 2px;
+  font-size: 14px;
+}
+
+.c3 {
+  padding-top: 8px;
+  font-size: 14px;
+  color: #11161A;
+}
+
+@media screen and (max-width:768px) {
+  .c0 {
+    width: 100%;
+  }
+}
+
+<div
+    className="c0"
+    fill="#EDF6FF"
+  >
+    <div
+      className="c1"
+    >
+      <span
+        className="c2"
+        color="#085FD9"
+      >
+        EXAMPLE CONTENTS
+      </span>
+      <span
+        className="c3"
+        dangerouslySetInnerHTML={
+          Object {
+            "__html": "Example Contents",
+          }
+        }
+      />
+    </div>
+  </div>,
+]
+`;
