@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Avatar, Button } from '@ifixit/toolbox';
 import { _js } from '@ifixit/localize';
+import { color } from '@core-ds/primitives';
 
 const Container = styled.div`
    display: flex;
@@ -18,6 +19,7 @@ const Name = styled.h3`
    font-size: 14px;
    font-weight: bold;
    line-height: 24px;
+   color: ${color.gray6};
 `;
 
 const Author = ({ author, reviewsUrl }) => {
