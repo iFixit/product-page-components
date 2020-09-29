@@ -57,7 +57,7 @@ function App() {
             reviewsLink={reviewsLink}
          />
          <hr />
-         <RecommenededProductsExample />
+         <RecommendedProductsExample />
          <hr />
          <ProductContainer>
             <NotifyProduct productcode={145307} optionid={4} email="test@test.com" />
@@ -68,7 +68,7 @@ function App() {
 
 const addToCart = skus => console.log('Add to Cart:', skus);
 
-function RecommenededProductsExample() {
+function RecommendedProductsExample() {
    const fewerProducts = {
       ...exampleProducts,
       relatedProducts: exampleProducts.relatedProducts.slice(0, 1),
