@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { _js } from '@ifixit/localize';
 import { Button, TextField } from '@ifixit/toolbox';
-import { color, borderRadius, space } from '@core-ds/primitives';
+import { color } from '@core-ds/primitives';
+import Status, { StatusType } from './status';
 
 /**
  * Because we have three components with different heights that swap their
@@ -48,15 +49,7 @@ const EmailForm = styled.form`
    }
 `;
 
-const Confirmation = styled.p`
-   margin: 0;
-   border: 1px solid #99dab2;
-   border-radius: ${borderRadius.md};
-   color: #288c4e;
-   background-color: #ebf8f0;
-   padding: ${space[3]} ${space[3]};
-   font-size: 13px;
-
+const HidableStatus = styled(Status)`
    ${({ visible }) =>
       visible
          ? `
@@ -96,9 +89,9 @@ const NotifyProduct = ({ email }) => {
                Notify me
             </Button>
          </EmailForm>
-         <Confirmation visible={stage === notifyStage.CONFIRMATION}>
+         <HidableStatus visible={stage === notifyStage.CONFIRMATION} type={StatusType.SUCCESS}>
             We'll send a message when the product is back in stock.
-         </Confirmation>
+         </HidableStatus>
       </NotifyContainer>
    );
 };
