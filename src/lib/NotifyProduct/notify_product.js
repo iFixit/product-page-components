@@ -4,6 +4,7 @@ import { _js } from '@ifixit/localize';
 import { Button, TextField } from '@ifixit/toolbox';
 import { color } from '@core-ds/primitives';
 import Status, { StatusType } from './status';
+import { post } from '../api';
 
 /**
  * Because we have three components with different heights that swap their
@@ -66,8 +67,14 @@ const notifyStage = {
    CONFIRMATION: 'confirmation',
 };
 
-const NotifyProduct = ({ email }) => {
+const defaultConfirmationStatus = {
+   successful: true,
+   message: "We'll send a message when the product is back in stock.",
+};
+
+const NotifyProduct = ({ email, productcode, optionid }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
+   const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
 
    return (
       <NotifyContainer>
@@ -83,14 +90,29 @@ const NotifyProduct = ({ email }) => {
                design="primary"
                onClick={event => {
                   event.preventDefault();
-                  setStage(notifyStage.CONFIRMATION);
+                  post('cart/product/notifyWhenInStock', {
+                     productcode,
+                     optionid,
+                     email,
+                  })
+                     .then(() => setStage(notifyStage.CONFIRMATION))
+                     .catch(err => {
+                        setStage(notifyStage.CONFIRMATION);
+                        setConfirmationStatus({
+                           successful: false,
+                           message: err.message,
+                        });
+                     });
                }}
             >
                Notify me
             </Button>
          </EmailForm>
-         <HidableStatus visible={stage === notifyStage.CONFIRMATION} type={StatusType.SUCCESS}>
-            We'll send a message when the product is back in stock.
+         <HidableStatus
+            visible={stage === notifyStage.CONFIRMATION}
+            type={confirmationStatus.successful ? StatusType.SUCCESS : StatusType.ERROR}
+         >
+            {confirmationStatus.message}
          </HidableStatus>
       </NotifyContainer>
    );

@@ -60,7 +60,7 @@ function App() {
          <RecommenededProductsExample />
          <hr />
          <ProductContainer>
-            <NotifyProduct />
+            <NotifyProduct productcode={145307} optionid={4} email="test@test.com" />
          </ProductContainer>
       </div>
    );
