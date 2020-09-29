@@ -8,6 +8,7 @@ import exampleReviewsNone from './example_reviews_none.json';
 import exampleProducts from './example_products.json';
 import exampleProductsLongTitles from './example_products_long_titles.json';
 import exampleProductsFloatingPointIssues from './example_products_floating_point_issues.json';
+import NotifyProduct from '../lib/NotifyProduct/notify_product.js';
 
 import './styles.css';
 
@@ -20,6 +21,14 @@ const SpacedRecommendedProducts = styled.div`
    ${MOBILE} {
       padding: 0;
    }
+`;
+
+const ProductContainer = styled.div`
+   border-radius: 4px;
+   background-color: #f7f9fa;
+   padding: 30px;
+   width: 400px;
+   box-sizing: border-box;
 `;
 
 function App() {
@@ -49,6 +58,10 @@ function App() {
          />
          <hr />
          <RecommenededProductsExample />
+         <hr />
+         <ProductContainer>
+            <NotifyProduct />
+         </ProductContainer>
       </div>
    );
 }
