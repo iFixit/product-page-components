@@ -107,7 +107,17 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                      email: formEmail,
                      sales_channelid: salesChannelID,
                   })
-                     .then(() => setStage(notifyStage.CONFIRMATION))
+                     .then(response => {
+                        setStage(notifyStage.CONFIRMATION);
+                        if (!response.ok) {
+                           response.json().then(responseBody => {
+                              setConfirmationStatus({
+                                 successful: false,
+                                 message: responseBody.message,
+                              });
+                           });
+                        }
+                     })
                      .catch(err => {
                         setStage(notifyStage.CONFIRMATION);
                         setConfirmationStatus({
