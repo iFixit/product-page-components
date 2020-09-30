@@ -70,8 +70,11 @@ const notifyStage = {
 
 const defaultConfirmationStatus = {
    successful: true,
-   message: "We'll send a message when the product is back in stock.",
+   message: _js("We'll send a message when the product is back in stock."),
 };
+
+const notifyText = _js('Notify me');
+const outOfStockText = _js('Out of Stock');
 
 const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
@@ -82,9 +85,9 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
       <NotifyContainer>
          <InitialBanner stage={stage}>
             <Button design="outline" onClick={() => setStage(notifyStage.INPUT)}>
-               Notify me
+               {notifyText}
             </Button>
-            <OutOfStock>Out of Stock</OutOfStock>
+            <OutOfStock>{outOfStockText}</OutOfStock>
          </InitialBanner>
          <EmailForm stage={stage}>
             <TextField
@@ -127,7 +130,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                      });
                }}
             >
-               Notify me
+               {notifyText}
             </Button>
          </EmailForm>
          <HidableStatus
