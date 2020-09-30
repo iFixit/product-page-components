@@ -18,10 +18,15 @@ const NotifyContainer = styled.div`
 `;
 
 const InitialBanner = styled.span`
+   display: flex;
    position: absolute;
    width: 100%;
    justify-content: space-between;
-   display: ${({ stage }) => (stage === notifyStage.INITIAL ? 'flex' : 'none')};
+
+   transition: opacity 0.5s;
+
+   visibility: ${({ stage }) => (stage === notifyStage.INITIAL ? 'visible' : 'hidden')};
+   opacity: ${({ stage }) => (stage === notifyStage.INITIAL ? 1 : 0)};
 `;
 
 const OutOfStock = styled.span`
@@ -32,7 +37,13 @@ const OutOfStock = styled.span`
 
 const EmailForm = styled.form`
    position: absolute;
-   display: ${({ stage }) => (stage === notifyStage.INPUT ? 'flex' : 'none')};
+   display: flex;
+
+   transition: all 0.5s;
+
+   ${({ stage }) => (stage === notifyStage.INITIAL ? 'transform: translateX(-100%);' : '')}
+   visibility: ${({ stage }) => (stage === notifyStage.INPUT ? 'visible' : 'hidden')};
+   opacity: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 0 : 1)};
 
    .text-field {
       padding-right: 10px;
@@ -43,7 +54,12 @@ const HidableStatus = styled(Status)`
    position: absolute;
    width: 100%;
    box-sizing: border-box;
-   display: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 'block' : 'none')};
+
+   transition: transform 0.5s;
+
+   transform: ${({ stage }) =>
+      stage === notifyStage.CONFIRMATION ? 'translateX(0)' : 'translateX(-100%)'};
+   visibility: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 'visible' : 'hidden')};
 `;
 
 const notifyStage = {
