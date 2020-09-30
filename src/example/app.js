@@ -2,13 +2,18 @@ import React from 'react';
 import { render } from 'react-dom';
 import styled from 'styled-components';
 
-import { ProductReviews, ReviewStars, ProductNote, RecommendedProducts } from '../lib/index.js';
+import {
+   ProductReviews,
+   ReviewStars,
+   ProductNote,
+   RecommendedProducts,
+   NotifyProduct,
+} from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleReviewsNone from './example_reviews_none.json';
 import exampleProducts from './example_products.json';
 import exampleProductsLongTitles from './example_products_long_titles.json';
 import exampleProductsFloatingPointIssues from './example_products_floating_point_issues.json';
-import NotifyProduct from '../lib/NotifyProduct/notify_product.js';
 
 import './styles.css';
 
