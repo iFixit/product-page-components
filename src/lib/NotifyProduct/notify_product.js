@@ -75,6 +75,7 @@ const defaultConfirmationStatus = {
 const NotifyProduct = ({ email, productcode, optionid }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
+   const [formEmail, setFormEmail] = useState(email);
 
    return (
       <NotifyContainer>
@@ -85,15 +86,24 @@ const NotifyProduct = ({ email, productcode, optionid }) => {
             <OutOfStock>Out of Stock</OutOfStock>
          </InitialBanner>
          <EmailForm visible={stage === notifyStage.INPUT}>
-            <TextField className="text-field" value={email} placeholder="Enter your email" />
+            <TextField
+               showValidity
+               required
+               type="email"
+               className="text-field"
+               value={formEmail}
+               placeholder="Enter your email"
+               onChange={({ value }) => setFormEmail(value)}
+            />
             <Button
                design="primary"
+               disabled={!formEmail}
                onClick={event => {
                   event.preventDefault();
                   post('cart/product/notifyWhenInStock', {
                      productcode,
                      optionid,
-                     email,
+                     email: formEmail,
                   })
                      .then(() => setStage(notifyStage.CONFIRMATION))
                      .catch(err => {
