@@ -18,15 +18,7 @@ const NotifyContainer = styled.div`
 
 const InitialBanner = styled.span`
    justify-content: space-between;
-
-   ${({ stage }) =>
-      stage === notifyStage.INITIAL
-         ? `
-      display: flex;
-   `
-         : `
-      display: none;
-   `};
+   display: ${({ stage }) => (stage === notifyStage.INITIAL ? 'flex' : 'none')};
 `;
 
 const OutOfStock = styled.span`
@@ -36,14 +28,7 @@ const OutOfStock = styled.span`
 `;
 
 const EmailForm = styled.form`
-   ${({ stage }) =>
-      stage === notifyStage.INPUT
-         ? `
-      display: flex;
-   `
-         : `
-      display: none;
-   `}
+   display: ${({ stage }) => (stage === notifyStage.INPUT ? 'flex' : 'none')};
 
    .text-field {
       padding-right: 10px;
@@ -51,14 +36,7 @@ const EmailForm = styled.form`
 `;
 
 const HidableStatus = styled(Status)`
-   ${({ stage }) =>
-      stage === notifyStage.CONFIRMATION
-         ? `
-      display: block;
-   `
-         : `
-      display: none;
-   `}
+   display: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 'block' : 'none')};
 `;
 
 const notifyStage = {
