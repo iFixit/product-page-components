@@ -19,8 +19,8 @@ const NotifyContainer = styled.div`
 const InitialBanner = styled.span`
    justify-content: space-between;
 
-   ${({ visible }) =>
-      visible
+   ${({ stage }) =>
+      stage === notifyStage.INITIAL
          ? `
       display: flex;
    `
@@ -36,8 +36,8 @@ const OutOfStock = styled.span`
 `;
 
 const EmailForm = styled.form`
-   ${({ visible }) =>
-      visible
+   ${({ stage }) =>
+      stage === notifyStage.INPUT
          ? `
       display: flex;
    `
@@ -51,8 +51,8 @@ const EmailForm = styled.form`
 `;
 
 const HidableStatus = styled(Status)`
-   ${({ visible }) =>
-      visible
+   ${({ stage }) =>
+      stage === notifyStage.CONFIRMATION
          ? `
       display: block;
    `
@@ -79,13 +79,13 @@ const NotifyProduct = ({ email, productcode, optionid }) => {
 
    return (
       <NotifyContainer>
-         <InitialBanner visible={stage === notifyStage.INITIAL}>
+         <InitialBanner stage={stage}>
             <Button design="outline" onClick={() => setStage(notifyStage.INPUT)}>
                Notify me
             </Button>
             <OutOfStock>Out of Stock</OutOfStock>
          </InitialBanner>
-         <EmailForm visible={stage === notifyStage.INPUT}>
+         <EmailForm stage={stage}>
             <TextField
                showValidity
                required
@@ -119,7 +119,7 @@ const NotifyProduct = ({ email, productcode, optionid }) => {
             </Button>
          </EmailForm>
          <HidableStatus
-            visible={stage === notifyStage.CONFIRMATION}
+            stage={stage}
             type={confirmationStatus.successful ? StatusType.SUCCESS : StatusType.ERROR}
          >
             {confirmationStatus.message}
