@@ -73,7 +73,7 @@ const defaultConfirmationStatus = {
    message: "We'll send a message when the product is back in stock.",
 };
 
-const NotifyProduct = ({ email, productcode, optionid }) => {
+const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
@@ -105,6 +105,7 @@ const NotifyProduct = ({ email, productcode, optionid }) => {
                      productcode,
                      optionid,
                      email: formEmail,
+                     sales_channelid: salesChannelID,
                   })
                      .then(() => setStage(notifyStage.CONFIRMATION))
                      .catch(err => {

@@ -60,7 +60,7 @@ function App() {
          <RecommendedProductsExample />
          <hr />
          <ProductContainer>
-            <NotifyProduct productcode={145307} optionid={4} />
+            <NotifyProduct productcode={145307} optionid={4} salesChannelID={1} />
          </ProductContainer>
       </div>
    );
