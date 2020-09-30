@@ -13,10 +13,13 @@ import { post } from '../api';
  * in order to keep the overall size constant.
  */
 const NotifyContainer = styled.div`
+   position: relative;
    height: 56px;
 `;
 
 const InitialBanner = styled.span`
+   position: absolute;
+   width: 100%;
    justify-content: space-between;
    display: ${({ stage }) => (stage === notifyStage.INITIAL ? 'flex' : 'none')};
 `;
@@ -28,6 +31,7 @@ const OutOfStock = styled.span`
 `;
 
 const EmailForm = styled.form`
+   position: absolute;
    display: ${({ stage }) => (stage === notifyStage.INPUT ? 'flex' : 'none')};
 
    .text-field {
@@ -36,6 +40,9 @@ const EmailForm = styled.form`
 `;
 
 const HidableStatus = styled(Status)`
+   position: absolute;
+   width: 100%;
+   box-sizing: border-box;
    display: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 'block' : 'none')};
 `;
 
