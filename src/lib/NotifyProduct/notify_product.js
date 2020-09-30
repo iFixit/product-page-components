@@ -69,7 +69,7 @@ const notifyStage = {
 };
 
 const defaultConfirmationStatus = {
-   successful: true,
+   type: StatusType.SUCCESS,
    message: _js("We'll send a message when the product is back in stock."),
 };
 
@@ -115,7 +115,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                         if (!response.ok) {
                            response.json().then(responseBody => {
                               setConfirmationStatus({
-                                 successful: false,
+                                 type: StatusType.ERROR,
                                  message: responseBody.message,
                               });
                            });
@@ -124,7 +124,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                      .catch(err => {
                         setStage(notifyStage.CONFIRMATION);
                         setConfirmationStatus({
-                           successful: false,
+                           type: StatusType.ERROR,
                            message: err.message,
                         });
                      });
@@ -133,10 +133,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                {notifyText}
             </Button>
          </EmailForm>
-         <HidableStatus
-            stage={stage}
-            type={confirmationStatus.successful ? StatusType.SUCCESS : StatusType.ERROR}
-         >
+         <HidableStatus stage={stage} type={confirmationStatus.type}>
             {confirmationStatus.message}
          </HidableStatus>
       </NotifyContainer>
