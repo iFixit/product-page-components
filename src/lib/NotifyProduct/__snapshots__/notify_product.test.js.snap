@@ -1,0 +1,174 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+.c0 {
+  position: relative;
+  height: 56px;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+  visibility: visible;
+  opacity: 1;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  color: #F34E46;
+}
+
+.c3 {
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: hidden;
+  opacity: 1;
+}
+
+.c3 .text-field {
+  padding-right: 10px;
+}
+
+.c4 {
+  margin: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  padding: 12px 12px;
+  font-size: 13px;
+  color: #288c4e;
+  background-color: #ebf8f0;
+  border-color: #99dab2;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  visibility: hidden;
+}
+
+<div
+  className="c0"
+>
+  <span
+    className="c1"
+  >
+    <button
+      className="css-174r4qz"
+      disabled={false}
+      onClick={[Function]}
+      tabIndex={0}
+    >
+      <span
+        className="css-57kgtb"
+      >
+        <span
+          className="css-tz46pd"
+        >
+          Notify me
+        </span>
+      </span>
+    </button>
+    <span
+      className="c2"
+    >
+      Out of Stock
+    </span>
+  </span>
+  <form
+    className="c3"
+  >
+    <label
+      className="css-n946dq text-field"
+      onMouseEnter={[Function]}
+      onMouseLeave={[Function]}
+    >
+      
+      <div
+        className="css-13azwyo"
+      >
+        <div
+          className="css-h731j8"
+          onClick={[Function]}
+        >
+          <span
+            className="css-plwqyv"
+          >
+            <span
+              className="css-1oyzn7j"
+              dangerouslySetInnerHTML={
+                Object {
+                  "__html": "<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"100%\\" height=\\"100%\\" viewBox=\\"0 0 24 24\\" fill=\\"none\\" stroke=\\"currentColor\\" stroke-width=\\"inherit\\" stroke-linecap=\\"round\\" stroke-linejoin=\\"round\\" class=\\"feather feather-check-circle\\"><path d=\\"M22 11.08V12a10 10 0 1 1-5.93-9.14\\"></path><polyline points=\\"22 4 12 14.01 9 11.01\\"></polyline></svg>",
+                }
+              }
+            />
+          </span>
+        </div>
+        <input
+          className="css-1804bpz"
+          disabled={false}
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          onInvalid={[Function]}
+          placeholder="Enter your email"
+          required={true}
+          type="email"
+          value=""
+        />
+      </div>
+    </label>
+    <button
+      className="css-mr6nb9"
+      disabled={true}
+      onClick={[Function]}
+      tabIndex={-1}
+    >
+      <span
+        className="css-57kgtb"
+      >
+        <span
+          className="css-tz46pd"
+        >
+          Notify me
+        </span>
+      </span>
+    </button>
+  </form>
+  <p
+    className="c4"
+    type="success"
+  >
+    We'll send a message when the product is back in stock.
+  </p>
+</div>
+`;
