@@ -80,6 +80,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
+   const [buttonClicked, setButtonClicked] = useState(false);
 
    return (
       <NotifyContainer>
@@ -101,9 +102,10 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
             />
             <Button
                design="primary"
-               disabled={!formEmail}
+               disabled={buttonClicked || !formEmail}
                onClick={event => {
                   event.preventDefault();
+                  setButtonClicked(true);
                   post('cart/product/notifyWhenInStock', {
                      productcode,
                      optionid,
