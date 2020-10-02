@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { _js } from '@ifixit/localize';
 import { Button, TextField } from '@ifixit/toolbox';
@@ -83,7 +83,10 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
+   const [showValidity, setShowValidity] = useState(false);
    const [buttonClicked, setButtonClicked] = useState(false);
+   const emailForm = useRef(null);
+
    sku = '' + sku;
 
    const sendNotifyRequest = () => {
@@ -121,9 +124,9 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
             </Button>
             <OutOfStock>{outOfStockText}</OutOfStock>
          </InitialBanner>
-         <EmailForm stage={stage}>
+         <EmailForm stage={stage} ref={emailForm}>
             <TextField
-               showValidity
+               showValidity={showValidity}
                required
                type="email"
                className="text-field"
@@ -133,11 +136,16 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
             />
             <Button
                design="primary"
-               disabled={buttonClicked || !formEmail}
+               disabled={buttonClicked}
                onClick={event => {
                   event.preventDefault();
-                  setButtonClicked(true);
-                  sendNotifyRequest();
+
+                  if (emailForm.current && emailForm.current.checkValidity()) {
+                     setButtonClicked(true);
+                     sendNotifyRequest();
+                  } else {
+                     setShowValidity(true);
+                  }
                }}
             >
                {notifyText}
