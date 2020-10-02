@@ -3,7 +3,8 @@
 exports[`renders correctly 1`] = `
 .c0 {
   position: relative;
-  height: 56px;
+  height: 60px;
+  overflow: hidden;
 }
 
 .c1 {
@@ -117,11 +118,11 @@ exports[`renders correctly 1`] = `
         className="css-13azwyo"
       >
         <div
-          className="css-h731j8"
+          className="css-1eca8pd"
           onClick={[Function]}
         >
           <span
-            className="css-plwqyv"
+            className="css-1jr2kwt"
           >
             <span
               className="css-1oyzn7j"
@@ -134,7 +135,7 @@ exports[`renders correctly 1`] = `
           </span>
         </div>
         <input
-          className="css-1804bpz"
+          className="css-1l6rqr7"
           disabled={false}
           onBlur={[Function]}
           onChange={[Function]}
@@ -148,10 +149,10 @@ exports[`renders correctly 1`] = `
       </div>
     </label>
     <button
-      className="css-mr6nb9"
-      disabled={true}
+      className="css-1er3yna"
+      disabled={false}
       onClick={[Function]}
-      tabIndex={-1}
+      tabIndex={0}
     >
       <span
         className="css-57kgtb"
