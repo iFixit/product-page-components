@@ -87,7 +87,7 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
    const sendNotifyRequest = () => {
       post('cart/product/notifyWhenInStock', {
          productcode: sku.substring(0, 6),
-         optionid: sku[6],
+         optionid: sku.substring(6),
          email: formEmail,
          sales_channelid: salesChannelID,
       })
