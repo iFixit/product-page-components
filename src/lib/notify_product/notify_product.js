@@ -124,7 +124,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                type="email"
                className="text-field"
                value={formEmail}
-               placeholder="Enter your email"
+               placeholder={_js('Enter your email')}
                onChange={({ value }) => setFormEmail(value)}
             />
             <Button
