@@ -14,7 +14,8 @@ import { post } from '../api';
  */
 const NotifyContainer = styled.div`
    position: relative;
-   height: 56px;
+   height: 60px;
+   overflow: hidden;
 `;
 
 const InitialBanner = styled.span`
