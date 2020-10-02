@@ -77,6 +77,8 @@ const defaultConfirmationStatus = {
 const notifyText = _js('Notify me');
 const outOfStockText = _js('Out of Stock');
 
+const PRODUCT_CODE_LENGTH = 6;
+
 const NotifyProduct = ({ email, sku, salesChannelID }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
@@ -86,8 +88,8 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
 
    const sendNotifyRequest = () => {
       post('cart/product/notifyWhenInStock', {
-         productcode: sku.substring(0, 6),
-         optionid: sku.substring(6),
+         productcode: sku.substring(0, PRODUCT_CODE_LENGTH),
+         optionid: sku.substring(PRODUCT_CODE_LENGTH),
          email: formEmail,
          sales_channelid: salesChannelID,
       })
