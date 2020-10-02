@@ -82,6 +82,33 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
    const [formEmail, setFormEmail] = useState(email);
    const [buttonClicked, setButtonClicked] = useState(false);
 
+   const sendNotifyRequest = () => {
+      post('cart/product/notifyWhenInStock', {
+         productcode,
+         optionid,
+         email: formEmail,
+         sales_channelid: salesChannelID,
+      })
+         .then(response => {
+            setStage(notifyStage.CONFIRMATION);
+            if (!response.ok) {
+               response.json().then(responseBody => {
+                  setConfirmationStatus({
+                     type: StatusType.ERROR,
+                     message: responseBody.message,
+                  });
+               });
+            }
+         })
+         .catch(err => {
+            setStage(notifyStage.CONFIRMATION);
+            setConfirmationStatus({
+               type: StatusType.ERROR,
+               message: err.message,
+            });
+         });
+   };
+
    return (
       <NotifyContainer>
          <InitialBanner stage={stage}>
@@ -106,30 +133,7 @@ const NotifyProduct = ({ email, productcode, optionid, salesChannelID }) => {
                onClick={event => {
                   event.preventDefault();
                   setButtonClicked(true);
-                  post('cart/product/notifyWhenInStock', {
-                     productcode,
-                     optionid,
-                     email: formEmail,
-                     sales_channelid: salesChannelID,
-                  })
-                     .then(response => {
-                        setStage(notifyStage.CONFIRMATION);
-                        if (!response.ok) {
-                           response.json().then(responseBody => {
-                              setConfirmationStatus({
-                                 type: StatusType.ERROR,
-                                 message: responseBody.message,
-                              });
-                           });
-                        }
-                     })
-                     .catch(err => {
-                        setStage(notifyStage.CONFIRMATION);
-                        setConfirmationStatus({
-                           type: StatusType.ERROR,
-                           message: err.message,
-                        });
-                     });
+                  sendNotifyRequest();
                }}
             >
                {notifyText}
