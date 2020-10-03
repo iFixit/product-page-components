@@ -48,6 +48,10 @@ const EmailForm = styled.form`
 
    .text-field {
       padding-right: 10px;
+
+      > span {
+         display: none;
+      }
    }
 `;
 
