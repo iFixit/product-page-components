@@ -101,22 +101,30 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
          sales_channelid: salesChannelID,
       })
          .then(response => {
-            setStage(notifyStage.CONFIRMATION);
-            if (!response.ok) {
-               response.json().then(responseBody => {
+            if (response.ok) {
+               return;
+            }
+
+            // Determine what message we want to send
+            if (response.status >= 400 && response.status < 500) {
+               return response.json().then(responseBody => {
                   setConfirmationStatus({
                      type: StatusType.ERROR,
                      message: responseBody.message,
                   });
                });
+            } else {
+               throw new Error('Server error');
             }
          })
-         .catch(err => {
-            setStage(notifyStage.CONFIRMATION);
+         .catch(() => {
             setConfirmationStatus({
                type: StatusType.ERROR,
-               message: err.message,
+               message: _js('Request failed'),
             });
+         })
+         .then(() => {
+            setStage(notifyStage.CONFIRMATION);
          });
    };
 
