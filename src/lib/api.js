@@ -1,4 +1,4 @@
-const baseUrl = 'https://ifixit.com/api/2.0/';
+const baseUrl = 'https://www.ifixit.com/api/2.0/';
 
 export async function post(endpoint, data = {}) {
    const response = await fetch(baseUrl + endpoint, {
