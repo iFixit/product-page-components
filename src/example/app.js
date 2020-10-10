@@ -70,6 +70,16 @@ function App() {
          <hr />
          <RecommendedProductsExample />
          <hr />
+         <NotifyProductExample />
+      </div>
+   );
+}
+
+const addToCart = skus => console.log('Add to Cart:', skus);
+
+function NotifyProductExample() {
+   return (
+      <>
          <ProductContainer>
             <NotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
@@ -78,11 +88,9 @@ function App() {
                <RedSpan>Uh-oh! We've sold all our stock!</RedSpan>
             </NotifyProduct>
          </ProductContainer>
-      </div>
+      </>
    );
 }
-
-const addToCart = skus => console.log('Add to Cart:', skus);
 
 function RecommendedProductsExample() {
    const fewerProducts = {
