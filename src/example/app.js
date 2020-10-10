@@ -36,6 +36,12 @@ const ProductContainer = styled.div`
    box-sizing: border-box;
 `;
 
+const RedSpan = styled.span`
+   color: red;
+   font-size: 20px;
+   padding-left: 8px;
+`;
+
 function App() {
    const reviewsLink = '/User/Reviews';
 
@@ -66,6 +72,11 @@ function App() {
          <hr />
          <ProductContainer>
             <NotifyProduct sku={1453074} salesChannelID={1} />
+         </ProductContainer>
+         <ProductContainer>
+            <NotifyProduct sku={1453074} salesChannelID={1}>
+               <RedSpan>Uh-oh! We've sold all our stock!</RedSpan>
+            </NotifyProduct>
          </ProductContainer>
       </div>
    );

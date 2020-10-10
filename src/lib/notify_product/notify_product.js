@@ -83,7 +83,7 @@ const outOfStockText = _js('Out of Stock');
 
 const PRODUCT_CODE_LENGTH = 6;
 
-const NotifyProduct = ({ email, sku, salesChannelID }) => {
+const NotifyProduct = ({ email, sku, salesChannelID, children }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
@@ -134,7 +134,7 @@ const NotifyProduct = ({ email, sku, salesChannelID }) => {
             <Button design="outline" onClick={() => setStage(notifyStage.INPUT)}>
                {notifyText}
             </Button>
-            <OutOfStock>{outOfStockText}</OutOfStock>
+            {children || (<OutOfStock>{outOfStockText}</OutOfStock>)}
          </InitialBanner>
          <EmailForm stage={stage} ref={emailForm}>
             <TextField
