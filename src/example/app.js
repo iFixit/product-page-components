@@ -77,6 +77,10 @@ function App() {
 
 const addToCart = skus => console.log('Add to Cart:', skus);
 
+const StyledNotifyProduct = styled(NotifyProduct)`
+   background: #3d3d3d;
+`;
+
 function NotifyProductExample() {
    return (
       <>
@@ -87,6 +91,9 @@ function NotifyProductExample() {
             <NotifyProduct sku={1453074} salesChannelID={1}>
                <RedSpan>Uh-oh! We've sold all our stock!</RedSpan>
             </NotifyProduct>
+         </ProductContainer>
+         <ProductContainer>
+            <StyledNotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
       </>
    );
