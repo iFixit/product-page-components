@@ -14,7 +14,7 @@ import { post } from '../api';
  */
 const NotifyContainer = styled.div`
    position: relative;
-   height: 60px;
+   height: 63px;
    overflow: hidden;
 `;
 
