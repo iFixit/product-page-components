@@ -83,7 +83,7 @@ const outOfStockText = _js('Out of Stock');
 
 const PRODUCT_CODE_LENGTH = 6;
 
-const NotifyProduct = ({ email, sku, salesChannelID, children, className }) => {
+const NotifyProduct = ({ email, sku, salesChannelID, baseUrl, children, className }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
@@ -94,7 +94,7 @@ const NotifyProduct = ({ email, sku, salesChannelID, children, className }) => {
    sku = '' + sku;
 
    const sendNotifyRequest = () => {
-      post('cart/product/notifyWhenInStock', {
+      post(baseUrl, 'cart/product/notifyWhenInStock', {
          productcode: sku.substring(0, PRODUCT_CODE_LENGTH),
          optionid: sku.substring(PRODUCT_CODE_LENGTH),
          email: formEmail,
