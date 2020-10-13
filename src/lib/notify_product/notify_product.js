@@ -14,7 +14,7 @@ import { post } from '../api';
  */
 const NotifyContainer = styled.div`
    position: relative;
-   height: 60px;
+   height: 63px;
    overflow: hidden;
 `;
 
@@ -83,7 +83,7 @@ const outOfStockText = _js('Out of Stock');
 
 const PRODUCT_CODE_LENGTH = 6;
 
-const NotifyProduct = ({ email, sku, salesChannelID, baseUrl }) => {
+const NotifyProduct = ({ email, sku, salesChannelID, baseUrl, className }) => {
    const [stage, setStage] = useState(notifyStage.INITIAL);
    const [confirmationStatus, setConfirmationStatus] = useState(defaultConfirmationStatus);
    const [formEmail, setFormEmail] = useState(email);
@@ -129,7 +129,7 @@ const NotifyProduct = ({ email, sku, salesChannelID, baseUrl }) => {
    };
 
    return (
-      <NotifyContainer>
+      <NotifyContainer className={className}>
          <InitialBanner stage={stage}>
             <Button design="outline" onClick={() => setStage(notifyStage.INPUT)}>
                {notifyText}
