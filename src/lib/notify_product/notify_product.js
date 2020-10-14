@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { _js } from '@ifixit/localize';
 import { Button, TextField } from '@ifixit/toolbox';
-import { color } from '@core-ds/primitives';
+import { color, fontSize } from '@core-ds/primitives';
 import Status, { StatusType } from './status';
 import { post } from '../api';
 
@@ -34,6 +34,7 @@ const OutOfStock = styled.span`
    display: flex;
    align-items: center;
    color: ${color.red};
+   font-size: ${fontSize[1]};
 `;
 
 const EmailForm = styled.form`
