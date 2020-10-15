@@ -38,8 +38,10 @@ const OutOfStock = styled.span`
 `;
 
 const EmailForm = styled.form`
-   position: absolute;
    display: flex;
+   position: absolute;
+   width: 100%;
+   justify-content: space-between;
 
    transition: all 0.5s;
 
