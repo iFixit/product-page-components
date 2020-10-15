@@ -68,6 +68,11 @@ const HidableStatus = styled(Status)`
    visibility: ${({ stage }) => (stage === notifyStage.CONFIRMATION ? 'visible' : 'hidden')};
 `;
 
+const ButtonNoShrink = styled(Button)`
+   flex-shrink: 0;
+   flex-basis: auto;
+`;
+
 const notifyStage = {
    INITIAL: 'initial',
    INPUT: 'input',
@@ -147,7 +152,7 @@ const NotifyProduct = ({ email, sku, salesChannelID, baseUrl, className }) => {
                placeholder={_js('Enter your email')}
                onChange={({ value }) => setFormEmail(value)}
             />
-            <Button
+            <ButtonNoShrink
                design="primary"
                disabled={buttonClicked}
                onClick={event => {
@@ -162,7 +167,7 @@ const NotifyProduct = ({ email, sku, salesChannelID, baseUrl, className }) => {
                }}
             >
                {notifyText}
-            </Button>
+            </ButtonNoShrink>
          </EmailForm>
          <HidableStatus stage={stage} type={confirmationStatus.type}>
             {confirmationStatus.message}
