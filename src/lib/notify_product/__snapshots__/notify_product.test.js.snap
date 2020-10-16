@@ -3,7 +3,7 @@
 exports[`renders correctly 1`] = `
 .c0 {
   position: relative;
-  height: 60px;
+  height: 63px;
   overflow: hidden;
 }
 
@@ -34,14 +34,20 @@ exports[`renders correctly 1`] = `
   -ms-flex-align: center;
   align-items: center;
   color: #F34E46;
+  font-size: 14px;
 }
 
 .c3 {
-  position: absolute;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
+  width: 100%;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   -webkit-transform: translateX(-100%);
@@ -55,7 +61,11 @@ exports[`renders correctly 1`] = `
   padding-right: 10px;
 }
 
-.c4 {
+.c3 .text-field > span {
+  display: none;
+}
+
+.c5 {
   margin: 0;
   border-width: 1px;
   border-style: solid;
@@ -75,6 +85,15 @@ exports[`renders correctly 1`] = `
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
   visibility: hidden;
+}
+
+.c4 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: auto;
+  -ms-flex-preferred-size: auto;
+  flex-basis: auto;
 }
 
 <div
@@ -149,7 +168,7 @@ exports[`renders correctly 1`] = `
       </div>
     </label>
     <button
-      className="css-1er3yna"
+      className="css-1er3yna c4"
       disabled={false}
       onClick={[Function]}
       tabIndex={0}
@@ -166,7 +185,7 @@ exports[`renders correctly 1`] = `
     </button>
   </form>
   <p
-    className="c4"
+    className="c5"
     type="success"
   >
     We'll send a message when the product is back in stock.
