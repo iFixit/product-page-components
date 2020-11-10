@@ -30,4 +30,4 @@ jobs:
       run: ./build
     
     - name: Test
-    - run: ./test
+      run: ./test
