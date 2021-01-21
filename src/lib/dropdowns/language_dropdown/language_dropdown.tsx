@@ -80,10 +80,6 @@ export default class LanguageDropdown extends React.Component<LanguageDropdownPr
       mobile: false,
    };
 
-   constructor(props: LanguageDropdownProps) {
-      super(props);
-   }
-
    render() {
       const {
          className,
