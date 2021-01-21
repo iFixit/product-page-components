@@ -4,8 +4,6 @@ import { space, borderRadius, fontSize } from '@core-ds/primitives';
 import Language from './language';
 import { CardLink } from '../card_dropdown_parts';
 
-const toolbox: any = require('@ifixit/toolbox');
-
 const LanguageButton = styled(CardLink)`
    :hover > .iso-code {
       color: ${({ theme }) => theme.isoCode.hover.font};
