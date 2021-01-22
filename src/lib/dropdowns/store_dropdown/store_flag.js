@@ -1,11 +1,11 @@
 import React from 'react';
-import USFlag from './flags/USFlag';
-import AUFlag from './flags/AUFlag';
-import CAFlag from './flags/CAFlag';
-import DEFlag from './flags/DEFlag';
-import FRFlag from './flags/FRFlag';
-import GBFlag from './flags/GBFlag';
-import EUFlag from './flags/EUFlag';
+import { ReactComponent as USFlag } from './flags/us.svg';
+import { ReactComponent as AUFlag } from './flags/au.svg';
+import { ReactComponent as CAFlag } from './flags/ca.svg';
+import { ReactComponent as DEFlag } from './flags/de.svg';
+import { ReactComponent as FRFlag } from './flags/fr.svg';
+import { ReactComponent as GBFlag } from './flags/gb.svg';
+import { ReactComponent as EUFlag } from './flags/eu.svg';
 
 const StoreFlag = ({ storeCode, style, id = null }) => {
    const svgProps = {
