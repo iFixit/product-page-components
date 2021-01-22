@@ -2,7 +2,7 @@
    {
       "name": "United States",
       "storeCode": "us",
-      "link": "/Store",
+      "link": "https://www.ifixit.com/Store",
       "currency": "USD",
       "isDisplayStore": true
    },
