@@ -91,15 +91,13 @@ export default class LanguageDropdown extends React.Component<LanguageDropdownPr
          mobile,
       } = this.props;
 
-      const leftColumn = [];
-      const rightColumn = [];
+      const leftColumn: Language[] = [];
+      const rightColumn: Language[] = [];
 
       for (let index = 0; index < languages.length; index++) {
          if (index % 2 === 0) {
-            // @ts-ignore
             leftColumn.push(languages[index]);
          } else {
-            // @ts-ignore
             rightColumn.push(languages[index]);
          }
       }
