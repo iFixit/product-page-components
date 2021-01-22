@@ -9,7 +9,7 @@ const StyledDropdownContainer = styled(DropdownContainer)`
    padding-bottom: ${space[3]};
 `;
 
-const StoreDropdown = ({ stores, mobile, onClickForStore, className }) => {
+const StoreDropdown = ({ stores, mobile, onClickStore, className }) => {
    return (
       <StyledDropdownContainer id="storeDropdown" mobile={mobile} className={className}>
          <CardColumn>
@@ -19,7 +19,7 @@ const StoreDropdown = ({ stores, mobile, onClickForStore, className }) => {
                   store={store}
                   mobile={mobile}
                   isDisplayStore={store.isDisplayStore}
-                  updateStorePreference={onClickForStore(store)}
+                  updateStorePreference={() => onClickStore(store)}
                />
             ))}
          </CardColumn>

@@ -92,12 +92,7 @@ function App() {
             <NotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
          <hr />
-         <StyledStoreDropdown
-            stores={stores}
-            onClickForStore={store => () => {
-               console.log(store);
-            }}
-         />
+         <StyledStoreDropdown stores={stores} onClickStore={store => console.log(store)} />
          <hr />
          <StyledLanguageDropdown
             languages={languages}
