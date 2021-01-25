@@ -24,7 +24,5 @@ yarn-error.log*
 *.swp
 *.swo
 
-tsconfig.json
-
 # This needs to be ignored due to a bug: https://github.com/facebook/create-react-app/issues/6560
 /src/react-app-env.d.ts
