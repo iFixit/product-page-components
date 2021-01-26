@@ -12,6 +12,7 @@
     "@ifixit/localize": "^1.0.0",
     "@ifixit/toolbox": "^1.1.0",
     "jest-styled-components": "^6.3.3",
+    "react-responsive": "^8.2.0",
     "react-test-renderer": "^16.13.0"
   },
   "scripts": {
@@ -28,6 +29,8 @@
   "devDependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
+    "@types/react": "^17.0.0",
+    "@types/styled-components": "^5.1.7",
     "acorn": "^6.4.1",
     "babel-preset-react-app": "^9.0.1",
     "enzyme": "^3.10.0",
