@@ -46,7 +46,11 @@ const Header = ({ rating, headline, date, productName, productVariantName }) => 
             </StarsContainer>
             {headline}
          </Headline>
-         <ProductVariantName>{productName} | {productVariantName}</ProductVariantName>
+         {productName && productVariantName && (
+            <ProductVariantName>
+               {productName} | {productVariantName}
+            </ProductVariantName>
+         )}
          <Timestamp itemProp="datePublished">{date}</Timestamp>
       </React.Fragment>
    );
