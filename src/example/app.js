@@ -9,6 +9,8 @@ import {
    RecommendedProducts,
    NotifyProduct,
    StoreDropdown,
+   StoreFlag,
+   Dropdown,
    LanguageDropdownContainer,
 } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
@@ -46,21 +48,25 @@ const ProductContainer = styled.div`
    box-sizing: border-box;
 `;
 
-const StyledStoreDropdown = styled(StoreDropdown)`
-   max-width: 204px;
-   border-radius: 8px;
-   border: 1px black solid;
+const StoreSelector = ({ stores, onClickStore, ...tippyOptions }) => {
+   const currentStore = stores.find(store => store.isDisplayStore);
 
-   a {
-      text-decoration: none;
-   }
-`;
+   return (
+      <Dropdown icon={<StoreFlag storeCode={currentStore.storeCode} />} {...tippyOptions}>
+         <StoreDropdown currentStore={currentStore} stores={stores} onClickStore={onClickStore} />
+      </Dropdown>
+   );
+};
 
-const DropdownContainer = styled.div`
-   width: 100%;
+const DropdownsContainer = styled.div`
    height: 400px;
    display: flex;
    justify-content: center;
+   align-items: center;
+
+   .dropdown-and-button-container {
+      margin: 0 10px;
+   }
 `;
 
 function App() {
@@ -95,16 +101,19 @@ function App() {
             <NotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
          <hr />
-         <StyledStoreDropdown stores={stores} onClickStore={store => console.log(store)} />
-         <hr />
-         <DropdownContainer>
+         <DropdownsContainer>
+            <StoreSelector
+               stores={stores}
+               onClickStore={store => console.log(store)}
+               placement="top-end"
+            />
             <LanguageDropdownContainer
                languages={languages}
                translationPreferencesUrl="https://www.cominor.com/Login"
                machineTranslationRequested={false}
                placement="top-end"
             />
-         </DropdownContainer>
+         </DropdownsContainer>
       </AppContainer>
    );
 }
