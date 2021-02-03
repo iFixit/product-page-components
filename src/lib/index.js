@@ -6,3 +6,4 @@ export { default as NotifyProduct } from './notify_product/notify_product.js';
 export { default as StoreDropdown } from './dropdowns/store_dropdown/store_dropdown.js';
 export { default as StoreFlag } from './dropdowns/store_dropdown/store_flag';
 export { default as LanguageDropdown } from './dropdowns/language_dropdown/language_dropdown';
+export { default as LanguageDropdownContainer } from './dropdowns/language_dropdown/language_dropdown_container';

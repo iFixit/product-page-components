@@ -9,7 +9,7 @@ import {
    RecommendedProducts,
    NotifyProduct,
    StoreDropdown,
-   LanguageDropdown,
+   LanguageDropdownContainer,
 } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleReviewsNone from './example_reviews_none.json';
@@ -22,6 +22,12 @@ import languages from './languages.json';
 import './styles.css';
 
 const MOBILE = `@media screen and (max-width: 500px)`;
+
+const AppContainer = styled.div`
+   a {
+      text-decoration: none;
+   }
+`;
 
 const SpacedRecommendedProducts = styled.div`
    margin: 20px auto;
@@ -50,21 +56,18 @@ const StyledStoreDropdown = styled(StoreDropdown)`
    }
 `;
 
-const StyledLanguageDropdown = styled(LanguageDropdown)`
-   max-width: 305px;
-   border-radius: 8px;
-   border: 1px black solid;
-
-   a {
-      text-decoration: none;
-   }
+const DropdownContainer = styled.div`
+   width: 100%;
+   height: 400px;
+   display: flex;
+   justify-content: center;
 `;
 
 function App() {
    const reviewsLink = '/User/Reviews';
 
    return (
-      <div className="App">
+      <AppContainer>
          <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
          <ProductNote type="note" title="Example Note" html="Example Contents" />
          <ProductNote type="disclaimer" title="Example Disclaimer" html="Example Contents" />
@@ -94,14 +97,15 @@ function App() {
          <hr />
          <StyledStoreDropdown stores={stores} onClickStore={store => console.log(store)} />
          <hr />
-         <StyledLanguageDropdown
-            languages={languages}
-            translationPreferencesUrl="https://www.cominor.com/Login"
-            machineTranslationEnabled
-            isLightTheme
-            machineTranslationRequested={false}
-         />
-      </div>
+         <DropdownContainer>
+            <LanguageDropdownContainer
+               languages={languages}
+               translationPreferencesUrl="https://www.cominor.com/Login"
+               machineTranslationRequested={false}
+               placement="top-end"
+            />
+         </DropdownContainer>
+      </AppContainer>
    );
 }
 
