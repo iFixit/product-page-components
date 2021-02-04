@@ -23,7 +23,14 @@ const Headline = styled.h3`
    line-height: 27px;
 `;
 
-const Header = ({ rating, headline, date }) => {
+const ProductVariantName = styled.h3`
+   margin: 0;
+   font-size: 18px;
+   font-weight: bold;
+   line-height: 27px;
+`;
+
+const Header = ({ rating, headline, date, productName, productVariantName }) => {
 
    return (
       <React.Fragment>
@@ -39,6 +46,11 @@ const Header = ({ rating, headline, date }) => {
             </StarsContainer>
             {headline}
          </Headline>
+         {productName && productVariantName && (
+            <ProductVariantName>
+               {productName} | {productVariantName}
+            </ProductVariantName>
+         )}
          <Timestamp itemProp="datePublished">{date}</Timestamp>
       </React.Fragment>
    );
