@@ -32,6 +32,7 @@ const withTippy = ClickableElement => {
             interactive
             placement="bottom-end"
             flip={false}
+            animateFill={false}
             onMount={onMount || noop}
             content={content}
             appendTo="parent"
