@@ -29,6 +29,8 @@ const AppContainer = styled.div`
    a {
       text-decoration: none;
    }
+
+   font-family: Lato, Arial, sans-serif;
 `;
 
 const SpacedRecommendedProducts = styled.div`
