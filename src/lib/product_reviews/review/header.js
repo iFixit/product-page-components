@@ -25,7 +25,7 @@ const Headline = styled.h3`
 
 const ProductVariantName = styled.h3`
    margin: 0;
-   font-size: 18px;
+   font-size: 15px;
    font-weight: bold;
    line-height: 27px;
 `;
