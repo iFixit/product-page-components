@@ -9,9 +9,7 @@ import {
    RecommendedProducts,
    NotifyProduct,
    StoreDropdown,
-   StoreFlag,
-   Dropdown,
-   LanguageDropdownContainer,
+   LanguageDropdown,
 } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleReviewsNone from './example_reviews_none.json';
@@ -24,14 +22,6 @@ import languages from './languages.json';
 import './styles.css';
 
 const MOBILE = `@media screen and (max-width: 500px)`;
-
-const AppContainer = styled.div`
-   a {
-      text-decoration: none;
-   }
-
-   font-family: Lato, Arial, sans-serif;
-`;
 
 const SpacedRecommendedProducts = styled.div`
    margin: 20px auto;
@@ -50,24 +40,23 @@ const ProductContainer = styled.div`
    box-sizing: border-box;
 `;
 
-const StoreSelector = ({ stores, onClickStore, ...tippyOptions }) => {
-   const currentStore = stores.find(store => store.isDisplayStore);
+const StyledStoreDropdown = styled(StoreDropdown)`
+   max-width: 204px;
+   border-radius: 8px;
+   border: 1px black solid;
 
-   return (
-      <Dropdown icon={<StoreFlag storeCode={currentStore.storeCode} />} {...tippyOptions}>
-         <StoreDropdown currentStore={currentStore} stores={stores} onClickStore={onClickStore} />
-      </Dropdown>
-   );
-};
+   a {
+      text-decoration: none;
+   }
+`;
 
-const DropdownsContainer = styled.div`
-   height: 400px;
-   display: flex;
-   justify-content: center;
-   align-items: center;
+const StyledLanguageDropdown = styled(LanguageDropdown)`
+   max-width: 305px;
+   border-radius: 8px;
+   border: 1px black solid;
 
-   .dropdown-and-button-container {
-      margin: 0 10px;
+   a {
+      text-decoration: none;
    }
 `;
 
@@ -75,7 +64,7 @@ function App() {
    const reviewsLink = '/User/Reviews';
 
    return (
-      <AppContainer>
+      <div className="App">
          <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet" />
          <ProductNote type="note" title="Example Note" html="Example Contents" />
          <ProductNote type="disclaimer" title="Example Disclaimer" html="Example Contents" />
@@ -103,20 +92,16 @@ function App() {
             <NotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
          <hr />
-         <DropdownsContainer>
-            <StoreSelector
-               stores={stores}
-               onClickStore={store => console.log(store)}
-               placement="top-end"
-            />
-            <LanguageDropdownContainer
-               languages={languages}
-               translationPreferencesUrl="https://www.cominor.com/Login"
-               machineTranslationRequested={false}
-               placement="top-end"
-            />
-         </DropdownsContainer>
-      </AppContainer>
+         <StyledStoreDropdown stores={stores} onClickStore={store => console.log(store)} />
+         <hr />
+         <StyledLanguageDropdown
+            languages={languages}
+            translationPreferencesUrl="https://www.cominor.com/Login"
+            machineTranslationEnabled
+            isLightTheme
+            machineTranslationRequested={false}
+         />
+      </div>
    );
 }
 
