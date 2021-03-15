@@ -1,9 +1,9 @@
 FROM node:13
 
 WORKDIR /opt/product-page-components
+RUN chown node .
 
-COPY . .
-RUN chown -R node .
 USER node
 
+COPY . .
 RUN npm install

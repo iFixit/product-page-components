@@ -8,16 +8,12 @@ import {
    ProductNote,
    RecommendedProducts,
    NotifyProduct,
-   StoreDropdown,
-   LanguageDropdown,
 } from '../lib/index.js';
 import exampleReviews from './example_reviews.json';
 import exampleReviewsNone from './example_reviews_none.json';
 import exampleProducts from './example_products.json';
 import exampleProductsLongTitles from './example_products_long_titles.json';
 import exampleProductsFloatingPointIssues from './example_products_floating_point_issues.json';
-import stores from './stores.json';
-import languages from './languages.json';
 
 import './styles.css';
 
@@ -38,26 +34,6 @@ const ProductContainer = styled.div`
    padding: 30px;
    width: 400px;
    box-sizing: border-box;
-`;
-
-const StyledStoreDropdown = styled(StoreDropdown)`
-   max-width: 204px;
-   border-radius: 8px;
-   border: 1px black solid;
-
-   a {
-      text-decoration: none;
-   }
-`;
-
-const StyledLanguageDropdown = styled(LanguageDropdown)`
-   max-width: 305px;
-   border-radius: 8px;
-   border: 1px black solid;
-
-   a {
-      text-decoration: none;
-   }
 `;
 
 function App() {
@@ -91,16 +67,6 @@ function App() {
          <ProductContainer>
             <NotifyProduct sku={1453074} salesChannelID={1} />
          </ProductContainer>
-         <hr />
-         <StyledStoreDropdown stores={stores} onClickStore={store => console.log(store)} />
-         <hr />
-         <StyledLanguageDropdown
-            languages={languages}
-            translationPreferencesUrl="https://www.cominor.com/Login"
-            machineTranslationEnabled
-            isLightTheme
-            machineTranslationRequested={false}
-         />
       </div>
    );
 }
