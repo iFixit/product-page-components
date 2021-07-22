@@ -19,12 +19,13 @@ const Container = styled.div`
 `;
 
 const Review = ({ review, showBorder, locale, reviewsUrl }) => {
-   const { rating, headline, body, body_trunc, author, created_date, productName, productVariantName } = review;
+   const { rating, headline, body, author, created_date, productName, productVariantName } = review;
    const date = new Date(created_date * 1000).toLocaleDateString(locale, {
       year: 'numeric',
       month: 'long',
       day: 'numeric',
    });
+   const body_trunc = body.substring(0, 300);
 
    return (
       <Container
