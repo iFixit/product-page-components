@@ -5,6 +5,7 @@ import { Stars, constants } from '@ifixit/toolbox';
 import { ___p } from '@ifixit/localize';
 import ReviewBar from './review_bar';
 import ReviewLink from './review_link';
+import { Helmet } from 'react-helmet';
 
 const { color, fontSize, spacing } = constants;
 
@@ -62,6 +63,44 @@ class Visualizer extends Component {
       const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
+      const schemaReviews = productReviews.reviews
+         .slice(0,10)
+         .map(r => {
+            return {
+               "@type": "Review",
+               "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": `${r.rating}`,
+                  "bestRating": "5"
+               },
+               "author": {
+                  "@type": "Person",
+                  "name": `${r.author.name}`
+               },
+               "product": {
+                  "@type": "Product",
+                  "name": `${r.productName}`
+               }};
+       });
+
+      const reviewJsonld = {
+         "@context": "http://schema.org/",
+         "@type": "Product",
+         // eslint-disable-next-line no-restricted-globals
+         "url": `${location.href}`,
+         "aggregateRating": {
+           "@type": "AggregateRating",
+           "ratingValue": `${average}`,
+           "reviewCount": `${numReviews}`
+         },
+         "review": [schemaReviews],
+      };
+
+      if (numReviews) {
+         // This is the only way to get the product name with current data provided
+         reviewJsonld["name"] = `${productReviews.reviews[0].productName}`;
+      }
+
       return (
          <Container
             itemProp="aggregateRating"
@@ -70,6 +109,11 @@ class Visualizer extends Component {
             <meta itemProp="worstRating" content="1" />
             <meta itemProp="bestRating" content="5" />
 
+            <Helmet>
+               {numReviews > 0 &&
+                  <script type="application/ld+json">{JSON.stringify(reviewJsonld)}</script>
+               }
+            </Helmet>
             <ContainerHeader>
                <div>
                   <Aggregate itemProp="ratingValue">{average}</Aggregate>
