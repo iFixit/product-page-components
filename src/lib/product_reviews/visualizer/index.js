@@ -68,6 +68,7 @@ class Visualizer extends Component {
          .map(r => {
             return {
                "@type": "Review",
+               "datePublished": r.date,
                "reviewRating": {
                   "@type": "Rating",
                   "ratingValue": r.rating,
