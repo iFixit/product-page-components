@@ -76,10 +76,6 @@ class Visualizer extends Component {
                "author": {
                   "@type": "Person",
                   "name": r.author.name
-               },
-               "product": {
-                  "@type": "Product",
-                  "name": r.productName
                }};
        });
 
