@@ -70,35 +70,34 @@ class Visualizer extends Component {
                "@type": "Review",
                "reviewRating": {
                   "@type": "Rating",
-                  "ratingValue": `${r.rating}`,
+                  "ratingValue": r.rating,
                   "bestRating": "5"
                },
                "author": {
                   "@type": "Person",
-                  "name": `${r.author.name}`
+                  "name": r.author.name
                },
                "product": {
                   "@type": "Product",
-                  "name": `${r.productName}`
+                  "name": r.productName
                }};
        });
 
       const reviewJsonld = {
          "@context": "http://schema.org/",
          "@type": "Product",
-         // eslint-disable-next-line no-restricted-globals
-         "url": `${location.href}`,
+         "url": window.location.href,
          "aggregateRating": {
            "@type": "AggregateRating",
-           "ratingValue": `${average}`,
-           "reviewCount": `${numReviews}`
+           "ratingValue": average,
+           "reviewCount": numReviews
          },
          "review": [schemaReviews],
       };
 
       if (numReviews) {
          // This is the only way to get the product name with current data provided
-         reviewJsonld["name"] = `${productReviews.reviews[0].productName}`;
+         reviewJsonld["name"] = productReviews.reviews[0].productName;
       }
 
       return (
