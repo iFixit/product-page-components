@@ -32,7 +32,7 @@ class ReviewBody extends Component {
 
       return (
          <React.Fragment>
-            <Body itemProp="description">
+            <Body>
                {expanded
                   ? body
                   : `${body_trunc}${body_trunc !== body ? '…' : ''}`}

@@ -97,13 +97,7 @@ class Visualizer extends Component {
       }
 
       return (
-         <Container
-            itemProp="aggregateRating"
-            itemScope
-            itemType="http://schema.org/AggregateRating">
-            <meta itemProp="worstRating" content="1" />
-            <meta itemProp="bestRating" content="5" />
-
+         <Container>
             <Helmet>
                {numReviews > 0 &&
                   <script type="application/ld+json">{JSON.stringify(reviewJsonld)}</script>
@@ -111,7 +105,7 @@ class Visualizer extends Component {
             </Helmet>
             <ContainerHeader>
                <div>
-                  <Aggregate itemProp="ratingValue">{average}</Aggregate>
+                  <Aggregate>{average}</Aggregate>
                   <AggregateSub>&#47; 5</AggregateSub>
                </div>
 
@@ -123,7 +117,7 @@ class Visualizer extends Component {
                   />
                </StarsContainer>
 
-               <ReviewCount itemProp="reviewCount" content={numReviews}>
+               <ReviewCount content={numReviews}>
                   {/* Translators: Number of reviews */}
                   {___p(numReviews, '%1 review', '%1 reviews', numReviews)}
                </ReviewCount>
