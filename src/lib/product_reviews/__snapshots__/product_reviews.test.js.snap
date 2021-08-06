@@ -174,25 +174,13 @@ exports[`renders correctly 1`] = `
 >
   <div
     className="c1"
-    itemProp="aggregateRating"
-    itemScope={true}
-    itemType="http://schema.org/AggregateRating"
   >
-    <meta
-      content="1"
-      itemProp="worstRating"
-    />
-    <meta
-      content="5"
-      itemProp="bestRating"
-    />
     <div
       className="c2"
     >
       <div>
         <span
           className="c3"
-          itemProp="ratingValue"
         >
           0
         </span>
@@ -484,7 +472,6 @@ exports[`renders correctly 1`] = `
       <h3
         className="c6"
         content={0}
-        itemProp="reviewCount"
       >
         0 reviews
       </h3>
