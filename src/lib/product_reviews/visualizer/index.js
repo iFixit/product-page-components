@@ -5,6 +5,7 @@ import { Stars, constants } from '@ifixit/toolbox';
 import { ___p } from '@ifixit/localize';
 import ReviewBar from './review_bar';
 import ReviewLink from './review_link';
+import { Helmet } from 'react-helmet';
 
 const { color, fontSize, spacing } = constants;
 
@@ -62,17 +63,50 @@ class Visualizer extends Component {
       const { average, groupedReviews } = productReviews;
       const numReviews = productReviews.count;
 
-      return (
-         <Container
-            itemProp="aggregateRating"
-            itemScope
-            itemType="http://schema.org/AggregateRating">
-            <meta itemProp="worstRating" content="1" />
-            <meta itemProp="bestRating" content="5" />
+      const schemaReviews = productReviews.reviews
+         .slice(0,10)
+         .map(r => {
+            return {
+               "@type": "Review",
+               "datePublished": r.date,
+               "reviewRating": {
+                  "@type": "Rating",
+                  "ratingValue": r.rating,
+                  "bestRating": "5"
+               },
+               "author": {
+                  "@type": "Person",
+                  "name": r.author.name
+               }};
+       });
 
+      const reviewJsonld = {
+         "@context": "http://schema.org/",
+         "@type": "Product",
+         "url": window.location.href,
+         "aggregateRating": {
+           "@type": "AggregateRating",
+           "ratingValue": average,
+           "reviewCount": numReviews
+         },
+         "review": [schemaReviews],
+      };
+
+      if (numReviews) {
+         // This is the only way to get the product name with current data provided
+         reviewJsonld["name"] = productReviews.reviews[0].productName;
+      }
+
+      return (
+         <Container>
+            <Helmet>
+               {numReviews > 0 &&
+                  <script type="application/ld+json">{JSON.stringify(reviewJsonld)}</script>
+               }
+            </Helmet>
             <ContainerHeader>
                <div>
-                  <Aggregate itemProp="ratingValue">{average}</Aggregate>
+                  <Aggregate>{average}</Aggregate>
                   <AggregateSub>&#47; 5</AggregateSub>
                </div>
 
@@ -84,7 +118,7 @@ class Visualizer extends Component {
                   />
                </StarsContainer>
 
-               <ReviewCount itemProp="reviewCount" content={numReviews}>
+               <ReviewCount content={numReviews}>
                   {/* Translators: Number of reviews */}
                   {___p(numReviews, '%1 review', '%1 reviews', numReviews)}
                </ReviewCount>

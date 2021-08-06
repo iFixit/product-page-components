@@ -28,11 +28,7 @@ const Review = ({ review, showBorder, locale, reviewsUrl }) => {
    const body_trunc = body.substring(0, 300);
 
    return (
-      <Container
-         itemProp="review"
-         itemScope
-         itemType="http://schema.org/Review"
-         showBorder={showBorder}>
+      <Container showBorder={showBorder}>
          <Author author={author} reviewsUrl={reviewsUrl} />
          <Header rating={rating} headline={headline} date={date} productName={productName} productVariantName={productVariantName} />
          <ReviewBody body={body} body_trunc={body_trunc} />

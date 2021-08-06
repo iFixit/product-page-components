@@ -34,14 +34,8 @@ const Header = ({ rating, headline, date, productName, productVariantName }) => 
 
    return (
       <React.Fragment>
-         <Headline itemProp="name">
-            <StarsContainer
-               itemProp="reviewRating"
-               itemScope
-               itemType="http://schema.org/Rating">
-               <meta itemProp="worstRating" content="1" />
-               <meta itemProp="ratingValue" content={rating} />
-               <meta itemProp="bestRating" content="5" />
+         <Headline>
+            <StarsContainer>
                <Stars rating={rating} size={23} activeColor={color.blue[4]} />
             </StarsContainer>
             {headline}
@@ -51,7 +45,7 @@ const Header = ({ rating, headline, date, productName, productVariantName }) => 
                {productName} | {productVariantName}
             </ProductVariantName>
          )}
-         <Timestamp itemProp="datePublished">{date}</Timestamp>
+         <Timestamp>{date}</Timestamp>
       </React.Fragment>
    );
 };
