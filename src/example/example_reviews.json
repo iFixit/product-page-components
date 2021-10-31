@@ -1114,5 +1114,165 @@
     "3": 1,
     "4": 2,
     "5": 61
+  },
+  "jsonld": {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": "iPad mini LCD",
+    "url": "https://www.cominor.com/Store/iPad/iPad-mini-LCD/IF122-000",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": 5,
+      "reviewCount": 12
+    },
+    "brand": {
+      "@type": "Brand",
+      "name": "iFixit"
+    },
+    "description": "Replace a damaged or malfunctioning 7.9\" 1024 x 768 pixel (163 ppi) LCD panel in your iPad mini.\n\nThis LCD panel can restore dead pixels, fix color bleeding, and eliminate lines in your display image as well as restore a dim or dead backlight.",
+    "image": "https://www.cominor.com/cart-products/WGXPwmR4KJGJhNQ5.full",
+    "mpn": 122000,
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "itemCondition": "https://schema.org/NewCondition",
+      "price": "49.99",
+      "priceCurrency": "USD",
+      "priceValidUntil": "2022-10-28T16:38:41-0700",
+      "url": "https://www.cominor.com/Store/iPad/iPad-mini-LCD/IF122-000"
+    },
+    "review": [
+      {
+        "@type": "Review",
+        "datePublished": "2020-07-22T19:42:49-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Lailanie Stamper"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-07-17T21:54:10-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Ronald"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-02-04T04:25:22-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "matthew hosman"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2021-05-28T06:17:21-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "kbrown"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-11-09T11:09:33-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Daniel Salazar Alvarez"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-04-10T03:15:30-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "volvoboy29"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-04-08T11:46:32-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Owen Cunneely"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-03-02T02:08:10-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "lzeelie"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2020-01-15T08:51:38-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Thomas Wilcox"
+        }
+      },
+      {
+        "@type": "Review",
+        "datePublished": "2019-09-17T04:49:59-0700",
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": 5,
+          "bestRating": "5"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Derrick Shabu"
+        }
+      }
+    ],
+    "sku": "1220001"
   }
 }
