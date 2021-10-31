@@ -175,6 +175,7 @@ exports[`renders correctly 1`] = `
   <div
     className="c1"
   >
+    0
     <div
       className="c2"
     >
