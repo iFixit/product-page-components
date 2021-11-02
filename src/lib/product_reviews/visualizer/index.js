@@ -65,7 +65,7 @@ class Visualizer extends Component {
 
       return (
          <Container>
-            {Object.keys(jsonld).length && (
+            {Object.keys(jsonld).length > 0 && (
                <Helmet>
                   <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
                </Helmet>
