@@ -60,50 +60,16 @@ const ReviewCount = styled.h3`
 class Visualizer extends Component {
    render() {
       const { productReviews, reviewsUrl } = this.props;
-      const { average, groupedReviews } = productReviews;
+      const { average, groupedReviews, jsonld } = productReviews;
       const numReviews = productReviews.count;
-
-      const schemaReviews = productReviews.reviews
-         .slice(0,10)
-         .map(r => {
-            return {
-               "@type": "Review",
-               "datePublished": r.date,
-               "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": r.rating,
-                  "bestRating": "5"
-               },
-               "author": {
-                  "@type": "Person",
-                  "name": r.author.name
-               }};
-       });
-
-      const reviewJsonld = {
-         "@context": "http://schema.org/",
-         "@type": "Product",
-         "url": window.location.href,
-         "aggregateRating": {
-           "@type": "AggregateRating",
-           "ratingValue": average,
-           "reviewCount": numReviews
-         },
-         "review": [schemaReviews],
-      };
-
-      if (numReviews) {
-         // This is the only way to get the product name with current data provided
-         reviewJsonld["name"] = productReviews.reviews[0].productName;
-      }
 
       return (
          <Container>
-            <Helmet>
-               {numReviews > 0 &&
-                  <script type="application/ld+json">{JSON.stringify(reviewJsonld)}</script>
-               }
-            </Helmet>
+            {Object.keys(jsonld).length > 0 && (
+               <Helmet>
+                  <script type="application/ld+json">{JSON.stringify(jsonld)}</script>
+               </Helmet>
+            )}
             <ContainerHeader>
                <div>
                   <Aggregate>{average}</Aggregate>
